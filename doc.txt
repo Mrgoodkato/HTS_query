@@ -1,0 +1,45 @@
+Este flask app se basa en un virtual environment que se debe crear al clonar el proyecto desde github, desde el command line, posicionado desde la carpeta root:
+
+<<AL CLONAR>>
+RUN:
+    > python -m venv venv (Esto crea el folder venv (virtual environment)) > python3 (si se está usando ubuntu)
+    > venv\Scripts\activate (Esto activa el virtua environment en el command line) cd venv (y luego) source bin/activate (en ubuntu)
+    > pip install -r requirements.txt (Esto instala las dependencias del proyecto, las librerías usadas como flask, flask-wtf, etc) pip3 (si es ubuntu)
+    > python app.py (Corre el servidor de flask en el )
+
+SALIR DEL VENV:
+    > deactivate
+
+<<AL TERMINAR CAMBIOS EN EL SERVIDOR>>
+COMO GUARDAR EL requirements.txt:
+Lo primero es estar localizado en el virtual environment en el command line:
+
+    > venv\Scripts\activate (Activa el venv, el command line debe aparcer así (venv) >) cd venv (y luego) source bin/activate (en ubuntu)
+    > pip freeze > requirements.txt (Esto crea el requirements.txt con las dependencias instaladas hasta el momento) pip3 (si es ubuntu)
+
+<<MONGO DB>>
+Instalado usando https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+En Ubuntu mongodb está en /var/lib/mongodb
+Los logs están en /var/log/mongodb
+El config file está en /etc/mongod.conf
+
+<<START mongodb>>
+sudo systemctl start mongod
+if: error > sudo systemctl daemon-reload
+
+<<CHECK mongodb process>>
+sudo systemctl status mongod
+
+<<STOP mongodb process>>
+sudo systemctl stop mongod
+
+<<RESTART mongodb process>>
+sudo systemctl restart mongod
+
+
+<<ERRORS IN VENV>>
+UBUNTU:
+Si tienes un error usando el deactivate command para desactivar el venv que dice que no se tiene permiso, y el venv sale asi: ((venv) ) -> corre el siguiente comando:
+chmod +x /home/ricardo_study/.vscode/extensions/ms-python.python-2024.4.0/python_files/deactivate/bash/deactivate
+
