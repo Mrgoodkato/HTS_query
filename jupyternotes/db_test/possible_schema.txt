@@ -1,0 +1,57 @@
+When creating the database:
+
+Each element in the collection is going to be a main HTS combination (meaning the 4 first digits of the HTS number)
+
+Definitions:
+
+-HTS_main_description -> The description of the main HTS code in each JSON file previously parsed from the main HTS file downloaded from customs
+    For example, we have file "0101.json":
+        This file starts with this object:
+        {
+            "htsno": "0101",
+            "indent": 0,
+            "description": "Live horses, asses, mules and hinnies:",
+            "superior": null,
+            "units": [],
+            "general": "",
+            "special": "",
+            "other": "",
+            "footnotes": [],
+            "quotaQuantity": "",
+            "additionalDuties": "",
+            "addiitionalDuties": null
+        }
+        We take the "description" value and use it to name each element in the collection.
+
+    -HTS_key -> Can be grabbed from the file itself e.g. "0101.json", the collection element will have "0101" as HTS_key
+    -Data -> this will be the full on data object from the JSON file.
+
+
+COLLECTION EXAMPLE:
+[
+    {
+        '_id': systemgenerated,
+        'hts_main_description': <<Gathered from the json file first element description>>
+        'hts_key': <<Gathered from the filename>>
+        'data': [<<This is the data from the json file>>]
+    },
+    {
+        '_id': systemgenerated,
+        'hts_main_description': <<Gathered from the json file first element description>>
+        'hts_key': <<Gathered from the filename>>
+        'data': [<<This is the data from the json file>>]
+    },
+    ...
+]
+
+
+CASE SCENARIOS:
+1) There are some records inside the json files that have the following information under these keys:
+    "htsno": "",
+    "superiot": "true"
+
+    Normally the "htsno" key will have a value with a complete o partial HTS Number in string format.
+    When the "htsno" is an empty string "", it means the information on this record is an extra category on the parent record.
+
+    The way parent records are organized is still under study.
+
