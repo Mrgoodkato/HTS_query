@@ -48,10 +48,83 @@ COLLECTION EXAMPLE:
 CASE SCENARIOS:
 1) There are some records inside the json files that have the following information under these keys:
     "htsno": "",
-    "superiot": "true"
+    "superior": "true"
 
     Normally the "htsno" key will have a value with a complete o partial HTS Number in string format.
     When the "htsno" is an empty string "", it means the information on this record is an extra category on the parent record.
 
-    The way parent records are organized is still under study.
+    There is another key called "indent", this key defines the indentation level of the tariff, it is a number defining the current subcategory level of that hts.
+
+    For instance, lets take a look at this list of records:
+    [
+        {
+            "htsno": "0101",
+            "indent": 0,                <-- First level of iteration
+            "description": "Livestock"
+        },
+        {
+            "htsno": "0101.00",
+            "indent": 1,                <-- Second level of iteration
+            "description": "Cattle"
+        },
+        {
+            "htsno": "",
+            "indent": 2,                <-- Third level of iteration
+            "description": "Horses"
+        },
+        {
+            "htsno": "0101.00.02",
+            "indent": 3,
+            "description": "Male"
+        },
+        {
+            "htsno": "0101.00.03",
+            "indent": 3,                <-- Fourth level of iteration
+            "description": "Female"
+        },
+        {
+            "htsno": "0101.00.06.00",
+            "indent": 4,                <-- Fifth level of iteratio
+            "description": "For mount"
+        },
+        {
+            "htsno": "",
+            "indent": 2,
+            "description": "Cows"
+        },
+        {
+            "htsno": "0101.00.05",
+            "indent": 3,
+            "description": "Male"
+        },
+        {
+            "htsno": "0101.00.06",
+            "indent": 3,
+            "description": "Female"
+        },
+        {
+            "htsno": "0101.00.06.01",
+            "indent": 3,
+            "description": "For slaughter"
+        },
+        {
+            "htsno": "0101.00.10",
+            "indent": 2,
+            "description": "Marranos male and female"
+        },
+        {
+            "htsno": "0101.00.10.02",
+            "indent": 3,
+            "description": "For slaughter"
+        }
+
+    ]
+
+    If I search for the record "0101.00.03" -> The result should iterate the tree, giving me the following in the description: "Livestock | Cattle | Horses | Female". Because it will run through each indent and find the appropriate result. As shown with the arrows pointing to the indents used. <--
+
+    But, how to for instance get all the information on "0101.00.05" ??????
+    
+    <NEED TO DEFINE AN ALGORITHM THAT ITERATES OR THAT ORGANIZES THE OBJECT IN SUCH A WAY THAT THIS ITERATION IS POSSIBLE>
+
+    Possibly solved, check test_iterations.ipynb
 
