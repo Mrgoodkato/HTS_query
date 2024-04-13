@@ -1,0 +1,16 @@
+update_hts_files.py -> This script needs to perform the following operations:
+
+    1) Use the downloaded <htsdata.json> file from CBP to create the json list of records (this will be a long list of files that will be discarded after successful addition to the DB).
+    This process is twofold:
+
+        - Create the json files folder with the records: 0101.json, 0102.json ... so on.
+        - Create the string_dict folder with the string_dict.json file (These are the keywords extracted per record for string query)
+    
+    2) From the temp folder in the db_hts folder (where we will store the json parsed files from before) we will add these json files as documents in a MongoDB collection.
+
+        - One collection is going to be the hts_records collection, that will have as documents each of the json file's information on hts records.
+        - The other collection is going to be string_dict, this will have as documents each of the elements inside the string_dict json file
+
+        Both of these collections will be linked to one another via de hts header (0101, 0102... etc)
+
+    3) When the MongoDB records are created, we will remove the information from the temp folder in order to save space.
