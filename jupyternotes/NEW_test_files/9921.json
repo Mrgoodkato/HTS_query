@@ -1,0 +1,50 @@
+[
+    {
+        "htsno": "9921.01.01",
+        "indent": 1,
+        "description": "Of automotive air conditioners",
+        "superior": null,
+        "units": [],
+        "general": "",
+        "special": "1.4% (JP)",
+        "other": "",
+        "footnotes": [
+            {
+                "columns": [
+                    "stat",
+                    "units"
+                ],
+                "marker": "1",
+                "value": " See chapter 99 statistical note 1. ",
+                "type": "footnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": "",
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9921.01.02",
+        "indent": 1,
+        "description": "Other",
+        "superior": null,
+        "units": [],
+        "general": "",
+        "special": "Free (JP)",
+        "other": "",
+        "footnotes": [
+            {
+                "columns": [
+                    "stat",
+                    "units"
+                ],
+                "marker": "1",
+                "value": " See chapter 99 statistical note 1. ",
+                "type": "footnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": "",
+        "addiitionalDuties": null
+    }
+]

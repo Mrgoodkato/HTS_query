@@ -1,0 +1,166 @@
+[
+    {
+        "htsno": "0909",
+        "indent": 0,
+        "description": "Seeds of anise, badian, fennel, coriander, cumin or caraway; juniper berries:",
+        "superior": null,
+        "units": [],
+        "general": "",
+        "special": "",
+        "other": "",
+        "footnotes": [],
+        "quotaQuantity": "",
+        "additionalDuties": "",
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.21.00.00",
+        "indent": 2,
+        "description": "Neither crushed nor ground | Seeds of coriander:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.22.00.00",
+        "indent": 2,
+        "description": "Crushed or ground | Seeds of coriander:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.31.00.00",
+        "indent": 2,
+        "description": "Neither crushed nor ground | Seeds of cumin:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.32.00.00",
+        "indent": 2,
+        "description": "Crushed or ground | Seeds of cumin:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.61.00.00",
+        "indent": 2,
+        "description": "Neither crushed nor ground | Seeds of anise, badian, caraway or fennel; juniper berries:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "0909.62.00.00",
+        "indent": 2,
+        "description": "Crushed or ground | Seeds of anise, badian, caraway or fennel; juniper berries:",
+        "superior": null,
+        "units": [
+            "kg"
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    }
+]

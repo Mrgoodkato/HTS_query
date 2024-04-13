@@ -1,0 +1,214 @@
+[
+    {
+        "htsno": "9701",
+        "indent": 0,
+        "description": "Painting, drawings and pastels, executed entirely by hand, other than drawings of heading 4906 and other than hand-painted or hand-decorated manufacture articles; collages, mosaics and similar decorative plaques:",
+        "superior": null,
+        "units": [],
+        "general": "",
+        "special": "",
+        "other": "",
+        "footnotes": [],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.21.00.00",
+        "indent": 2,
+        "description": "Paintings, drawings, and pastels | Of an age exceeding 100 years:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.22.00.00",
+        "indent": 2,
+        "description": "Mosaics | Of an age exceeding 100 years:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.29.00.00",
+        "indent": 2,
+        "description": "Other | Of an age exceeding 100 years:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.91.00.00",
+        "indent": 2,
+        "description": "Paintings, drawings, and pastels | Other:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.92.00.00",
+        "indent": 2,
+        "description": "Mosaics | Other:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "9701.99.00.00",
+        "indent": 2,
+        "description": "Other | Other:",
+        "superior": null,
+        "units": [
+            "No."
+        ],
+        "general": "Free",
+        "special": "",
+        "other": "Free",
+        "footnotes": [
+            {
+                "columns": [
+                    "general"
+                ],
+                "marker": "1",
+                "value": "See 9903.88.15. ",
+                "type": "endnote"
+            },
+            {
+                "columns": [
+                    "other"
+                ],
+                "marker": "1",
+                "value": "See 9903.90.08. ",
+                "type": "endnote"
+            }
+        ],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    }
+]

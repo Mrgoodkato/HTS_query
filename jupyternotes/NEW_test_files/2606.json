@@ -1,0 +1,64 @@
+[
+    {
+        "htsno": "2606.00.00",
+        "indent": 0,
+        "description": "Aluminum ores and concentrates",
+        "superior": null,
+        "units": [],
+        "general": "Free",
+        "special": "",
+        "other": "$1/t",
+        "footnotes": [],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "2606.00.00.30",
+        "indent": 2,
+        "description": "Refractory grade | Bauxite, calcined:",
+        "superior": null,
+        "units": [
+            "t"
+        ],
+        "general": "",
+        "special": "",
+        "other": "",
+        "footnotes": [],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "2606.00.00.60",
+        "indent": 2,
+        "description": "Other | Bauxite, calcined:",
+        "superior": null,
+        "units": [
+            "t"
+        ],
+        "general": "",
+        "special": "",
+        "other": "",
+        "footnotes": [],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    },
+    {
+        "htsno": "2606.00.00.90",
+        "indent": 1,
+        "description": "Other",
+        "superior": null,
+        "units": [
+            "t"
+        ],
+        "general": "",
+        "special": "",
+        "other": "",
+        "footnotes": [],
+        "quotaQuantity": null,
+        "additionalDuties": null,
+        "addiitionalDuties": null
+    }
+]
