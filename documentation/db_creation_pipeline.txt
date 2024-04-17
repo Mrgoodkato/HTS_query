@@ -11,6 +11,6 @@ update_hts_files.py -> This script needs to perform the following operations:
         - One collection is going to be the hts_records collection, that will have as documents each of the json file's information on hts records.
         - The other collection is going to be string_dict, this will have as documents each of the elements inside the string_dict json file
 
-        Both of these collections will be linked to one another via de hts header (0101, 0102... etc)
+        Both of these collections will be linked to one another via de hts header (0101, 0102... etc) -> THIS IS DONE USING THE ObjectId from the MongoDB collection for the HTS records, storing in an array for each key_word
 
     3) When the MongoDB records are created, we will remove the information from the temp folder in order to save space.
