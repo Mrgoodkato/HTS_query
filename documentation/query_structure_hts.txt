@@ -1,0 +1,35 @@
+Querying the database for HTS results can be done by the user in 4 different scenarios of input:
+
+    1) Base chapter query:
+        
+        -INPUT = '####'
+
+        The user inputs only the first 4 numbers of the HTS they are looking for, which will yield a result of all possible subrecords of that specifc chapter of 4 digits.
+
+        -TYPE = <List>
+    
+    2) Base_subrecord query:
+
+        -INPUT = '####.##'
+
+        The user inputs the 4 first numbers plus the sub-record 2 numbers of the chapter, this yields a more specific set of records pertaining to the sub-record.
+
+        -TYPE = <List>
+
+    3) Base_semifull_record query:
+
+        -INPUT = '####.##.##'
+
+        The user inputs 8 digits of the HTS query, going to the second level records, this yields an even more specific set of results.
+        Or it can yield a complete record in the cases of the Chapter 99 records, which are 8 digits long.
+
+        -TYPE = <List> | <Single>
+
+
+    4) Complete_record query:
+
+        -INPUT = '####.##.##.##'
+
+        The user inputs the total 10 digit record, this yields a single record information.
+
+        -TYPE = <Single>
