@@ -1,0 +1,50 @@
+OVERVIEW:
+
+When handling a string query to the database, there are several things that should happen in order to provide the best results possible against the information already present in the DB.
+
+Let's breakdown the steps:
+
+1) There are several ways the query string can be input by the user:
+
+    -Single word
+    -Multiple words
+    -Multiple or single word with special characters
+    -Number
+    -Multiple or single word with numbers
+
+    For each of these scenarios we need to first process the string to be divided into a list of strings to grab and query individually in the DB.
+
+    To do this we will use a series of functions to parse the query string and create a list with single words in lowercase, including numbers.
+
+    Example:
+    "query = 'words words2 words##, words'
+
+    def parseQuery(query):
+
+        return ['words', 'words2', 'words', 'words']"
+
+    
+2) When we get the list of keywords separated, each word will be queried against the string_dict collection using the find({'string':<query>}) method from pymongo.
+
+This will provide a list of ObjectIDs from Mongo referencing the hts_record entries where each word has a coincidence.
+
+We will store each of the ObjectID lists for each of the words in a dict for subsequent processing as follows:
+
+result = [
+    {
+        'string': <query>,
+        'records': [<ObjectIDs>...]
+    },
+    {
+        'string': <query>,
+        'records': [<ObjectIDs>...]
+    }
+]
+
+3) After that we will process the list of objects gathered with the ObjectIDs and start the process of organizing what IDs are repeating between those dictionaries.
+
+4) When we have the IDs organized by the most repeated to the ones less repeated we continue by querying each of the top IDs (we can set a rule for a top 5 IDs to not clutter the query) and gathering each hts_record info for each ID.
+
+5) When we have each hts_record for each ID in order, we will proceed to internally traverse each record with the words available to get the inner_records that have the coincidences.
+
+6) Then we organize the results by the highest number of matches for the most words to the lowest number of matches for the least words.
