@@ -1,5 +1,7 @@
 OVERVIEW:
 
+DONE IN string_query_db script:------------------------------------------------------
+
 When handling a string query to the database, there are several things that should happen in order to provide the best results possible against the information already present in the DB.
 
 Let's breakdown the steps:
@@ -47,4 +49,41 @@ result = [
 
 5) When we have each hts_record for each ID in order, we will proceed to internally traverse each record with the words available to get the inner_records that have the coincidences.
 
+WORK ON string_query_processing script--------------------------------------------------
+
 6) Then we organize the results by the highest number of matches for the most words to the lowest number of matches for the least words.
+
+7) From the result of the query, which will be a dictionary comprised of the chapter data, and keys referring to each chapter retrieved:
+    {
+        <CHAPTER_NAME1>: {
+            'coincidence': <NUMBER_OF_COINCIDENCES>,
+            'keyword': [<STRINGS_FROM QUERY_MATCHED>...]
+            'data': [<CHAPTER_DATA>...]
+        },
+        <CHAPTER_NAME2>: {
+            'coincidence': <NUMBER_OF_COINCIDENCES>,
+            'keyword': [<STRINGS_FROM QUERY_MATCHED>...]
+            'data': [<CHAPTER_DATA>...]
+        },
+        {
+            ...
+        }
+    }
+
+    We import this dictionary and process it to parse only the relevant chapter data pertaining to the 'keyword' array of words with the following logic:
+
+    1A) For each string we search the 'data' array in the description and grab all results that have that string in the 'description' key into a list:
+
+        [<SUBCHAPTER1>, <SUBCHATPER2>, ...]
+   
+    2A) This list will have possibly repeated values because there might be strings that are in the same description key of the original data. So we need to remove all duplicates from the list, but we need to do it counting the number of times a duplicate is found to create hierarchy, gathering an object like this:
+
+        [
+            (<SUBCHAPTER1>, <OCURRENCES>), (<SUBCHATPER2>, <OCURRENCES>), ...
+        ]
+
+        This object will contain the SUBCHAPTER string and the Number of Ocurrences of that subchapter according to the repeated results from the previous list.
+
+        This list will be organized by the higher number of ocurrences to the lowest.
+
+    3A) From here we can then generate a more complex object that will be the result of parsing the subchapter numbers and grabbing all related subchapter information to generate a more in depth result for the user to view. > THIS IS STILL IN PROCESS OF WORK.
