@@ -87,3 +87,6 @@ WORK ON string_query_processing script------------------------------------------
         This list will be organized by the higher number of ocurrences to the lowest.
 
     3A) From here we can then generate a more complex object that will be the result of parsing the subchapter numbers and grabbing all related subchapter information to generate a more in depth result for the user to view. > THIS IS STILL IN PROCESS OF WORK.
+
+
+    
