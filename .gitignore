@@ -1,6 +1,9 @@
 # Ignore Excel files
 *.xlsx
 
+#Ignore json test files
+temp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
