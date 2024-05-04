@@ -1,0 +1,9 @@
+This script handles the initial creation of the hts database files as follows:
+
+1) createHTSDict() -> This function takes only the path of the <htsdata.json> file from CBP with the information for all the hts records all IN ONE and converts this json file into a dictionary of dataframes with each chapter information organized by record number (first 4 digits of the number)
+
+2) writeFiles() -> The previous createHTSDict() will return a dict[Dataframe] object that will be processed here to generate each json file for each chapter. It will also generate the <string_dict.json> file with the keyword information contained inside the whole of the <htsdata.json> file.
+
+<WORK TO BE DONE>
+
+The <key_words> and <punctuation_pattern> variables will need to be used from a global util script to be imported in the final .py version of this logic.
