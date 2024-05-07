@@ -7,3 +7,11 @@ This script handles the initial creation of the hts database files as follows:
 <WORK TO BE DONE>
 
 The <key_words> and <punctuation_pattern> variables will need to be used from a global util script to be imported in the final .py version of this logic.
+
+The chapterOrgnanizer() will need to have a function that handles the empty hts numbers:
+
+    -- Created folder <testing_chapters/> where I added a test jupyter file called <empty_hts_tests.ipynb> that throws a JSON called <test_file.json> where I gather all the empty hts number records inside each chapter.
+
+    This <test_file.json> provides a view of the previous and next record in the chapter, in order to study the cases where the "htsno" is empty and how it's organized in the records, alongside "indent" and "description".
+    
+    (WORK IN PROGRESS)

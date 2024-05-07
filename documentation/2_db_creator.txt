@@ -1,0 +1,2 @@
+This script handles the connection to MongoDB and creation of the hts_records and string_dict collections.
+
