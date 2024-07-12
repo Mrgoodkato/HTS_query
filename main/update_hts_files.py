@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import json
 from typing import List, Dict, Any
-from utils import *
+from utils import removeEmptyKeysAndSave, countDFLength, addRowsToDataframe, HTSDictProgressCount, punctuation_pattern, checkKeyWords
 
 def createHTSDict(path: str) -> dict[pd.DataFrame, any]:
     """Method that creates a dictionary object with all the HTS data from the CBP site in JSON format for all chapters.
