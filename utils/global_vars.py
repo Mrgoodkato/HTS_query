@@ -6,5 +6,6 @@ temp_hts_folder_path = '../db_hts/temp/NEW_test_files/'
 hts_folder_path = '../db_hts/temp/NEW_final_json_files/'
 string_folder_path = '../db_hts/temp/NEW_test_string_dict/'
 
+raw_hts_dir_path = '../db_hts/htsdata/'
 raw_hts_path = '../db_hts/htsdata/htsdata.json'
 
