@@ -1,7 +1,7 @@
 import requests
 import os
 import json
-from global_vars import raw_hts_dir_path
+from utils.global_vars import raw_hts_dir_path
 
 def run_download_hts() -> bool:
 

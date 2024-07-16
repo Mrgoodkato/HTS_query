@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import json
 from typing import List, Dict, Any
-from global_vars import key_words
+from utils.global_vars import key_words
 
 def removeEmptyKeysAndSave(htsdata: List[Dict[str, Any]], path: str):
     """This function removes the empty keys from the json chapter and saves it to the desired path

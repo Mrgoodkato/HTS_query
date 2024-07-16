@@ -1,3 +1,4 @@
-from util_functions import *
-from counters import *
-from global_vars import *
+from utils.counters import *
+from utils.download_hts import *
+from utils.global_vars import *
+from utils.util_functions import *

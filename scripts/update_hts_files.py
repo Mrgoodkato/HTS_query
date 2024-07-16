@@ -2,7 +2,6 @@ import pandas as pd
 import re
 import os
 import json
-from typing import List, Dict, Any
 from utils import removeEmptyKeysAndSave, countDFLength, addRowsToDataframe, HTSDictProgressCount, punctuation_pattern, checkKeyWords, download_hts
 
 def createHTSDict(path: str) -> dict[pd.DataFrame, any]:
@@ -116,3 +115,18 @@ def writeFiles_workflow(HTS_dict: dict[pd.DataFrame, any], path_hts: str, path_s
 
     with open(f'{path_strings}{string_dict_file_path}', 'w') as json_file:
         json.dump(string_dict, json_file, indent=4)
+
+    
+def deleteTempFiles(folder_paths: list[str]):
+
+    for path in folder_paths:
+
+        for filename in os.listdir(path):
+            file_path = os.path.join(path, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+                    print(f'Deleted temp file: {file_path}')
+            except Exception as e:
+                print(f'Error deleting file: {file_path}')
+

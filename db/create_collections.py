@@ -1,5 +1,5 @@
 import pymongo, json, re
-from connection import Connection
+from db.connection import Connection
 
 def createHTSDatabase(path_records: str, file_list: list, connection: Connection):
     """Main function to create the HTS database of records
