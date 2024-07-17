@@ -34,3 +34,28 @@ class Connection:
         except Exception as exception:
             print('Error closing connection')
             print(exception)
+    
+    def queryRecordsHTS(query_groups: list[dict[str, any]], self) -> list[dict[str, any]]:
+        """This function queries the hts_records collection to retrieve the full records for a given list of queries (hts numbers)
+
+        Args:
+            query_groups (list[dict[str, any]]): Query hts groups organized for database query.
+
+        Returns:
+            list[dict[str, any]]: Resulting records from DB in list.
+        """
+
+        result = []
+
+        for group in query_groups:
+
+            try:
+                document = self.collection_records.find_one(
+                    {'header': group['main_group']}
+                )
+                result.append(document)
+            except Exception as exception:
+                print(f'Failed query of record {group["main_group"]}')
+                print(exception)
+        
+        return result

@@ -2,6 +2,21 @@ key_words = ['a', 'able', 'about', 'above', 'across', 'actually', 'after', 'afte
 
 punctuation_pattern = r'[!\"#$%&\'()*+,-./:;<=>?@\[\]\^_`{|}~—]'
 
+gather_hts_number = [
+    (
+        r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Complete_record'
+    ),
+    (
+        r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Base_semifull'
+    ),
+    (
+        r'(^[\d]{4})([\d]{2})$', 'Base_subrecord'
+    ),
+    (
+        r'(^[\d]{4})$', 'Base_chapter'
+    )
+]
+
 temp_hts_folder_path = '../db_hts/temp/NEW_test_files/'
 hts_folder_path = '../db_hts/temp/NEW_final_json_files/'
 string_folder_path = '../db_hts/temp/NEW_test_string_dict/'
