@@ -13,6 +13,7 @@ class Connection:
         """
 
         db_path = f'{credentialsDB.PATH_DB}{credentialsDB.USER_DB}:{credentialsDB.PW_DB}@{credentialsDB.CLUSTER_DB}'
+        print(db_path)
 
         try:
             self.client = pymongo.MongoClient(db_path)
@@ -31,11 +32,12 @@ class Connection:
         """
         try:
             self.client.close()
+            print('Closed connection to mongodb')
         except Exception as exception:
             print('Error closing connection')
             print(exception)
     
-    def queryRecordsHTS(query_groups: list[dict[str, any]], self) -> list[dict[str, any]]:
+    def queryRecordsHTS(self, query_groups: list[dict[str, any]]) -> list[dict[str, any]]:
         """This function queries the hts_records collection to retrieve the full records for a given list of queries (hts numbers)
 
         Args:
@@ -53,7 +55,7 @@ class Connection:
                 document = self.collection_records.find_one(
                     {'header': group['main_group']}
                 )
-                if document.count() == 0: result.append('No result')
+                if document == None: result.append('No result')
                 else: result.append(document)
             except Exception as exception:
                 print(f'Failed query of record {group["main_group"]}')

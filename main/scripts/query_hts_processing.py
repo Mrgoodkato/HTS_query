@@ -31,11 +31,11 @@ def searchEHIndents(result_query: list[dict[str, any]], hts_records: list[dict[s
     
     result_final = []
 
-    for indx, result in enumerate(result_query):
+    for indx, result in enumerate(hts_records):
 
         result_final.append(result)
 
-        if 'missing' not in result: continue
+        if 'missing' not in result_query[indx]: continue
         if hts_records[indx].count() == 0: continue
 
         indents = result_query[indx]['missing']
