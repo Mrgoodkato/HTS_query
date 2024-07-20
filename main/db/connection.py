@@ -53,7 +53,8 @@ class Connection:
                 document = self.collection_records.find_one(
                     {'header': group['main_group']}
                 )
-                result.append(document)
+                if document.count() == 0: result.append('No result')
+                else: result.append(document)
             except Exception as exception:
                 print(f'Failed query of record {group["main_group"]}')
                 print(exception)
