@@ -4,13 +4,18 @@ from db.connection import *
 
 def queryHTSMulti(input_query: list[str]):
 
+    query_result = []
+
     query_list = createQueryGroups(input_query)
-
     connection = Connection()
-
     db_query_result = connection.queryRecordsHTS(query_list)
-
     connection.closeConnection()
+
+    for index, result in enumerate(db_query_result):
+
+        query_result.append(
+            searchEHIndents(grabQueryRecords(result, query_list[index]), result)
+        )
     
     return searchEHIndents(query_list, db_query_result)
     
