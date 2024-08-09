@@ -1,24 +1,29 @@
 import re
 
-def grabQueryRecords(hts_record: list[dict[str, any]], query: list[dict[str, any]]) -> list[dict[str, any]]:
+def grabQueryRecords(hts_record: list[dict[str, any]], query: dict[str, any]) -> list[dict[str, any]]:
     """Function that iterates the original HTS full record and parses against the coincidences found in the query list (query list containing the main and sub query numbers entered at the time of query)
 
     Args:
         hts_record (list[dict[str, any]]): Full HTS record grabbed from db
-        query (list[dict[str, any]]): List of query numbers in the original query input (for each query there may be multiple of these)
+        query [dict[str, any]): Dict of query numbers in the original query input
 
     Returns:
         list[dict[str, any]]: HTS parsed record of coincidences matching the query list elements against original HTS record
     """
 
-    def parseQueryList(query: list[dict[str, any]]) -> list[str]:
-        
-        queryList = []
+    def parseQueryList(query: dict[str, any]) -> list[str]:
+        """Helper function that works by grabbing the 'main_group' and 'sub_groups' items in the original query and joining them in a single str list
 
-        for item in query:
-            queryList.append(item['main_group'])
-            if "sub_groups" in item:
-                queryList.extend(item['sub_groups'])
+        Args:
+            query (dict[str, any]): Original query object with 'main_group' and with or without 'sub_groups'
+
+        Returns:
+            list[str]: Resulting str list of all htsno records to be queried
+        """
+        
+        queryList = [query['main_group']]
+        if 'sub_groups' in query:
+            queryList.extend(query['sub_groups'])
 
         return queryList
 
@@ -32,7 +37,7 @@ def grabQueryRecords(hts_record: list[dict[str, any]], query: list[dict[str, any
 
         index = 0
         indent_list = [record['indent'] for record in result_query if 'indent' in record]
-        
+
         for i in range(0, result_query[-1]['indent']):
             
             if i not in indent_list:
@@ -49,13 +54,14 @@ def grabQueryRecords(hts_record: list[dict[str, any]], query: list[dict[str, any
     result = []
     index_query = 0
     queryList = parseQueryList(query)
+    print(queryList)
 
     while index_query < len(queryList):
 
         for key, record in enumerate(hts_record):
-
+            
             if 'htsno' in record and re.match(rf'{queryList[index_query]}$', record['htsno']):
-
+                print(record['description'])
                 result.append({
                     'htsno': record['htsno'],
                     'indent': record['indent'],
@@ -73,11 +79,11 @@ def searchEHIndents(result_query: list[dict[str, any]], hts_records: list[dict[s
     """Function that search for the Empty HTS records in the current result_query and adds their information to the final result
 
     Args:
-        result_query (list[dict[str, any]]): Result of the original query to the hts_records with all valid matches for the original query string
-        hts_records (list[dict[str, any]]): Main record where all the query information is located
+        result_query (list[dict[str,any]]): Result of the original query to the hts_records with all valid matches for the original query string
+        hts_records (list[dict[str,any]]): Main record where all the query information is located
 
     Returns:
-        list[dict[str, any]]: Returns a list of dictinaries with the result_query and the EH records (if present).
+        list[dict[str,any]]: Returns a list of dictinaries with the result_query and the EH records (if present).
     """
     
     def createEHRecords(indents: list[int]) -> list[dict[str, int]]:
@@ -102,12 +108,12 @@ def searchEHIndents(result_query: list[dict[str, any]], hts_records: list[dict[s
     
     result_final = []
 
-    for indx, result in enumerate(hts_records):
+    for indx, result in enumerate(result_query):
 
         result_final.append(result)
 
-        if 'missing' not in result_query[indx]: continue
-        if hts_records[indx].count() == 0: continue
+        if 'missing' not in result: continue
+        if len(result) == 0: continue
 
         indents = result_query[indx]['missing']
         eh_records = createEHRecords(indents)

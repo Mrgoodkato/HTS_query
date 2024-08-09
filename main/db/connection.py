@@ -11,8 +11,9 @@ class Connection:
         Args:
             db_path (str): Path to the database connection on MongoDB
         """
-
-        db_path = f'{credentialsDB.PATH_DB}{credentialsDB.USER_DB}:{credentialsDB.PW_DB}@{credentialsDB.CLUSTER_DB}'
+        credentials = credentialsDB.loadEnvironmentVals()
+        print(credentials)
+        db_path = f'{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}'
         print(db_path)
 
         try:
@@ -20,8 +21,8 @@ class Connection:
             self.db = self.client['hts']
             self.collection_records = self.db['hts_records']
             self.collection_string_dict = self.db['string_dict']
-            print(f'Connected to: {credentialsDB.PATH_DB}, cluster: {credentialsDB.CLUSTER_DB}')
-            print(f'User: {credentialsDB.USER_DB}')
+            print(f'Connected to: {credentials["PATH_DB"]}, cluster: {credentials["CLUSTER_DB"]}')
+            print(f'User: {credentials["USER_DB"]}')
 
         except Exception as exception:
             print('Error connecting to database')
@@ -44,7 +45,7 @@ class Connection:
             query_groups (list[dict[str, any]]): Query hts groups organized for database query.
 
         Returns:
-            list[dict[str, any]]: Resulting records from DB in list.
+            list[dict[str,any]]: Resulting records from DB in list.
         """
 
         result = []
@@ -55,7 +56,9 @@ class Connection:
                 document = self.collection_records.find_one(
                     {'header': group['main_group']}
                 )
-                if document == None: result.append('No result')
+                if document == None: 
+                    result.append('No result')
+                    print(f'Warning, no result found for {group['main_group']}')
                 else: result.append(document)
             except Exception as exception:
                 print(f'Failed query of record {group["main_group"]}')

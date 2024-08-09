@@ -81,11 +81,9 @@ def createQueryGroups(query_list: list) -> list[dict[str, any]]:
 
     Returns:
         list: Returns a list of resulting objects\n \tThese objects are with type of query, main chapter, and sub_records if applicable for DB query, as follows \n
-        {
             'type': (str),
             'main_group': (str),
             'sub_groups': (list)
-        }
     """
 
     list_of_results = []

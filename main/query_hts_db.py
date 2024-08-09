@@ -14,8 +14,8 @@ def queryHTSMulti(input_query: list[str]):
     for index, result in enumerate(db_query_result):
 
         query_result.append(
-            searchEHIndents(grabQueryRecords(result, query_list[index]), result)
+            searchEHIndents(grabQueryRecords(result['data'], query_list[index]), result['data'])
         )
     
-    return searchEHIndents(query_list, db_query_result)
+    return query_result
     
