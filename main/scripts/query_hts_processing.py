@@ -122,9 +122,9 @@ def searchEHIndents(result_query: list[dict[str, any]], hts_records: list[dict[s
 
             for rec in eh_records:
 
-                if 'htsno' not in hts_records[indx][i] and rec['indent'] == hts_records[indx][i]['indent']:
+                if 'htsno' not in hts_records[i] and rec['indent'] == hts_records[i]['indent']:
                     
-                    rec['description'] = hts_records[indx][i]['description']
+                    rec['description'] = hts_records[i]['description']
         
         
         if eh_records: result_final.extend(eh_records)
