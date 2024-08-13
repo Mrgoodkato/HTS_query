@@ -12,8 +12,7 @@ class Connection:
             db_path (str): Path to the database connection on MongoDB
         """
         credentials = credentialsDB.loadEnvironmentVals()
-        print(credentials)
-        db_path = f'{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}'
+        db_path = f"{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}"
         print(db_path)
 
         try:
@@ -21,8 +20,8 @@ class Connection:
             self.db = self.client['hts']
             self.collection_records = self.db['hts_records']
             self.collection_string_dict = self.db['string_dict']
-            print(f'Connected to: {credentials["PATH_DB"]}, cluster: {credentials["CLUSTER_DB"]}')
-            print(f'User: {credentials["USER_DB"]}')
+            print(f"Connected to: {credentials['PATH_DB']}, cluster: {credentials['CLUSTER_DB']}")
+            print(f"User: {credentials['USER_DB']}")
 
         except Exception as exception:
             print('Error connecting to database')
@@ -58,10 +57,10 @@ class Connection:
                 )
                 if document == None: 
                     result.append('No result')
-                    print(f'Warning, no result found for {group['main_group']}')
+                    print(f"Warning, no result found for {group['main_group']}")
                 else: result.append(document)
             except Exception as exception:
-                print(f'Failed query of record {group["main_group"]}')
+                print(f"Failed query of record {group['main_group']}")
                 print(exception)
         
         return result
