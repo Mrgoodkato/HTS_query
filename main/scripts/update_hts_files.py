@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import os
 import json
-from utils import removeEmptyKeysAndSave, countDFLength, addRowsToDataframe, HTSDictProgressCount, punctuation_pattern, checkKeyWords, download_hts
+from utils import removeEmptyKeysAndSave, countDFLength, addRowsToDataframe, HTSDictProgressCount, punctuation_pattern, checkKeyWords, countStringOccurences, download_hts
 
 def createHTSDict(path: str) -> dict[pd.DataFrame, any]:
     """Method that creates a dictionary object with all the HTS data from the CBP site in JSON format for all chapters.
@@ -104,17 +104,17 @@ def writeFiles_workflow(HTS_dict: dict[pd.DataFrame, any], path_hts: str, path_s
 
                 if(string in string_dict):
                     string_dict[string].append(key)
-                    string_dict[string] = list(set(string_dict[string]))
                     print(f'string_dict key "{string}" added chapter "{key}"')
                     continue
             
                 string_dict[string] = []
                 string_dict[string].append(key)
-                string_dict[string] = list(set(string_dict[string]))
                 print(f'string_dict added string "{string}" with chapter "{key}"')
 
+    processedStringDict = countStringOccurences(string_dict)
+
     with open(f'{path_strings}{string_dict_file_path}', 'w') as json_file:
-        json.dump(string_dict, json_file, indent=4)
+        json.dump(processedStringDict, json_file, indent=4)
 
     
 def deleteTempFiles(folder_paths: list[str]):

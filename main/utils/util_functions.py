@@ -77,3 +77,35 @@ def openJSON(path: str) -> list[dict, any]:
         result = json.loads(file.read())
     
     return result
+
+def countStringOccurences(stringDict: dict[list[str]]) -> dict[list[dict[str, any]]]:
+    """Function that takes the raw stringDict object and counts all occurrences of each of the chapters assigned to each string
+
+    Args:
+        stringDict (dict[list[str]]): Raw stringDict object with repeated chapter values
+
+    Returns:
+        dict[list[dict[str,any]]]: Returns a dict that lists each chapter where a string is located alongside how many times its repeated.
+    """
+
+    result = {}
+
+    for key in stringDict.keys():
+
+        result[key] = []
+        valueSet = list(set(stringDict[key]))
+
+        for val in valueSet:
+
+            result[key].append({
+                'chap': val,
+                'count': stringDict[key].count(val)
+            })
+
+    return result
+            
+            
+
+
+
+        

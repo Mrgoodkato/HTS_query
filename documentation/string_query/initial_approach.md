@@ -1,18 +1,18 @@
 # Main query input
-## Query string:
+### Query string:
 - "Random words, for processing, with symbols!"
-## Query processed
-- random
-- words
-- for
-- processing
-- with
-- symbols
-## Query removing common words (for, with)
-- random
-- words
-- processing
-- symbols
+- Query processed
+  - random
+  - words
+  - for
+  - processing
+  - with
+  - symbols
+- Query removing common words (for, with)
+  - random
+  - words
+  - processing
+  - symbols
 ### Query processing
 #### DB query STRING DICT
 - Grabs the object IDs of chapters with that string
@@ -171,7 +171,7 @@
       - processing
         - 21
 #### Process HTS results
-- Multiplly sum of HTS result x STRING DICT main result
+- **Multiplly sum of HTS result x STRING DICT main result**
   - 0203
     - 3 x 54 = 162
       - words
@@ -230,3 +230,64 @@
     - 21
       - processing
         - 21
+- **Sort results**
+  - 0203
+    - 162
+      - words
+        - 10
+      - processing
+        - 20
+      - symbols
+        - 24
+  - 0001
+    - 158
+      - random
+        - 50
+      - symbols
+        - 29
+  - 0201
+    - 50
+      - processing
+        - 50
+  - 0003
+    - 33
+      - random
+        - 33
+  - 0101
+    - 30
+      - words
+        - 12
+      - processing
+        - 3
+  - 0103
+    - 29
+      - words
+        - 29
+  - 0002
+    - 24
+      - random
+        - 10
+      - symbols
+        - 2
+  - 0402
+    - 23
+      - processing
+        - 23
+  - 0405
+    - 22
+      - processing
+        - 22
+  - 2039
+    - 21
+      - processing
+        - 21
+  - 0004
+    - 2
+      - random
+        - 2
+  - 0102
+    - 1
+      - words
+        - 1
+  
+  
