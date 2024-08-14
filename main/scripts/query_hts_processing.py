@@ -62,8 +62,9 @@ def grabQueryRecords(hts_record: list[dict[str, any]], query: dict[str, any]) ->
         for key, record in enumerate(hts_record):
             
             if 'htsno' in record and re.match(rf'{queryList[index_query]}$', record['htsno']):
-                obj = record
-                result.append(obj.update({}))
+                update_record = record
+                update_record.update({'indexHTSRec': key})
+                result.append(update_record)
 
         index_query += 1
     

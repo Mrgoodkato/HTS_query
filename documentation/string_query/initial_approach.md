@@ -1,0 +1,232 @@
+# Main query input
+## Query string:
+- "Random words, for processing, with symbols!"
+## Query processed
+- random
+- words
+- for
+- processing
+- with
+- symbols
+## Query removing common words (for, with)
+- random
+- words
+- processing
+- symbols
+### Query processing
+#### DB query STRING DICT
+- Grabs the object IDs of chapters with that string
+  - *string['random']*
+    - 0001
+    - 0002
+    - 0003
+    - 0004
+  - *string['words']*
+    - 0101
+    - 0102
+    - 0103
+    - 0203
+  - *string['processing']*
+    - 0201
+    - 0101
+    - 0203
+    - 0402
+  - *string['symbols']*
+    - 0001
+    - 0002
+    - 0203
+    - 0405
+    - 2039
+#### Process STRING DICT query
+- Weights the information in the initial query of records to check for occurrences
+  - 0001
+    - 2
+      - random
+      - symbols
+  - 0002 
+    - 2
+      - random
+      - symbols
+  - 0003
+    - 1
+      - random
+  - 0004
+    - 1
+      - random
+  - 0101 
+    - 2
+      - words
+      - processing
+  - 0102
+    - 1
+      - words
+  - 0103
+    - 1
+      - words
+  - 0201
+    - 1
+      - processing
+  - 0203
+    - 3
+      - words
+      - processing
+      - symbols
+  - 0402
+    - 1
+      - processing
+  - 0405
+    - 1
+      - processing
+  - 2039
+    - 1
+      - processing
+- Organize the occurrences by quantity
+  - 0203
+    - 3
+      - words
+      - processing
+      - symbols
+  - 0001
+    - 2
+      - random
+      - symbols
+  - 0002 
+    - 2
+      - random
+      - symbols
+  - 0101 
+    - 2
+      - words
+      - processing
+  - 0003
+    - 1
+      - random
+  - 0004
+    - 1
+      - random
+  - 0102
+    - 1
+      - words
+  - 0103
+    - 1
+      - words
+  - 0201
+    - 1
+      - processing
+  - 0402
+    - 1
+      - processing
+  - 0405
+    - 1
+      - processing
+  - 2039
+    - 1
+      - processing
+  #### DB query HTS
+  - Query each of the records in the list to get quantity of matches
+  - 0203
+      - words
+        - 10
+      - processing
+        - 20
+      - symbols
+        - 24
+  - 0001
+      - random
+        - 50
+      - symbols
+        - 29
+  - 0002 
+      - random
+        - 10
+      - symbols
+        - 2
+  - 0101 
+      - words
+        - 12
+      - processing
+        - 3
+  - 0003
+      - random
+        - 33
+  - 0004
+      - random
+        - 2
+  - 0102
+      - words
+        - 1
+  - 0103
+      - words
+        - 29
+  - 0201
+      - processing
+        - 50
+  - 0402
+      - processing
+        - 23
+  - 0405
+      - processing
+        - 22
+  - 2039
+      - processing
+        - 21
+#### Process HTS results
+- Multiplly sum of HTS result x STRING DICT main result
+  - 0203
+    - 3 x 54 = 162
+      - words
+        - 10
+      - processing
+        - 20
+      - symbols
+        - 24
+  - 0001
+    - 2 x 79 = 158
+      - random
+        - 50
+      - symbols
+        - 29
+  - 0002
+    - 2 x 12 = 24
+      - random
+        - 10
+      - symbols
+        - 2
+  - 0101
+    - 2 x 15 = 30
+      - words
+        - 12
+      - processing
+        - 3
+  - 0003
+    - 33
+      - random
+        - 33
+  - 0004
+    - 2
+      - random
+        - 2
+  - 0102
+    - 1
+      - words
+        - 1
+  - 0103
+    - 29
+      - words
+        - 29
+  - 0201
+    - 50
+      - processing
+        - 50
+  - 0402
+    - 23
+      - processing
+        - 23
+  - 0405
+    - 22
+      - processing
+        - 22
+  - 2039
+    - 21
+      - processing
+        - 21
