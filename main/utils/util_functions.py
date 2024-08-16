@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import json
+from collections import Counter
 from typing import List, Dict, Any
 from utils.global_vars import key_words
 
@@ -78,7 +79,7 @@ def openJSON(path: str) -> list[dict, any]:
     
     return result
 
-def countStringOccurences(stringDict: dict[list[str]]) -> dict[list[dict[str, any]]]:
+def countStringOccurences(stringDict: dict[str,list[str]]) -> dict[str,list[dict[str, any]]]:
     """Function that takes the raw stringDict object and counts all occurrences of each of the chapters assigned to each string
 
     Args:
@@ -90,19 +91,12 @@ def countStringOccurences(stringDict: dict[list[str]]) -> dict[list[dict[str, an
 
     result = {}
 
-    for key in stringDict.keys():
-
-        result[key] = []
-        valueSet = list(set(stringDict[key]))
-
-        for val in valueSet:
-
-            result[key].append({
-                'chap': val,
-                'count': stringDict[key].count(val)
-            })
+    for key, values in stringDict.items():
+        chapter_count = Counter(values)
+        result[key] = [{'chap': chap, 'count': count} for chap, count in chapter_count.items()]
 
     return result
+
             
             
 

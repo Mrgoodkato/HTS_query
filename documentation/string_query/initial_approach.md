@@ -38,256 +38,181 @@
     - 0405
     - 2039
 #### Process STRING DICT query
-- Weights the information in the initial query of records to check for occurrences
+  - **Weights the information in the initial query of records to check for occurrences and grab the number of times of each string repeated in the record**
   - 0001
-    - 2
+    - OCCURRENCE 4
       - random
-      - symbols
-  - 0002 
-    - 2
-      - random
-      - symbols
-  - 0003
-    - 1
-      - random
-  - 0004
-    - 1
-      - random
-  - 0101 
-    - 2
-      - words
-      - processing
-  - 0102
-    - 1
-      - words
-  - 0103
-    - 1
-      - words
-  - 0201
-    - 1
-      - processing
-  - 0203
-    - 3
-      - words
-      - processing
-      - symbols
-  - 0402
-    - 1
-      - processing
-  - 0405
-    - 1
-      - processing
-  - 2039
-    - 1
-      - processing
-- Organize the occurrences by quantity
-  - 0203
-    - 3
-      - words
-      - processing
-      - symbols
-  - 0001
-    - 2
-      - random
-      - symbols
-  - 0002 
-    - 2
-      - random
-      - symbols
-  - 0101 
-    - 2
-      - words
-      - processing
-  - 0003
-    - 1
-      - random
-  - 0004
-    - 1
-      - random
-  - 0102
-    - 1
-      - words
-  - 0103
-    - 1
-      - words
-  - 0201
-    - 1
-      - processing
-  - 0402
-    - 1
-      - processing
-  - 0405
-    - 1
-      - processing
-  - 2039
-    - 1
-      - processing
-  #### DB query HTS
-  - Query each of the records in the list to get quantity of matches
-  - 0203
-      - words
         - 10
+      - words
+        - 2
       - processing
+        - 5
+      - symbols
+        - 12
+  - 0002 
+    - OCCURRENCE 2
+      - random
         - 20
       - symbols
-        - 24
-  - 0001
+        - 3
+  - 0003
+    - OCCURRENCE 1
       - random
-        - 50
-      - symbols
-        - 29
-  - 0002 
+        - 2
+  - 0004
+    - OCCURRENCE 1
       - random
         - 10
-      - symbols
-        - 2
   - 0101 
+    - OCCURRENCE 2
+      - words
+        - 15
+      - processing
+        - 1
+  - 0102
+    - OCCURRENCE 3
+      - words
+        - 30
+      - processing
+        - 40
+      - symbols
+        - 55
+  - 0103
+    - OCCURRENCE 1
+      - words
+        - 11
+  - 0201
+    - OCCURRENCE 1
+      - processing
+        - 2
+  - 0203
+    - OCCURRENCE 3
       - words
         - 12
       - processing
-        - 3
-  - 0003
-      - random
-        - 33
-  - 0004
-      - random
-        - 2
-  - 0102
-      - words
-        - 1
-  - 0103
-      - words
-        - 29
-  - 0201
-      - processing
-        - 50
-  - 0402
-      - processing
         - 23
+      - symbols
+        - 15
+  - 0402
+    - OCCURRENCE 1
+      - processing
+        - 2
   - 0405
+    - OCCURRENCE 1
+      - processing
+        - 45
+  - 2039
+    - OCCURRENCE 1
       - processing
         - 22
-  - 2039
-      - processing
-        - 21
-#### Process HTS results
-- **Multiplly sum of HTS result x STRING DICT main result**
-  - 0203
-    - 3 x 54 = 162
-      - words
-        - 10
-      - processing
-        - 20
-      - symbols
-        - 24
+- **Sort by OCURRENCE**
   - 0001
-    - 2 x 79 = 158
-      - random
-        - 50
-      - symbols
-        - 29
-  - 0002
-    - 2 x 12 = 24
+    - OCCURRENCE 4
       - random
         - 10
-      - symbols
+      - words
         - 2
-  - 0101
-    - 2 x 15 = 30
+      - processing
+        - 5
+      - symbols
+        - 12
+  - 0102
+    - OCCURRENCE 3
+      - words
+        - 30
+      - processing
+        - 40
+      - symbols
+        - 55
+  - 0203
+    - OCCURRENCE 3
       - words
         - 12
       - processing
-        - 3
-  - 0003
-    - 33
-      - random
-        - 33
-  - 0004
-    - 2
-      - random
-        - 2
-  - 0102
-    - 1
-      - words
-        - 1
-  - 0103
-    - 29
-      - words
-        - 29
-  - 0201
-    - 50
-      - processing
-        - 50
-  - 0402
-    - 23
-      - processing
         - 23
-  - 0405
-    - 22
-      - processing
-        - 22
-  - 2039
-    - 21
-      - processing
-        - 21
-- **Sort results**
-  - 0203
-    - 162
-      - words
-        - 10
-      - processing
+      - symbols
+        - 15
+  - 0002 
+    - OCCURRENCE 2
+      - random
         - 20
       - symbols
-        - 24
-  - 0001
-    - 158
-      - random
-        - 50
-      - symbols
-        - 29
-  - 0201
-    - 50
-      - processing
-        - 50
-  - 0003
-    - 33
-      - random
-        - 33
-  - 0101
-    - 30
-      - words
-        - 12
-      - processing
         - 3
-  - 0103
-    - 29
+  - 0101 
+    - OCCURRENCE 2
       - words
-        - 29
-  - 0002
-    - 24
+        - 15
+      - processing
+        - 1
+  - 0003
+    - OCCURRENCE 1
+      - random
+        - 2
+  - 0004
+    - OCCURRENCE 1
       - random
         - 10
-      - symbols
+  - 0103
+    - OCCURRENCE 1
+      - words
+        - 11
+  - 0201
+    - OCCURRENCE 1
+      - processing
         - 2
   - 0402
-    - 23
+    - OCCURRENCE 1
       - processing
-        - 23
+        - 2
   - 0405
-    - 22
+    - OCCURRENCE 1
+      - processing
+        - 45
+  - 2039
+    - OCCURRENCE 1
       - processing
         - 22
-  - 2039
-    - 21
-      - processing
-        - 21
-  - 0004
-    - 2
+#### Query HTS DB
+- Check for descriptions where there are occurrences of > 1 string from query
+  - EXAMPLE 0001
+    - OCCURRENCE 4
       - random
-        - 2
-  - 0102
-    - 1
+        - 10
       - words
-        - 1
-  
+        - 2
+      - processing
+        - 5
+      - symbols
+        - 12
+    - 4 matches
+      - 2
+        - innerIndx 4
+        - innerIndx 33
+    - 3 matches
+      - 5
+        - innerIndx 2
+        - innerIndx 5
+        - innerIndx 10
+        - innerIndx 23
+        - innerIndx 39
+    - 2 matches
+      - 1
+        - innerIndx 50
+    - 1 matches
+      - 15
+        - innerIndx 1
+        - innerIndx 2
+        - innerIndx 3
+        - innerIndx 7
+        - innerIndx 9
+        - innerIndx 11
+        - innerIndx 12
+        - innerIndx 20
+        - innerIndx 21
+        - innerIndx 31
+        - innerIndx 49
+        - innerIndx 51
+        - innerIndx 52
+        - innerIndx 55
+        - innerIndx 60
   
