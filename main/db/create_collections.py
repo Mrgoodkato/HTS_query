@@ -51,20 +51,20 @@ def createStringDict(path_string_dict: str, connection: Connection):
         connection (Connection): Connection class object that connects to the MongoDB instance
     """
 
-    def addStrRecord(str_chaps: list, key: str, connection: Connection):
+    def addStrRecord(str_chaps: list[dict[str,any]], key: str, connection: Connection):
         """Collects all the necessary information for the creation of each document in the string_dict collection
 
         Args:
-            str_chaps (list): Chapter list from the original string_dict json file that will be converted in its corresponding ObjectIds from the HTS collection in MongoDB
+            str_chaps (list[dict[str,any]]): Chapter list from the original string_dict json file that will be converted in its corresponding ObjectIds from the HTS collection in MongoDB
             key (str): Key word to be added to the collection representing the document
             connection (Connection): Connection class object that connects to the MongoDB instance
         """
 
-        def queryHTSString(chaps: list, hts_collection: pymongo.collection.Collection):
+        def queryHTSString(chaps: list[dict[str,any]], hts_collection: pymongo.collection.Collection):
             """Function helper of addStrRecord() that adds the ObjectId of each of the chapters in the list created in the string_dict json object.
 
             Args:
-                chaps (list): List of chapters to be queried in Mongo
+                chaps (list[dict[str,any]]): List of chapters to be queried in Mongo
                 hts_collection (pymongo.collection.Collection): HTS collection already created and populated with chapter information for query
 
             Returns:
@@ -73,13 +73,17 @@ def createStringDict(path_string_dict: str, connection: Connection):
 
             ids = []
 
-            for chap in chaps:
+            for obj in chaps:
 
                 #MongoDB returns a cursor iterator when we perform a find() query or aggregator as well, we need to also iterate it to gather the documents, or document
-                cursor = hts_collection.find({ 'header': chap })
+                cursor = hts_collection.find({ 'header': obj['chap'] })
+
 
                 for document in cursor:
-                    ids.append(document['_id'])
+                    ids.append({
+                        'chap': document['_id'],
+                        'count': obj['count']
+                                })
             
             return ids
 

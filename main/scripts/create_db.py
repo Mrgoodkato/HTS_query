@@ -1,5 +1,6 @@
 import os
-from db import Connection, create_collections
+from db.connection import Connection
+from db import create_collections
 
 def create_database(hts_folder_path: str, string_folder_path: str):
     """Function that handles the creation of the database using the temporary JSON files created previously in the temp folder

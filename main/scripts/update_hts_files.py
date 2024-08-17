@@ -2,7 +2,10 @@ import pandas as pd
 import re
 import os
 import json
-from utils import removeEmptyKeysAndSave, countDFLength, addRowsToDataframe, HTSDictProgressCount, punctuation_pattern, checkKeyWords, countStringOccurences, download_hts
+from utils import download_hts
+from utils.util_functions import removeEmptyKeysAndSave, addRowsToDataframe, checkKeyWords, countStringOccurences
+from utils.counters import countDFLength, HTSDictProgressCount
+from utils.global_vars import punctuation_pattern
 
 def createHTSDict(path: str) -> dict[pd.DataFrame, any]:
     """Method that creates a dictionary object with all the HTS data from the CBP site in JSON format for all chapters.
@@ -13,7 +16,7 @@ def createHTSDict(path: str) -> dict[pd.DataFrame, any]:
     Returns:
         dict: Dictionary object with all the information in the original HTS file
     """
-    download_check = download_hts()
+    download_check = download_hts.run_download_hts()
 
     if download_check == False:
         print('Download failed')

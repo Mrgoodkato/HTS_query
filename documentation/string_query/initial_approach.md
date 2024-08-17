@@ -215,4 +215,14 @@
         - innerIndx 52
         - innerIndx 55
         - innerIndx 60
-  
+  #### Process HTS results
+  - Process the innerIndx retrieved to get the records
+    - EXAMPLE 0001
+      - 4 matches
+        - 2
+          - {hts record} from innerIndx 4
+            - how?
+              - Using the innerIndx htsno value or the previous htsno in case its an EH record
+          - {hts record} from innerIndx 33
+            - how?
+              - Using the innerIndx htsno value or the previous htsno in case its an EH record
