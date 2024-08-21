@@ -5,18 +5,20 @@ class Connection:
     """Class that connects to the database creating all necessary methods for connection and closing connection, as well as the base database for adding new HTS records and the string_dict collection too
     """
 
-    def __init__(self):
+    def __init__(self, testing: bool):
         """_init_ function of the class, defines the connection variables
 
         Args:
             db_path (str): Path to the database connection on MongoDB
         """
+
         credentials = credentialsDB.loadEnvironmentVals()
         db_path = f"{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}"
+        db_port = None
         print(db_path)
 
         try:
-            self.client = pymongo.MongoClient(db_path)
+            self.client = pymongo.MongoClient(host= db_path, port= db_port)
             self.db = self.client['hts']
             self.collection_records = self.db['hts_records']
             self.collection_string_dict = self.db['string_dict']
@@ -37,7 +39,7 @@ class Connection:
             print('Error closing connection')
             print(exception)
     
-    def queryRecordsHTS(self, query_groups: list[dict[str, any]]) -> list[dict[str, any]]:
+    def queryRecordsHTS(self, query_groups: list[dict[str, any]]) -> list[dict[str,any]]:
         """This function queries the hts_records collection to retrieve the full records for a given list of queries (hts numbers)
 
         Args:
@@ -64,3 +66,25 @@ class Connection:
                 print(exception)
         
         return result
+    
+    def queryStringDict(self, queryList: list[str]) -> dict[str,any]:
+        """This function queries the string_dict collection in the DB and returns a list of results based on the query list provided of strings to query
+
+        Args:
+            queryList (list[str]): List of strings to pass to query
+
+        Returns:
+            list[dict[str,any]]: List of documents retrieved from the database
+        """
+
+        result = {}
+
+        for query in queryList:
+            try:
+                document = self.collection_string_dict.find_one({'string': query})
+                if document != None:
+                    result[query] = document
+                
+            except Exception as exception:
+                print(f'Failed to query string: {query}')
+                print(exception)
