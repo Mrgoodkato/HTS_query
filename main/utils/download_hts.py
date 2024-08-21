@@ -4,6 +4,11 @@ import json
 from utils.global_vars import raw_hts_dir_path
 
 def run_download_hts() -> bool:
+    """Function that downloads the HTS JSON file for all chapter information from the US customs website and places it in the global raw_hts_path folder
+
+    Returns:
+        bool: True or False depending on download success.
+    """
 
     url = 'https://hts.usitc.gov/reststop/exportList?from=0101&to=9999.&format=JSON&styles=true'
 

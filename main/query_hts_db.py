@@ -2,7 +2,7 @@ from scripts.query_hts_input import *
 from scripts.query_hts_processing import *
 from db.connection import *
 
-def queryHTSMulti(input_query: list[str]):
+def queryHTSNumber(input_query: list[str]):
 
     query_result = []
 
