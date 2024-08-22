@@ -2,12 +2,12 @@ from scripts.query_hts_input import *
 from scripts.query_hts_processing import *
 from db.connection import *
 
-def queryHTSNumber(input_query: list[str]):
+def queryHTSNumber(input_query: list[str], testing: bool):
 
     query_result = []
 
     query_list = createQueryGroups(input_query)
-    connection = Connection()
+    connection = Connection(testing)
     db_query_result = connection.queryRecordsHTS(query_list)
     connection.closeConnection()
 

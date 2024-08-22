@@ -87,13 +87,37 @@ class Connection:
             list[dict[str,any]]: List of documents retrieved from the database
         """
 
+        def grabChapterInfo(connection: Connection, document: dict[str,any]) -> dict[str,any]:
+            """Function that queries the hts record collection and grabs the relevant record information for each of the chapters a string is present in the query
+
+            Args:
+                connection (Connection): Connection object from the database
+                document (dict[str,any]): Document with the string_dict record information
+
+            Returns:
+                dict[str,any]: Returns a complete object with the chapter header information, the count of repeated times the string is present and the HTS record data
+            """
+            chapters = []
+
+            for data in document['chaps']:
+                chapter = connection.collection_records.find_one({'_id': data['chap']})
+                chapters.append({
+                    'chap': chapter['header'],
+                    'count': data['count'],
+                    'data': chapter['data']
+                })
+            
+            return chapters
+
+
+
         result = {}
 
         for query in queryList:
             try:
                 document = self.collection_string_dict.find_one({'string': query})
                 if document != None:
-                    result[query] = document
+                    result[query] = grabChapterInfo(self, document)
                 
             except Exception as exception:
                 print(f'Failed to query string: {query}')
