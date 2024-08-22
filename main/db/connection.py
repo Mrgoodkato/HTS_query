@@ -11,23 +11,33 @@ class Connection:
         Args:
             db_path (str): Path to the database connection on MongoDB
         """
-
         credentials = credentialsDB.loadEnvironmentVals()
-        db_path = f"{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}"
-        db_port = None
-        print(db_path)
+        if testing:
+            option = input('You are using the local DB for testing, enter Y to continue, N to cancel')
+            if option == 'N': return
+            db_path = 'localhost'
+            db_port = 27017
+        else:
+            option = input('You are using the production DB, enter Y to continue, N to cancel')
+            if option == 'N':return
+            db_path = f"{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}"
+            db_port = None
 
         try:
             self.client = pymongo.MongoClient(host= db_path, port= db_port)
             self.db = self.client['hts']
             self.collection_records = self.db['hts_records']
             self.collection_string_dict = self.db['string_dict']
-            print(f"Connected to: {credentials['PATH_DB']}, cluster: {credentials['CLUSTER_DB']}")
-            print(f"User: {credentials['USER_DB']}")
+            if testing:
+                print(f'Connected to {db_path} on {db_port}')
+            else:
+                print(f"Connected to: {credentials['PATH_DB']}, cluster: {credentials['CLUSTER_DB']}")
+                print(f"User: {credentials['USER_DB']}")
 
         except Exception as exception:
             print('Error connecting to database')
             print(exception)
+            raise
 
     def closeConnection(self):
         """Close connection function, closes current connection created in the Connection class

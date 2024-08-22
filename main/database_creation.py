@@ -1,10 +1,11 @@
-import os
 from scripts import update_hts_files, create_db
 from utils.global_vars import raw_hts_path, temp_hts_folder_path, string_folder_path, hts_folder_path
 
-def run_database_creation():
+def run_database_creation(testing: bool):
     """Main database creation function, executes the workflows of hts temp files creation for both the HTS JSON files and the String_Dict, and the 
 
+    Args:
+        testing (bool): Defines if testing, local DB will be used (needs mongo installed in system)
     """
 
     option = input('Starting the process of HTS and String Dict creation, run?\nY/N')
@@ -23,7 +24,7 @@ def run_database_creation():
 
     if(option.upper() == 'Y'):
 
-        create_db.create_database(hts_folder_path, string_folder_path)
+        create_db.create_database(hts_folder_path, string_folder_path, testing)
         print('Databases created successfully')
     
     option = input('Delete the created JSON files for HTS and String Dict?')
