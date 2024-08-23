@@ -122,3 +122,5 @@ class Connection:
             except Exception as exception:
                 print(f'Failed to query string: {query}')
                 print(exception)
+
+        return result
