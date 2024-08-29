@@ -1,137 +1,36 @@
 {
-    "cows": [
+    "mules": [
         {
-            "chap": "0102",
-            "count": 2,
-            "data": [
-                {
-                    "htsno": "0102.29.20",
-                    "desc": "Cows imported specially for dairy purposes",
-                    "indexHTS": 10
-                },
-                {
-                    "htsno": "0102.29.40.66",
-                    "desc": "Cows",
-                    "indexHTS": 27
-                }
-            ]
-        },
-        {
-            "chap": "0406",
-            "count": 20,
-            "data": [
-                {
-                    "htsno": null,
-                    "desc": "Italian-type cheeses, made from cow's milk, in original loaves (Romano made from cow's milk, Reggiano, Parmesan, Provol- one, Provoletti and Sbrinz); Italian-type cheeses, made from cow's milk, not in original loaves (Romano made from cow's milk, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz and Goya), and cheese and substitutes for cheese containing, or processed from, such Italian-type cheeses, whether or not in original loaves:",
-                    "indexHTS": 21
-                },
-                {
-                    "htsno": null,
-                    "desc": "Other cheese and substitutes for cheese (except cheese not containing cow's milk, and soft ripened cow's milk cheese):",
-                    "indexHTS": 31
-                },
-                {
-                    "htsno": null,
-                    "desc": "Romano made from cow's milk, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz and Goya cheeses:",
-                    "indexHTS": 57
-                },
-                {
-                    "htsno": null,
-                    "desc": "Made from cow's milk:",
-                    "indexHTS": 60
-                },
-                {
-                    "htsno": null,
-                    "desc": "Containing, or processed from, Italian-type cheeses (Romano, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz and Goya) made from cow's milk:",
-                    "indexHTS": 81
-                },
-                {
-                    "htsno": null,
-                    "desc": "Containing cow's milk:",
-                    "indexHTS": 92
-                },
-                {
-                    "htsno": null,
-                    "desc": "Containing cow's milk:",
-                    "indexHTS": 147
-                },
-                {
-                    "htsno": "0406.90.20.00",
-                    "desc": "Made from goat's milk whey or from whey obtained from a mixture of goat's milk and not more than 20 percent by weight of cow's milk",
-                    "indexHTS": 179
-                },
-                {
-                    "htsno": null,
-                    "desc": "Made from cow's milk and not in original loaves:",
-                    "indexHTS": 184
-                },
-                {
-                    "htsno": null,
-                    "desc": "Made from cow's milk:",
-                    "indexHTS": 191
-                },
-                {
-                    "htsno": null,
-                    "desc": "Romano made from cow's milk, Reggiano, Parmesan, Provolone and Provoletti cheeses:",
-                    "indexHTS": 195
-                },
-                {
-                    "htsno": null,
-                    "desc": "Made from cow's milk:",
-                    "indexHTS": 198
-                },
-                {
-                    "htsno": "0406.90.61.00",
-                    "desc": "Containing Romano, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz or Goya, all the foregoing made from cow's milk",
-                    "indexHTS": 217
-                },
-                {
-                    "htsno": null,
-                    "desc": "Containing Romano, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz or Goya, all the foregoing made from cow's milk:",
-                    "indexHTS": 220
-                },
-                {
-                    "htsno": null,
-                    "desc": "Containing cow's milk (except soft- ripened cow's milk cheese):",
-                    "indexHTS": 243
-                }
-            ]
-        },
-        {
-            "chap": "1901",
+            "chap": "0101",
             "count": 1,
             "data": [
                 {
-                    "htsno": "1901.90.32.00",
-                    "desc": "Cajeta not made from cow's milk",
-                    "indexHTS": 76
+                    "htsno": "0101",
+                    "indexHTS": 0
                 }
             ]
         },
         {
-            "chap": "9903",
+            "chap": "0205",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0205.00.00.00",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0206",
             "count": 2,
             "data": [
                 {
-                    "htsno": "9903.04.20",
-                    "desc": "Cheeses and substitutes for cheeses, valued over 11.3\u00a2 per kg, containing, or processed from, Italian-type cheeses, made from cow's milk, not in original loaves (Romano made from cow's milk, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz and Goya) (provided for in subheading 0406.20.77, 0406.20.79, 0406.30.77, 0406.30.79, 0406.90.66 or 0406.90.68)",
-                    "indexHTS": 3
-                }
-            ]
-        },
-        {
-            "chap": "9904",
-            "count": 6,
-            "data": [
-                {
-                    "htsno": null,
-                    "desc": "Italian-type cheeses, made from cow's milk, in original loaves (Romano made from cow's milk, Reggiano, Parmesan, Provolone, Provoletti and Sbrinz), and Italian-type cheeses, made from cow's milk, not in original loaves (Romano made from cow's milk, Reggiano, Parmesan, Provolone, Provoletti, Sbrinz and Goya) and cheese and substitutes for cheese containing, or processed from, such Italian-type cheeses, whether or not in original loaves, provided for in subheadings 0406.10.58, 0406.20.53, 0406.20.79, 0406.30.79, 0406.90.32, 0406.90.37, 0406.90.42 or 0406.90.68:",
-                    "indexHTS": 260
+                    "htsno": "0206",
+                    "indexHTS": 0
                 },
                 {
-                    "htsno": null,
-                    "desc": "Cheeses and substitutes for cheese (except (i) cheese not containing cow's milk, (ii) soft ripened cow's milk cheese, (iii) cheese (except cottage cheese) containing 0.5 percent or less by weight of butterfat, and (iv) cheese of the type described in additional U.S. notes 17 through 25, inclusive, to chapter 4), provided for in subheadings 0406.10.08, 0406.10.88, 0406.20.91, 0406.30.91 or 0406.90.97:",
-                    "indexHTS": 311
+                    "htsno": "0206.90.00.40",
+                    "indexHTS": 13
                 }
             ]
         }
@@ -143,12 +42,10 @@
             "data": [
                 {
                     "htsno": "0101",
-                    "desc": "Live horses, asses, mules and hinnies:",
                     "indexHTS": 0
                 },
                 {
                     "htsno": null,
-                    "desc": "Horses:",
                     "indexHTS": 1
                 }
             ]
@@ -159,7 +56,6 @@
             "data": [
                 {
                     "htsno": "0205.00.00.00",
-                    "desc": "Meat of horses, asses, mules or hinnies, fresh, chilled or frozen",
                     "indexHTS": 0
                 }
             ]
@@ -170,12 +66,10 @@
             "data": [
                 {
                     "htsno": "0206",
-                    "desc": "Edible offal of bovine animals, swine, sheep, goats, horses, asses, mules or hinnies, fresh, chilled or frozen:",
                     "indexHTS": 0
                 },
                 {
                     "htsno": "0206.90.00.40",
-                    "desc": "Of goats, horses, asses, mules or hinnies",
                     "indexHTS": 13
                 }
             ]
@@ -186,342 +80,685 @@
             "data": [
                 {
                     "htsno": "9804.00.35",
-                    "desc": "Automobiles, trailers, aircraft, motorcycles, bicycles, baby carriages, boats, horse-drawn conveyances, horses and similar means of transportation, and the usual equipment accompanying the foregoing; any of the foregoing imported in connection with the arrival of such person and to be used in the United States only for the transportation of such person, his family and guests, and such incidental carriage of articles as may be appropriate to his personal use of the conveyance",
                     "indexHTS": 8
                 }
             ]
         }
     ],
-    "bulk": [
+    "mammals": [
         {
-            "chap": "0304",
-            "count": 6,
+            "chap": "0106",
+            "count": 4,
             "data": [
                 {
-                    "htsno": "0304.91.10.00",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 180
-                },
-                {
-                    "htsno": "0304.92.10.00",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 183
-                },
-                {
-                    "htsno": "0304.93.10",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 186
-                },
-                {
-                    "htsno": "0304.94.10",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 193
-                },
-                {
-                    "htsno": "0304.95.10",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 200
-                },
-                {
-                    "htsno": "0304.99.11",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each",
-                    "indexHTS": 215
-                }
-            ]
-        },
-        {
-            "chap": "0309",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "0309.10.05.00",
-                    "desc": "In bulk or in immediate containers weighing with their contents over 6.8 kg each",
-                    "indexHTS": 2
-                }
-            ]
-        },
-        {
-            "chap": "0707",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "0707.00.60.30",
-                    "desc": "Not exceeding 15 cm (6 inches) in length and presented in bulk quantities of 453.6 kg (1,000 lbs) or more",
-                    "indexHTS": 59
-                }
-            ]
-        },
-        {
-            "chap": "0804",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "0804.30.20.00",
-                    "desc": "In bulk",
-                    "indexHTS": 17
-                }
-            ]
-        },
-        {
-            "chap": "1604",
-            "count": 3,
-            "data": [
-                {
-                    "htsno": "1604.14.40.00",
-                    "desc": "In bulk or in immediate containers weighing with their contents over <il>6.8 kg</il> each, not in oil",
-                    "indexHTS": 58
-                },
-                {
-                    "htsno": "1604.17.60.00",
-                    "desc": "In oil and in bulk or in immediate containers over 7 kg each",
-                    "indexHTS": 76
-                },
-                {
-                    "htsno": "1604.19.61.00",
-                    "desc": "In oil and in bulk or in immediate containers weighing with their contents over <il>7 kg</il> each",
-                    "indexHTS": 94
-                }
-            ]
-        },
-        {
-            "chap": "1806",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "1806.20",
-                    "desc": "Other preparations in blocks, slabs or bars, weighing more than 2 kg or in liquid, paste, powder, granular or other bulk form in containers or immediate packings, of a content exceeding 2 kg:",
-                    "indexHTS": 22
-                }
-            ]
-        },
-        {
-            "chap": "6305",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "6305.32.00",
-                    "desc": "Flexible intermediate bulk containers",
-                    "indexHTS": 4
-                }
-            ]
-        },
-        {
-            "chap": "6806",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "6806.10.00",
-                    "desc": "Slag wool, rock wool and similar mineral wools (including intermixtures thereof), in bulk, sheets or rolls",
+                    "htsno": null,
                     "indexHTS": 1
-                }
-            ]
-        },
-        {
-            "chap": "7019",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "7019.90.51.20",
-                    "desc": "Glass fibers in bulk",
-                    "indexHTS": 151
-                }
-            ]
-        },
-        {
-            "chap": "9902",
-            "count": 5,
-            "data": [
-                {
-                    "htsno": "9902.14.69",
-                    "desc": "Polycrystalline fibers containing by weight over 70 percent of alumina and less than 30 percent of silica, the foregoing containing no alkaline oxides or boric oxide, presented in bulk (provided for in subheading 6806.10.00)",
-                    "indexHTS": 1335
                 },
                 {
-                    "htsno": "9902.14.70",
-                    "desc": "Catalytic converter needled blanket mats of ceramic fibers, containing over 65 percent by weight of aluminum oxide and not over 3 percent of acrylic latex organic binder, of a basis weight greater than or equal to 1745 g/m2, measuring 10.0 mm or more in thickness; the foregoing presented in bulk, sheets or rolls, designed for use in motor vehicles of heading 8703 (provided for in subheading 6806.10.00).\n",
-                    "indexHTS": 1336
-                },
-                {
-                    "htsno": "9902.14.71",
-                    "desc": "Catalytic converter needled blanket mats of ceramic fibers, containing over 65 percent by weight of aluminum oxide and not over 3 percent by weight of acrylic latex organic binder, of a basis weight less than 1745 g/m2, measuring 5.0 mm or more but not over 9.9 mm in thickness; presented in bulk, sheets or rolls, designed for use in motor vehicles of heading 8703 (provided for in subheading 6806.10.00).\n",
-                    "indexHTS": 1337
-                },
-                {
-                    "htsno": "9902.14.72",
-                    "desc": "Catalytic converter needled blanket mats of ceramic fibers containing over 65 percent by weight of aluminum oxide, containing an acrylic latex organic binder of greater than 3 percent and less than 7 percent by weight, of a basis weight less than 1745 g/m2, measuring at least 5.0 mm or no more than 9.9 mm in thickness, in bulk, sheets or rolls, designed for motor vehicles of heading 8703 (provided for in subheading 6806.10.00).\n",
-                    "indexHTS": 1338
-                },
-                {
-                    "htsno": "9902.14.73",
-                    "desc": "Catalytic converter needled blanket mats of ceramic fibers, containing over 65 percent by weight of aluminum oxide and 3 percent or more but less than 7 percent by weight of acrylic latex organic binder, measuring 10.0 mm or more in thickness, of a basis weight greater than or equal to 1745 g/m2; presented in bulk, sheets or rolls, designed for use in motor vehicles of heading 8703 (provided for in subheading 6806.10.00).\n",
-                    "indexHTS": 1339
-                }
-            ]
-        }
-    ],
-    "dozen": [
-        {
-            "chap": "6203",
-            "count": 2,
-            "data": [
-                {
-                    "htsno": "6203.41.01",
-                    "desc": "Trousers and breeches, containing elastomeric fiber, water resistant, without belt loops, weighing more than 9 kg per dozen",
-                    "indexHTS": 139
-                },
-                {
-                    "htsno": "6203.41.25",
-                    "desc": "Trousers and breeches, containing elastomeric fiber, water resistant, without belt loops, weighing more than 9 kg per dozen",
-                    "indexHTS": 154
-                }
-            ]
-        },
-        {
-            "chap": "6204",
-            "count": 2,
-            "data": [
-                {
-                    "htsno": "6204.61.05",
-                    "desc": "Trousers and breeches, containing elastomeric fiber, water resistant, without belt loops, weighing more than 6 kg per dozen",
-                    "indexHTS": 264
-                },
-                {
-                    "htsno": "6204.61.60",
-                    "desc": "Trousers and breeches, containing elastomeric fiber, water resistant, without belt loops, weighing more than 6 kg per dozen",
-                    "indexHTS": 274
-                }
-            ]
-        },
-        {
-            "chap": "6911",
-            "count": 19,
-            "data": [
-                {
-                    "htsno": "6911.10.15.00",
-                    "desc": "Valued not over $31.50 per dozen pieces",
-                    "indexHTS": 5
-                },
-                {
-                    "htsno": "6911.10.52.00",
-                    "desc": "Cups valued over $8 but not over $29 per dozen; saucers valued over $5.25 but not over $18.75 per dozen; soups, oatmeals and cereals valued over $9.30 but not over $33 per dozen; plates not over 22.9 cm in maximum diameter and valued over $8.50 but not over $31 per dozen; plates over 22.9 but not over 27.9 cm in maximum diameter and valued over $11.50 but not over $41 per dozen; platters or chop dishes valued over $40 but not over $143 per dozen; sugars valued over $23 but not over $85 per dozen; creamers valued over $20 but not over $75 per dozen; and beverage servers valued over $50 but not over $180 per dozen",
-                    "indexHTS": 22
-                },
-                {
-                    "htsno": "6911.10.58.00",
-                    "desc": "Cups valued over $29 per dozen; saucers valued over $18.75 per dozen; soups, oatmeals and cereals valued over $33 per dozen; plates not over 22.9 cm in maximum diameter and valued over $31 per dozen; plates over 22.9 but not over 27.9 cm in maximum diameter and valued over $41 per dozen; platters or chop dishes valued over $143 per dozen; sugars valued over $85 per dozen; creamers valued over $75 per dozen; and beverage servers valued over $180 per dozen",
-                    "indexHTS": 23
-                }
-            ]
-        },
-        {
-            "chap": "6912",
-            "count": 9,
-            "data": [
-                {
-                    "htsno": "6912.00.45.00",
-                    "desc": "Cups valued over $5.25 per dozen; saucers valued over $3 per dozen; soups, oatmeals and cereals valued over $6 per dozen; plates not over 22.9 cm in maximum diameter and valued over $6 per dozen; plates over 22.9 but not over 27.9 cm in maximum diameter and valued over $8.50 per dozen; platters or chop dishes valued over $35 per dozen; sugars valued over $21 per dozen; creamers valued over $15 per dozen; and beverage servers valued over $42 per dozen",
-                    "indexHTS": 16
-                }
-            ]
-        },
-        {
-            "chap": "7113",
-            "count": 1,
-            "data": [
-                {
-                    "htsno": "7113.11.20.00",
-                    "desc": "Valued not over $18 per dozen pieces or parts",
-                    "indexHTS": 5
-                }
-            ]
-        },
-        {
-            "chap": "7117",
-            "count": 3,
-            "data": [
-                {
-                    "htsno": "7117.90.10.00",
-                    "desc": "Necklaces, valued not over 30 cents per dozen, composed wholly of plastic shapes mounted on fiber string",
-                    "indexHTS": 14
-                },
-                {
-                    "htsno": null,
-                    "desc": "Valued not over 20 cents per dozen pieces or parts:",
-                    "indexHTS": 19
-                },
-                {
-                    "htsno": null,
-                    "desc": "Valued over 20 cents per dozen pieces or parts:",
-                    "indexHTS": 22
-                }
-            ]
-        },
-        {
-            "chap": "9113",
-            "count": 3,
-            "data": [
-                {
-                    "htsno": "9113.20.20.00",
-                    "desc": "Valued not over $5 per dozen",
-                    "indexHTS": 4
-                },
-                {
-                    "htsno": "9113.20.40.00",
-                    "desc": "Valued over $5 per dozen",
-                    "indexHTS": 5
-                },
-                {
-                    "htsno": "9113.20.60.00",
-                    "desc": "Of watch bracelets, valued not over $12 per dozen",
-                    "indexHTS": 7
-                }
-            ]
-        },
-        {
-            "chap": "9603",
-            "count": 2,
-            "data": [
-                {
-                    "htsno": "9603.10.05.00",
-                    "desc": "In any calendar year prior to the entry, or withdrawal from warehouse for comsumption, of 61,655 dozen whiskbrooms classifiable under subheadings 9603.10.05 to 9603.10.35, inclusive",
-                    "indexHTS": 4
-                },
-                {
-                    "htsno": "9603.10.40.00",
-                    "desc": "In any calendar year prior to the entry, or withdrawal from warehouse for consumption, of 121,478 dozen brooms classifiable under subheadings 9603.10.40 to 9603.10.60, inclusive",
-                    "indexHTS": 9
-                }
-            ]
-        },
-        {
-            "chap": "9606",
-            "count": 2,
-            "data": [
-                {
-                    "htsno": "9606.10.40.00",
-                    "desc": "Valued not over 20\u00a2 per dozen pieces or parts",
-                    "indexHTS": 2
-                },
-                {
-                    "htsno": "9606.10.80.00",
-                    "desc": "Valued over 20\u00a2 per dozen pieces or parts",
+                    "htsno": "0106.12.01.00",
                     "indexHTS": 3
                 }
             ]
         },
         {
-            "chap": "9613",
+            "chap": "0208",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "0208.40.01.00",
+                    "indexHTS": 3
+                }
+            ]
+        },
+        {
+            "chap": "0210",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "0210.92.01.00",
+                    "indexHTS": 14
+                }
+            ]
+        },
+        {
+            "chap": "1504",
             "count": 2,
             "data": [
                 {
-                    "htsno": "9613.80.60.00",
-                    "desc": "Valued not over $5 per dozen pieces",
-                    "indexHTS": 14
+                    "htsno": "1504",
+                    "indexHTS": 0
                 },
                 {
-                    "htsno": "9613.80.80.00",
-                    "desc": "Valued over $5 per dozen pieces",
+                    "htsno": "1504.30.00.00",
+                    "indexHTS": 10
+                }
+            ]
+        },
+        {
+            "chap": "9902",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9902.12.50",
+                    "indexHTS": 1127
+                }
+            ]
+        }
+    ],
+    "breeding": [
+        {
+            "chap": "0101",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0101.21.00",
+                    "indexHTS": 2
+                }
+            ]
+        },
+        {
+            "chap": "0102",
+            "count": 4,
+            "data": [
+                {
+                    "htsno": "0102.21.00",
+                    "indexHTS": 2
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 29
+                },
+                {
+                    "htsno": "0102.31.00",
+                    "indexHTS": 36
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 53
+                }
+            ]
+        },
+        {
+            "chap": "0103",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "0103.10.00.00",
+                    "indexHTS": 1
+                },
+                {
+                    "htsno": "0103.92.00.20",
+                    "indexHTS": 9
+                }
+            ]
+        },
+        {
+            "chap": "0105",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": null,
+                    "indexHTS": 3
+                }
+            ]
+        },
+        {
+            "chap": "9813",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9813.00.60",
+                    "indexHTS": 13
+                }
+            ]
+        }
+    ],
+    "production": [
+        {
+            "chap": "1701",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "1701.13.20.00",
+                    "indexHTS": 9
+                },
+                {
+                    "htsno": "1701.14.20.00",
+                    "indexHTS": 16
+                }
+            ]
+        },
+        {
+            "chap": "2905",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "2905.11.20.10",
+                    "indexHTS": 5
+                }
+            ]
+        },
+        {
+            "chap": "4911",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "4911.91.15.00",
+                    "indexHTS": 10
+                }
+            ]
+        },
+        {
+            "chap": "7017",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "7017.10.30.00",
+                    "indexHTS": 2
+                }
+            ]
+        },
+        {
+            "chap": "7020",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "7020.00.30.00",
+                    "indexHTS": 1
+                }
+            ]
+        },
+        {
+            "chap": "8402",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "8402.11.00.00",
+                    "indexHTS": 2
+                },
+                {
+                    "htsno": "8402.12.00.00",
+                    "indexHTS": 3
+                }
+            ]
+        },
+        {
+            "chap": "8430",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "8430.49.40.00",
+                    "indexHTS": 17
+                }
+            ]
+        },
+        {
+            "chap": "8431",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "8431.43.40.00",
+                    "indexHTS": 24
+                }
+            ]
+        },
+        {
+            "chap": "8523",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "8523",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "8547",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "8547.10.40.00",
+                    "indexHTS": 2
+                }
+            ]
+        },
+        {
+            "chap": "8905",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "8905",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": "8905.20.00.00",
+                    "indexHTS": 2
+                }
+            ]
+        },
+        {
+            "chap": "9028",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9028",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "9029",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "9029",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": "9029.10",
+                    "indexHTS": 1
+                }
+            ]
+        },
+        {
+            "chap": "9803",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "9803.00.50",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "9813",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9813.00.25",
+                    "indexHTS": 6
+                },
+                {
+                    "htsno": "9813.00.55",
+                    "indexHTS": 12
+                }
+            ]
+        },
+        {
+            "chap": "9902",
+            "count": 7,
+            "data": [
+                {
+                    "htsno": "9902.12.34",
+                    "indexHTS": 1112
+                },
+                {
+                    "htsno": "9902.15.82",
+                    "indexHTS": 1442
+                },
+                {
+                    "htsno": "9902.15.86",
+                    "indexHTS": 1446
+                },
+                {
+                    "htsno": "9902.15.95",
+                    "indexHTS": 1455
+                },
+                {
+                    "htsno": "9902.17.42",
+                    "indexHTS": 1598
+                },
+                {
+                    "htsno": "9902.17.43",
+                    "indexHTS": 1599
+                },
+                {
+                    "htsno": "9902.17.44",
+                    "indexHTS": 1600
+                }
+            ]
+        }
+    ],
+    "meat": [
+        {
+            "chap": "0201",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0201",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0202",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0202",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0203",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0203",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0204",
+            "count": 4,
+            "data": [
+                {
+                    "htsno": "0204",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 2
+                },
+                {
+                    "htsno": null,
                     "indexHTS": 15
+                },
+                {
+                    "htsno": "0204.50.00.00",
+                    "indexHTS": 27
+                }
+            ]
+        },
+        {
+            "chap": "0205",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0205.00.00.00",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0207",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0207",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0208",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "0208",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0209",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0209",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0210",
+            "count": 9,
+            "data": [
+                {
+                    "htsno": "0210",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 1
+                },
+                {
+                    "htsno": "0210.20.00.00",
+                    "indexHTS": 11
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 12
+                },
+                {
+                    "htsno": "0210.99.20.00",
+                    "indexHTS": 17
+                }
+            ]
+        },
+        {
+            "chap": "0302",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0302",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0303",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0303",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0304",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0304",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "0811",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "0811.90.30.00",
+                    "indexHTS": 26
+                }
+            ]
+        },
+        {
+            "chap": "1601",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "1601.00",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "1602",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "1602",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": "1602.90.10.00",
+                    "indexHTS": 63
+                }
+            ]
+        },
+        {
+            "chap": "1603",
+            "count": 2,
+            "data": [
+                {
+                    "htsno": "1603.00",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": "1603.00.90.10",
+                    "indexHTS": 3
+                }
+            ]
+        },
+        {
+            "chap": "1604",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "1604.20.05",
+                    "indexHTS": 97
+                }
+            ]
+        },
+        {
+            "chap": "1605",
+            "count": 16,
+            "data": [
+                {
+                    "htsno": "1605.10.05",
+                    "indexHTS": 2
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 6
+                },
+                {
+                    "htsno": "1605.21.05.00",
+                    "indexHTS": 34
+                },
+                {
+                    "htsno": "1605.29.05.00",
+                    "indexHTS": 41
+                },
+                {
+                    "htsno": "1605.30.05",
+                    "indexHTS": 46
+                },
+                {
+                    "htsno": null,
+                    "indexHTS": 50
+                },
+                {
+                    "htsno": "1605.40.05.00",
+                    "indexHTS": 57
+                },
+                {
+                    "htsno": "1605.40.10.10",
+                    "indexHTS": 59
+                },
+                {
+                    "htsno": "1605.51.05.00",
+                    "indexHTS": 63
+                },
+                {
+                    "htsno": "1605.52.05.00",
+                    "indexHTS": 68
+                },
+                {
+                    "htsno": "1605.53.05.00",
+                    "indexHTS": 71
+                },
+                {
+                    "htsno": "1605.54.05.00",
+                    "indexHTS": 74
+                },
+                {
+                    "htsno": "1605.55.05.00",
+                    "indexHTS": 81
+                },
+                {
+                    "htsno": "1605.56.05.00",
+                    "indexHTS": 84
+                },
+                {
+                    "htsno": "1605.57.05.00",
+                    "indexHTS": 95
+                },
+                {
+                    "htsno": "1605.58.05.00",
+                    "indexHTS": 98
+                },
+                {
+                    "htsno": "1605.59.05.00",
+                    "indexHTS": 101
+                }
+            ]
+        },
+        {
+            "chap": "1902",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "1902",
+                    "indexHTS": 0
+                }
+            ]
+        },
+        {
+            "chap": "2301",
+            "count": 4,
+            "data": [
+                {
+                    "htsno": "2301",
+                    "indexHTS": 0
+                },
+                {
+                    "htsno": "2301.10.00.00",
+                    "indexHTS": 1
+                }
+            ]
+        },
+        {
+            "chap": "8438",
+            "count": 3,
+            "data": [
+                {
+                    "htsno": "8438.50.00",
+                    "indexHTS": 7
+                },
+                {
+                    "htsno": "8438.50.00.10",
+                    "indexHTS": 8
+                },
+                {
+                    "htsno": "8438.90.90.60",
+                    "indexHTS": 17
+                }
+            ]
+        },
+        {
+            "chap": "9801",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9801.00.10.15",
+                    "indexHTS": 4
+                }
+            ]
+        },
+        {
+            "chap": "9904",
+            "count": 1,
+            "data": [
+                {
+                    "htsno": "9904.02.60",
+                    "indexHTS": 29
                 }
             ]
         }
