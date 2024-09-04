@@ -1,0 +1,1091 @@
+{
+    "0101": {
+        "0101": {
+            "ocurrence": 2,
+            "htsdata": {
+                "htsno": "0101",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "mules",
+                "horses"
+            ]
+        },
+        "EH index - 1": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 1
+            },
+            "query_str": [
+                "horses"
+            ]
+        },
+        "0101.21.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0101.21.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "breeding"
+            ]
+        }
+    },
+    "0205": {
+        "0205.00.00.00": {
+            "ocurrence": 3,
+            "htsdata": {
+                "htsno": "0205.00.00.00",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "mules",
+                "horses",
+                "meat"
+            ]
+        }
+    },
+    "0206": {
+        "0206": {
+            "ocurrence": 2,
+            "htsdata": {
+                "htsno": "0206",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "mules",
+                "horses"
+            ]
+        },
+        "0206.90.00.40": {
+            "ocurrence": 2,
+            "htsdata": {
+                "htsno": "0206.90.00.40",
+                "indexHTS": 13
+            },
+            "query_str": [
+                "mules",
+                "horses"
+            ]
+        }
+    },
+    "0208": {
+        "0208.40.01.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0208.40.01.00",
+                "indexHTS": 3
+            },
+            "query_str": [
+                "mammals"
+            ]
+        },
+        "0208": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0208",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0210": {
+        "0210.92.01.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0210.92.01.00",
+                "indexHTS": 14
+            },
+            "query_str": [
+                "mammals"
+            ]
+        },
+        "0210": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0210",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 1": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 1
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "0210.20.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0210.20.00.00",
+                "indexHTS": 11
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 12": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 12
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "0210.99.20.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0210.99.20.00",
+                "indexHTS": 17
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "9902": {
+        "9902.12.50": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.12.50",
+                "indexHTS": 1127
+            },
+            "query_str": [
+                "mammals"
+            ]
+        },
+        "9902.12.34": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.12.34",
+                "indexHTS": 1112
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.15.82": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.15.82",
+                "indexHTS": 1442
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.15.86": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.15.86",
+                "indexHTS": 1446
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.15.95": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.15.95",
+                "indexHTS": 1455
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.17.42": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.17.42",
+                "indexHTS": 1598
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.17.43": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.17.43",
+                "indexHTS": 1599
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9902.17.44": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9902.17.44",
+                "indexHTS": 1600
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "9813": {
+        "9813.00.60": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9813.00.60",
+                "indexHTS": 13
+            },
+            "query_str": [
+                "breeding"
+            ]
+        },
+        "9813.00.25": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9813.00.25",
+                "indexHTS": 6
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9813.00.55": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9813.00.55",
+                "indexHTS": 12
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "9804": {
+        "9804.00.35": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9804.00.35",
+                "indexHTS": 8
+            },
+            "query_str": [
+                "horses"
+            ]
+        }
+    },
+    "0106": {
+        "EH index - 1": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 1
+            },
+            "query_str": [
+                "mammals"
+            ]
+        },
+        "0106.12.01.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0106.12.01.00",
+                "indexHTS": 3
+            },
+            "query_str": [
+                "mammals"
+            ]
+        }
+    },
+    "1504": {
+        "1504": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1504",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "mammals"
+            ]
+        },
+        "1504.30.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1504.30.00.00",
+                "indexHTS": 10
+            },
+            "query_str": [
+                "mammals"
+            ]
+        }
+    },
+    "0102": {
+        "0102.21.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0102.21.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "breeding"
+            ]
+        },
+        "EH index - 29": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 29
+            },
+            "query_str": [
+                "breeding"
+            ]
+        },
+        "0102.31.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0102.31.00",
+                "indexHTS": 36
+            },
+            "query_str": [
+                "breeding"
+            ]
+        },
+        "EH index - 53": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 53
+            },
+            "query_str": [
+                "breeding"
+            ]
+        }
+    },
+    "0103": {
+        "0103.10.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0103.10.00.00",
+                "indexHTS": 1
+            },
+            "query_str": [
+                "breeding"
+            ]
+        },
+        "0103.92.00.20": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0103.92.00.20",
+                "indexHTS": 9
+            },
+            "query_str": [
+                "breeding"
+            ]
+        }
+    },
+    "0105": {
+        "EH index - 3": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 3
+            },
+            "query_str": [
+                "breeding"
+            ]
+        }
+    },
+    "1701": {
+        "1701.13.20.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1701.13.20.00",
+                "indexHTS": 9
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "1701.14.20.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1701.14.20.00",
+                "indexHTS": 16
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "2905": {
+        "2905.11.20.10": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "2905.11.20.10",
+                "indexHTS": 5
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "4911": {
+        "4911.91.15.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "4911.91.15.00",
+                "indexHTS": 10
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "7017": {
+        "7017.10.30.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "7017.10.30.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "7020": {
+        "7020.00.30.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "7020.00.30.00",
+                "indexHTS": 1
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8402": {
+        "8402.11.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8402.11.00.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "8402.12.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8402.12.00.00",
+                "indexHTS": 3
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8430": {
+        "8430.49.40.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8430.49.40.00",
+                "indexHTS": 17
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8431": {
+        "8431.43.40.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8431.43.40.00",
+                "indexHTS": 24
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8523": {
+        "8523": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8523",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8547": {
+        "8547.10.40.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8547.10.40.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "8905": {
+        "8905": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8905",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "8905.20.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8905.20.00.00",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "9028": {
+        "9028": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9028",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "9029": {
+        "9029": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9029",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "production"
+            ]
+        },
+        "9029.10": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9029.10",
+                "indexHTS": 1
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "9803": {
+        "9803.00.50": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9803.00.50",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "production"
+            ]
+        }
+    },
+    "0201": {
+        "0201": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0201",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0202": {
+        "0202": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0202",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0203": {
+        "0203": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0203",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0204": {
+        "0204": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0204",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 2": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 2
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 15": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 15
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "0204.50.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0204.50.00.00",
+                "indexHTS": 27
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0207": {
+        "0207": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0207",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0209": {
+        "0209": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0209",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0302": {
+        "0302": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0302",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0303": {
+        "0303": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0303",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0304": {
+        "0304": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0304",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "0811": {
+        "0811.90.30.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "0811.90.30.00",
+                "indexHTS": 26
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1601": {
+        "1601.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1601.00",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1602": {
+        "1602": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1602",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1602.90.10.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1602.90.10.00",
+                "indexHTS": 63
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1603": {
+        "1603.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1603.00",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1603.00.90.10": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1603.00.90.10",
+                "indexHTS": 3
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1604": {
+        "1604.20.05": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1604.20.05",
+                "indexHTS": 97
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1605": {
+        "1605.10.05": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.10.05",
+                "indexHTS": 2
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 6": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 6
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.21.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.21.05.00",
+                "indexHTS": 34
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.29.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.29.05.00",
+                "indexHTS": 41
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.30.05": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.30.05",
+                "indexHTS": 46
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "EH index - 50": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": null,
+                "indexHTS": 50
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.40.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.40.05.00",
+                "indexHTS": 57
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.40.10.10": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.40.10.10",
+                "indexHTS": 59
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.51.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.51.05.00",
+                "indexHTS": 63
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.52.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.52.05.00",
+                "indexHTS": 68
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.53.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.53.05.00",
+                "indexHTS": 71
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.54.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.54.05.00",
+                "indexHTS": 74
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.55.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.55.05.00",
+                "indexHTS": 81
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.56.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.56.05.00",
+                "indexHTS": 84
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.57.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.57.05.00",
+                "indexHTS": 95
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.58.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.58.05.00",
+                "indexHTS": 98
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "1605.59.05.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1605.59.05.00",
+                "indexHTS": 101
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "1902": {
+        "1902": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "1902",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "2301": {
+        "2301": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "2301",
+                "indexHTS": 0
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "2301.10.00.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "2301.10.00.00",
+                "indexHTS": 1
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "8438": {
+        "8438.50.00": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8438.50.00",
+                "indexHTS": 7
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "8438.50.00.10": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8438.50.00.10",
+                "indexHTS": 8
+            },
+            "query_str": [
+                "meat"
+            ]
+        },
+        "8438.90.90.60": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "8438.90.90.60",
+                "indexHTS": 17
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "9801": {
+        "9801.00.10.15": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9801.00.10.15",
+                "indexHTS": 4
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    },
+    "9904": {
+        "9904.02.60": {
+            "ocurrence": 1,
+            "htsdata": {
+                "htsno": "9904.02.60",
+                "indexHTS": 29
+            },
+            "query_str": [
+                "meat"
+            ]
+        }
+    }
+}
