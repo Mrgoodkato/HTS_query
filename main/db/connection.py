@@ -1,5 +1,6 @@
 import pymongo
 import db.credentialsDB as credentialsDB
+from utils import util_functions
 
 class Connection:
     """Class that connects to the database creating all necessary methods for connection and closing connection, as well as the base database for adding new HTS records and the string_dict collection too
@@ -101,11 +102,7 @@ class Connection:
 
             for data in document['chaps']:
                 chapter = connection.collection_records.find_one({'_id': data['chap']})
-                chapters.append({
-                    'chap': chapter['header'],
-                    'count': data['count'],
-                    'data': chapter['data']
-                })
+                chapters.append(util_functions.checkStringDescriptions(chapter, document['string'], data['count']))
             
             return chapters
 

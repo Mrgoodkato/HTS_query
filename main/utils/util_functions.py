@@ -3,7 +3,7 @@ import re
 import json
 from collections import Counter
 from typing import List, Dict, Any
-from utils.global_vars import key_words
+from utils.global_vars import key_words, punctuation_pattern
 
 def removeEmptyKeysAndSave(htsdata: List[Dict[str, Any]], path: str):
     """This function removes the empty keys from the json chapter and saves it to the desired path
@@ -97,6 +97,33 @@ def countStringOccurences(stringDict: dict[str,list[str]]) -> dict[str,list[dict
 
     return result
 
+def checkStringDescriptions(hts_document: list[str,any], query_string: str, count: int) -> dict[str,any]:
+    """Function that goes through the hts document gathered from the db and gets the relevant records with their index and hts number if present and returns them in a dictionary
 
+    Args:
+        hts_document (list[str,any]): Hts document gathered from DB
+        query_string (str): String that will be searched against Hts document
+        count (int): Count of occurrences of the string in the Hts document
+
+    Returns:
+        dict[str,any]: Resulting dictionary with chapter header, count and Hts document htsno's and indexes
+    """
+
+    result = {
+        'chap': hts_document['header'],
+        'count': count,
+        'data': []
+    }
+    for key, doc in enumerate(hts_document['data']):
+        
+        description = re.sub(punctuation_pattern, '', doc['description'].lower())
+        if re.search(query_string, description):
+            
+            result['data'].append({
+                'htsno': doc.get('htsno', None),
+                'indexHTS': key
+            })
+    
+    return result
 
         
