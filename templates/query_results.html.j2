@@ -1,0 +1,21 @@
+{% extends "layout.html.j2" %}
+{% block content %}
+    {% for result in query_result %}
+    {% for item in result %}
+        {% for key, value in item.items() %}
+
+            {% if key == "htsno" %}
+                <h1>HTS Section:</h1>
+                <p>{{value}}</p>
+            {% elif key == "description" %}
+                <h1>Description</h1>
+                <p>{{value}}</p>    
+            {% else %}
+                <h2>{{key}}</h2>
+                <p>{{value}}</p>
+            {% endif %}
+
+        {% endfor %}
+    {% endfor %}    
+    {% endfor %}
+{% endblock content %}
