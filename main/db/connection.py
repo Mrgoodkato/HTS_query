@@ -14,8 +14,6 @@ class Connection:
         """
         credentials = credentialsDB.loadEnvironmentVals()
         if testing:
-            option = input('You are using the local DB for testing, enter Y to continue, N to cancel')
-            if option == 'N': return
             db_path = 'localhost'
             db_port = 27017
         else:
