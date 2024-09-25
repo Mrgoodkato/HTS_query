@@ -125,5 +125,3 @@ def checkStringDescriptions(hts_document: list[str,any], query_string: str, coun
             })
     
     return result
-
-        

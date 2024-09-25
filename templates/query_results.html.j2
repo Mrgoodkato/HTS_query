@@ -5,17 +5,8 @@
         <div class="content_container">
         {% for key, value in item.items() %}
             <div class="item_container">
-            
-            {% if key == "htsno" %}
-                <h1>HTS Section:</h1>
+                <h1>{{key}}</h1>
                 <p>{{value}}</p>
-            {% elif key == "description" %}
-                <h1>Description</h1>
-                <p>{{value}}</p>    
-            {% else %}
-                <h2>{{key}}</h2>
-                <p>{{value}}</p>
-            {% endif %}
             </div>
         {% endfor %}
         </div>

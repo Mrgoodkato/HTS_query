@@ -11,8 +11,9 @@ def queryHTSNumber(input_query: list[str], testing: bool):
     db_query_result = connection.queryRecordsHTS(query_list)
     connection.closeConnection()
 
-    for index, result in enumerate(db_query_result):
-
+    #First process, raw JSON format
+    for index, result in enumerate(db_query_result):        
+        
         query_result.append(
             searchEHIndents(grabQueryRecords(result['data'], query_list[index]), result['data'])
         )
