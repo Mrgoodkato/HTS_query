@@ -2,8 +2,10 @@
 {% block content %}
     {% for result in query_result %}
     {% for item in result %}
+        <div class="content_container">
         {% for key, value in item.items() %}
-
+            <div class="item_container">
+            
             {% if key == "htsno" %}
                 <h1>HTS Section:</h1>
                 <p>{{value}}</p>
@@ -14,8 +16,9 @@
                 <h2>{{key}}</h2>
                 <p>{{value}}</p>
             {% endif %}
-
+            </div>
         {% endfor %}
+        </div>
     {% endfor %}    
     {% endfor %}
 {% endblock content %}
