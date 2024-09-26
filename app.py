@@ -14,9 +14,8 @@ def index():
 @app.route('/process_query')
 def process_query():
     query = request.args['user_input']
-    #return query_hts_db.queryHTSNumber([query], testing=True)
-    return render_template('query_results.html.j2', 
-                            query_result=query_hts_db.queryHTSNumber([query], testing=True))
+    query_result = query_hts_db.queryHTSNumber([query], testing=True)
+    return render_template('query_results.html.j2', query_result=query_result)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -2,20 +2,22 @@
 {% block content %}
     {% for result in query_result %}
         <div class="content_container">
-        <h1>HTS number:</h1>
-        <p>{{result.htsno}}</p>
-        <h1>Description</h1>
-        <p>{{result.description}}</p>
-        <h1>Details</h1>
-        {% for item in result %}
-            {% if key != 'htsno' or key != 'description' %}
-                <div class="item_container"></div>
-                    <h1>{{key}}</h1>
+            <h1>HTS number:</h1>
+            <p>{{result.htsno}}</p>
+            <h1>Description:</h1>
+            <p>{{result.description}}</p>
+            <button id="details_btn">Details</button>
+            <div class="item_container">
+        {% for key, value in result.items() %}
+            {% if key != 'htsno' and key != 'description' %}
+                <div class="inner_item">
+                    <h2>{{key | capitalize}}</h2>
                     <p>{{value}}</p>
                 </div>
             {% else %}
-            {% endif %}
+            {% endif %} 
         {% endfor %}
+            </div>
         </div>  
     {% endfor %}
 {% endblock content %}

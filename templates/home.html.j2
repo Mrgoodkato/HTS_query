@@ -1,9 +1,11 @@
 {% extends "layout.html.j2" %}
 {% block content %}
-    <h1>Please enter your query:</h1>
-    <form action="{{ url_for('process_query') }}" method="GET">
-        <label for="user_input">Enter your HTS code</label>
-        <input type="text" name="user_input" required>
-        <button>Query</button>
-    </form>
+    <div class="content_container">
+        <h1>Please enter your query:</h1>
+        <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
+            <label for="user_input">Enter your HTS code</label>
+            <input type="text" name="user_input" required>
+            <button>Query</button>
+        </form>
+    </div>
 {% endblock content %}
