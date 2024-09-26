@@ -1,15 +1,21 @@
 {% extends "layout.html.j2" %}
 {% block content %}
     {% for result in query_result %}
-    {% for item in result %}
         <div class="content_container">
-        {% for key, value in item.items() %}
-            <div class="item_container">
-                <h1>{{key}}</h1>
-                <p>{{value}}</p>
-            </div>
+        <h1>HTS number:</h1>
+        <p>{{result.htsno}}</p>
+        <h1>Description</h1>
+        <p>{{result.description}}</p>
+        <h1>Details</h1>
+        {% for item in result %}
+            {% if key != 'htsno' or key != 'description' %}
+                <div class="item_container"></div>
+                    <h1>{{key}}</h1>
+                    <p>{{value}}</p>
+                </div>
+            {% else %}
+            {% endif %}
         {% endfor %}
-        </div>
-    {% endfor %}    
+        </div>  
     {% endfor %}
 {% endblock content %}

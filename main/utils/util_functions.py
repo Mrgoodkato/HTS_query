@@ -125,3 +125,41 @@ def checkStringDescriptions(hts_document: list[str,any], query_string: str, coun
             })
     
     return result
+
+def createDisplayResult(raw_result: list[dict[str,any]]):
+    
+    display_result = {}
+
+    for item in raw_result:
+
+        for key, val in item.items():
+            if val == None: continue
+            if key == 'indent' or key == 'indexHTSRec' or key == 'missing': continue
+            if key == 'units': 
+                display_result[key] = ', '.join(val)
+                continue
+            if key == 'footnotes' and key not in display_result:
+                display_result[key] = processFootnotes(val)
+                continue
+
+            if key not in display_result:
+                display_result[key] = val
+            elif key == 'htsno':
+                display_result[key] = val
+            elif isinstance(val, list) and key in display_result:
+                display_result[key].extend(val)
+            elif isinstance(val, str) and key in display_result:
+                display_result[key] += ' ' + val
+                
+            
+    return display_result
+
+def processFootnotes(footnotes: list[dict[str,any]]):
+
+    result = ''
+    for note in footnotes:
+        for key, val in note.items():
+            if key == 'columns' or key == 'marker' or key == 'type': continue
+            result = val
+
+    return result
