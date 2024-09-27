@@ -1,7 +1,10 @@
-const detailsButton = document.getElementById('details_btn')
+const detailsButton = document.getElementById('details_btn');
 
-detailsButton.addEventListener('click', ()=>{
+if(detailsButton){
+    detailsButton.addEventListener('click', ()=>{
 
-    console.log('Click!')
+        console.log('Click!')
+    
+    })
+}
 
-})

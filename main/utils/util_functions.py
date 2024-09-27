@@ -163,3 +163,29 @@ def processFootnotes(footnotes: list[dict[str,any]]):
             result = val
 
     return result
+
+def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
+    """Function that takes the textarea input from the user, converts it to lists according to matches with HTS patterns, if they don't match, it adds to the error list, if it does, it adds to the result
+
+    Args:
+        raw_text (str): Raw textarea user input
+
+    Returns:
+        dict[str,list[str]]: Dictionary containing all the queries in list and all the errors in another list
+    """
+    hts_pattern = r'(?:[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{8,10}$)'
+    raw_list = raw_text.splitlines()
+    print(raw_list)
+    final_list = {
+        'query_list': [],
+        'errors': []
+    }
+    for string in raw_list:
+        
+        if re.match(hts_pattern, string):
+            final_list['query_list'].append(string)
+        else:
+            final_list['errors'].append(string)
+
+    print(final_list)
+    return final_list

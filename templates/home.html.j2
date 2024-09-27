@@ -1,10 +1,18 @@
 {% extends "layout.html.j2" %}
 {% block content %}
     <div class="content_container">
-        <h1>Please enter your query:</h1>
+        <h1>Input your HTS numbers:</h1>
         <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
-            <label for="user_input">Enter your HTS code</label>
-            <input type="text" name="user_input" required>
+            <label for="user_input">Enter your HTS codes</label>
+            <textarea rows="5"  name="user_input" required placeholder="Separate each code in a new line"></textarea>
+            <button>Query</button>
+        </form>
+    </div>
+    <div class="content_container">
+        <h1>Upload your file with HTS numbers:</h1>
+        <form action="{{ url_for('process_file_query') }}" method="GET" class="form_container">
+            <label for="user_input">Enter your CSV file with HTS codes</label>
+            <input type="file" name="user_input" required>
             <button>Query</button>
         </form>
     </div>

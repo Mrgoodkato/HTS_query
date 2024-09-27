@@ -1,5 +1,8 @@
 body{
     color: darkslategrey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 label{
@@ -7,10 +10,29 @@ label{
     font-size: smaller;
 }
 
-input{
+textarea{
     border: 1px darkgray solid;
     border-radius: 5px;
     background-color: white;
+    width: 100%;
+    resize: vertical;
+}
+
+input::-webkit-file-upload-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: darkcyan;
+    font-weight: 700;
+    color: white;
+    font-size: x-small;
+}
+
+input::-webkit-file-upload-button:hover{
+    background-color: rgb(2, 171, 171);
 }
 
 button{
@@ -25,7 +47,7 @@ button{
 }
 
 button:active{
-    background-color: rgb(0, 34, 34);
+    background-color: darkgreen !important;
 }
 
 button:hover{
@@ -33,11 +55,11 @@ button:hover{
 }
 
 .content_container{
-    width: 33%;
+    width: 50%;
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     gap: 1px;
     align-items: start;
     flex-wrap: wrap;
@@ -45,7 +67,7 @@ button:hover{
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px grey solid;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .item_container{
@@ -60,10 +82,11 @@ button:hover{
 }
 
 .form_container{
+    width: 85%;
     line-height: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: start;
     border: 1px lightgray solid;
     border-radius: 10px;
