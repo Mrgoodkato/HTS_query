@@ -55,8 +55,7 @@ def grabQueryRecords(hts_record: list[dict[str, any]], query: dict[str, any]) ->
     result = []
     index_query = 0
     queryList = parseQueryList(query)
-    print(queryList)
-
+    
     while index_query < len(queryList):
 
         for key, record in enumerate(hts_record):
