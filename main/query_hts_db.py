@@ -13,14 +13,16 @@ def queryHTSNumber(input_query: list[str], testing: bool):
     connection.closeConnection()
 
     for index, result in enumerate(db_query_result):        
-        
         final_result = []
+        if result == 'No result': continue
         query_result.append(
             searchEHIndents(grabQueryRecords(result['data'], query_list[index]), result['data'])
         )
 
         for query in query_result:
             final_result.append(createDisplayResult(query))
+    
+    if not final_result: return None
     
     return final_result
     
