@@ -15,8 +15,9 @@ def queryHTSNumber(input_query: list[str], testing: bool):
     for index, result in enumerate(db_query_result):        
         
         final_result = []
+        grabbed_records = grabQueryRecords(result['data'], query_list[index])
         query_result.append(
-            searchEHIndents(grabQueryRecords(result['data'], query_list[index]), result['data'])
+            searchEHIndents(grabbed_records, result['data'])
         )
 
         for query in query_result:

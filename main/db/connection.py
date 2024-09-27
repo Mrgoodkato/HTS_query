@@ -67,7 +67,7 @@ class Connection:
                     {'header': group['main_group']}
                 )
                 if document == None: 
-                    result.append('No result')
+                    result.append({'data':'Missing record'})
                     print(f"Warning, no result found for {group['main_group']}")
                 else: result.append(document)
             except Exception as exception:
