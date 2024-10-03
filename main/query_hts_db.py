@@ -14,7 +14,9 @@ def queryHTSNumber(input_query: list[str], testing: bool):
 
     for index, result in enumerate(db_query_result):        
         final_result = []
-        if result == 'No result': continue
+        if result == 'No result':
+            final_result.append('No result')
+            continue
         grabbed_records = grabQueryRecords(result['data'], query_list[index])
         query_result.append(
             searchEHIndents(grabbed_records, result['data'])

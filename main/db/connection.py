@@ -17,8 +17,6 @@ class Connection:
             db_path = 'localhost'
             db_port = 27017
         else:
-            option = input('You are using the production DB, enter Y to continue, N to cancel')
-            if option == 'N':return
             db_path = f"{credentials['PATH_DB']}{credentials['USER_DB']}:{credentials['PW_DB']}@{credentials['CLUSTER_DB']}"
             db_port = None
 
@@ -56,6 +54,13 @@ class Connection:
 
         Returns:
             list[dict[str,any]]: Resulting records from DB in list.
+            e.g:
+            [{
+                id:ObjectId,
+                header:str,
+                data:list[dict[str,any]]
+            }]
+            OR 'No result'
         """
 
         result = []
