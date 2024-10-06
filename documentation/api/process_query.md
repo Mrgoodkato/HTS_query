@@ -21,7 +21,7 @@
 - header: str,
 - data: list[dict] -> HTS record raw data
 - } 
-- OR { data: 'Missing Record' }]
+- OR { data: 'Missing record' }]
 ### 4) FOR EACH hts_documents element:
 ### query_hts_processing.py -> grabQueryRecords(hts_documents)
 - parseQueryList() -> ERROR FOUND
