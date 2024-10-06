@@ -55,12 +55,14 @@ class Connection:
         Returns:
             list[dict[str,any]]: Resulting records from DB in list.
             e.g:
-            [{
-                id:ObjectId,
-                header:str,
-                data:list[dict[str,any]]
-            }]
-            OR 'No result'
+            {
+                query:str,
+                document: {
+                    id: ObjectId,
+                    header: str,
+                    data: list[dict[str, any]]
+                } OR  str('Missing record')
+            }
         """
 
         result = []
@@ -72,9 +74,15 @@ class Connection:
                     {'header': group['main_group']}
                 )
                 if document == None: 
-                    result.append({'data':'Missing record'})
+                    result.append({
+                        'query': group,
+                        'document': 'Missing record'
+                    })
                     print(f"Warning, no result found for {group['main_group']}")
-                else: result.append(document)
+                else: result.append({
+                    'query': group,
+                    'document': document
+                })
             except Exception as exception:
                 print(f"Failed query of record {group['main_group']}")
                 print(exception)

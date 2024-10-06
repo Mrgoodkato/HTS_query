@@ -126,7 +126,15 @@ def checkStringDescriptions(hts_document: list[str,any], query_string: str, coun
     
     return result
 
-def createDisplayResult(raw_result: list[dict[str,any]]):
+def createDisplayResult(raw_result: list[dict[str,any]])-> dict[str,any]:
+    """This function takes the EH parsed HTS records and creates a dictionary for easier display in HTML and other formats
+
+    Args:
+        raw_result (list[dict[str,any]]): Original parsed query records, raw from EH final parsing
+
+    Returns:
+        dict[str,any]: Dictionary containing all key eleements to be displayed in other formats
+    """
     
     display_result = {}
 

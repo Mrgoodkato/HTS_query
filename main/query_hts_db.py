@@ -3,29 +3,40 @@ from scripts.query_hts_processing import *
 from db.connection import *
 from utils.util_functions import createDisplayResult
 
-def queryHTSNumber(input_query: list[str], testing: bool):
+def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
+    """Function that receives an input query string list and queries against the HTS database, getting and parsing the results
 
-    query_result = []
+    Args:
+        input_query (list[str]): List of query HTS numbers to be searched
+        testing (bool): True if using testing Mongo DB database, or False if using production DB server
 
+    Returns:
+        list[dict[str,any]]: Returns a query/document object as follows:
+        [
+            {
+                query:list[dict[str,any]] -> query groups,
+                document:dict[str,any] OR str('Missing record'),
+                result:list[dict[str,any]] -> resulting records queried, raw response
+                display_result: dict[str,any] -> resulting records parsed for display in HTML or other formats
+            }
+        ]
+    """
     query_list = createQueryGroups(input_query)
     connection = Connection(testing)
     db_query_result = connection.queryRecordsHTS(query_list)
     connection.closeConnection()
 
-    for index, result in enumerate(db_query_result):        
-        final_result = []
-        if result == 'No result':
-            final_result.append('No result')
-            continue
-        grabbed_records = grabQueryRecords(result['data'], query_list[index])
-        query_result.append(
-            searchEHIndents(grabbed_records, result['data'])
-        )
+    if not db_query_result: return None
 
-        for query in query_result:
-            final_result.append(createDisplayResult(query))
+    for index, result in enumerate(db_query_result):
+
+        if result['document'] == 'Missing record': continue
+
+        db_query_result[index]['result'] = searchEHIndents(grabQueryRecords(result['data'], query_list[index]), result['data'])
+
+        for res in db_query_result[index]['result']:
+            db_query_result[index]['display_result'] = createDisplayResult(res)
+
     
-    if not final_result: return None
-    
-    return final_result
+    return db_query_result
     
