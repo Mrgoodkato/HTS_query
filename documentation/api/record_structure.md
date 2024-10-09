@@ -31,31 +31,20 @@
             {...},
         ]
 
-        #type of records list from global_vars.py:
-        gather_hts_number = [
-        (
-            r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Complete_record'
-        ),
-        (
-            r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Base_semifull'
-        ),
-        (
-            r'(^[\d]{4})([\d]{2})$', 'Base_subrecord'
-        ),
-        (
-            r'(^[\d]{4})$', 'Base_chapter'
-        )
-    ]
-
+        #type of records list from global_vars.py, list of tuples:
+        
+            (r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Complete_record')
+            (r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Base_semifull')
+            (r'(^[\d]{4})([\d]{2})$', 'Base_subrecord') 
+            (r'(^[\d]{4})$', 'Base_chapter')
     - `Connection` instance is created to connect to DB and perform initial query.
     - `connection.queryRecordHTS()`is called with the `query_list` object. This function processes the list and returns the DB records gathered, as well as any errors in search:
       
       - ```python
         db_query_result = [
             {
-            'query':dict[str,any],
-            #The query object used with type, main_group and sub_groups
-            document: #Returned from DB if there is a result: 
+            'query':dict[str,any], #The query object used with type, main_group and sub_groups
+            'document': #Returned from DB if there is a result: 
             {
                 'id': ObjectId, #DB id
                 'header': str, #Header chapter number, e.g: 0101, 0102, 0103, etc...
