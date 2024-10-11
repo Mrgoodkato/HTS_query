@@ -14,10 +14,10 @@ def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
         list[dict[str,any]]: Returns a query/document object as follows:
         [
             {
-                query:list[dict[str,any]] -> query groups,
-                document:dict[str,any] OR str('Missing record'),
-                result:list[dict[str,any]] -> resulting records queried, raw response
-                display_result: dict[str,any] -> resulting records parsed for display in HTML or other formats
+                query:list[dict[str,any]] -> #query groups,
+                document:dict[str,any] #OR str('Missing record'),
+                result:list[dict[str,any]] -> #resulting records queried, raw response
+                display_result: dict[str,any] -> #resulting records parsed for display in HTML or other formats
             }
         ]
     """
