@@ -183,7 +183,7 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
     """
     hts_pattern = r'(?:[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{8,10}$)'
     raw_list = raw_text.splitlines()
-    print(raw_list)
+    print(f'processTextAreaInput - raw list:{raw_list}')
     final_list = {
         'query_list': [],
         'errors': []
@@ -195,5 +195,5 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
         else:
             final_list['errors'].append(string)
 
-    print(final_list)
+    print(f'processTextAreaInput - final list:{final_list}')
     return final_list

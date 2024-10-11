@@ -1,25 +1,32 @@
 {% extends "layout.html.j2" %}
 {% block content %}
 
-    
-
     {% for result in query_result %}
+        
+        {% if result[document] == "Missing record"%}
+        <div class="class_container">
+            <h1>HTS Number</h1>
+            <p>{{ result.query.full_query }}</p>
+            <p>This query did not throw any results, please review your HTS number</p>
+        </div>
+        {% else %}
         <div class="content_container">
             <h1>HTS number:</h1>
-            <p>{{result.htsno}}</p>
+            <p>{{result.display_result.htsno}}</p>
             <h1>Description:</h1>
-            <p>{{result.description}}</p>
+            <p>{{result.display_result.description}}</p>
             <button id="details_btn">Details</button>
             <div class="item_container">
-        {% for key, value in result.items() %}
+        {% for key, value in result.display_result.items() %}
             {% if key != 'htsno' and key != 'description' %}
                 <div class="inner_item">
                     <h2>{{key | capitalize}}</h2>
                     <p>{{value}}</p>
                 </div>
             {% else %}
-            {% endif %} 
-        {% endfor %}
+            {% endif %}
+        {% endfor%}
+        {% endif %}
             </div>
         </div>  
     {% endfor %}

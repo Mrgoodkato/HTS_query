@@ -37,7 +37,7 @@ def grabQueryRecords(hts_record: list[dict[str, any]], query: dict[str, any]) ->
 
         index = 0
         indent_list = [record['indent'] for record in result_query if 'indent' in record]
-
+        if len(indent_list) == 0: return
         for i in range(0, result_query[-1]['indent']):
             
             if i not in indent_list:

@@ -32,7 +32,7 @@ def processGroups(processed_str: dict) -> dict[str, any]:
     Returns:
         dict: Returns an object with 'type', 'main_group' and 'sub_groups' for DB query
     """
-    def gatherGroups(groups: re.Match) -> list:
+    def gatherGroups(groups: re.Match) -> list[str]:
         """Helper method for the processGroups() that formats the HTS subrecords adding the previous numbers for database query
 
         Args:
@@ -64,13 +64,15 @@ def processGroups(processed_str: dict) -> dict[str, any]:
     if len(groups) == 0:
         return {
             'type': processed_str['type'],
-            'main_group': query_chap
+            'main_group': query_chap,
+            'full_query': query_chap
         }
     else:
         return {
             'type': processed_str['type'],
             'main_group': query_chap,
-            'sub_groups': groups
+            'sub_groups': groups,
+            'full_query': groups[-1]
         }
 
 def createQueryGroups(query_list: list) -> list[dict[str, any]]:

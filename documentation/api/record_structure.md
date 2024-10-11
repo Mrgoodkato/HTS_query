@@ -26,6 +26,8 @@
                 #First 4 characters of query to gather chapter in DB.
                 'sub_groups':list[str],
                 #List of subgroups that contain all the 6, 8 and 10 digit versions of the HTS code for querying the DB records.
+                'full_query':str,
+                #String result of the full query
 
             }, 
             {...},
@@ -41,20 +43,24 @@
     - `connection.queryRecordHTS()`is called with the `query_list` object. This function processes the list and returns the DB records gathered, as well as any errors in search:
       
       - ```python
+        #When there is a result
         db_query_result = [
             {
             'query':dict[str,any], #The query object used with type, main_group and sub_groups
             'document': #Returned from DB if there is a result: 
+              {
+                  'id': ObjectId, #DB id
+                  'header': str, #Header chapter number, e.g: 0101, 0102, 0103, etc...
+                  'data': list[dict[str, any]] #HTS raw record
+              }
+            },
+            #If there is no result:
             {
-                'id': ObjectId, #DB id
-                'header': str, #Header chapter number, e.g: 0101, 0102, 0103, etc...
-                'data': list[dict[str, any]] #HTS raw record
-            } 
-            #If there is no result: 
-            str #Missing record
+              'query':dict[str,any],
+              'document':str #"Missing record"
             },
             {...},
-        ]
+        ] 
     
     - `Connection` instance is closed.
     - Iteration over the `db_query_result` list of records, each reacord goes through the `grabQueryRecords()`and from there into the `searchEHIndents()` functions to return the appropriate query info based on the query `sub_groups`. This information is saved in the `result` key added to the `db_query_result[index]` element of the list being iterated.
