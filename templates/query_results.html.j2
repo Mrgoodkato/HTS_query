@@ -10,6 +10,8 @@
             <p>This query did not throw any results, please review your HTS number</p>
         </div>
         {% else %}
+        {% endif %}
+        {% continue %}
         <div class="content_container">
             <h1>HTS number:</h1>
             <p>{{result.display_result.htsno}}</p>
@@ -26,7 +28,6 @@
             {% else %}
             {% endif %}
         {% endfor%}
-        {% endif %}
             </div>
         </div>  
     {% endfor %}
