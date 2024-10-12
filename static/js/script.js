@@ -1,10 +1,16 @@
-const detailsButton = document.getElementById('details_btn');
+const buttons = document.querySelectorAll('button[data-id')
 
-if(detailsButton){
-    detailsButton.addEventListener('click', ()=>{
-
-        console.log('Click!')
+buttons.forEach(button => {
     
-    })
-}
+    button.addEventListener('click', ()=>{
 
+        const item = document.getElementById(`item_${button.getAttribute('data-id')}`)
+        if(item.style.display === 'none' || item.style.display === ''){
+            item.style.display = 'flex'
+        }else{
+            item.style.display = 'none'
+        }
+
+    })
+
+});

@@ -74,10 +74,23 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: start;
+    width: 50%;
     align-items: start;
     border: 1px lightgray solid;
     border-radius: 10px;
     padding: 10px;
+    flex-wrap: wrap;
+}
+
+.item_container_errors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    align-items: start;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    padding: 5px, 10px;
     flex-wrap: wrap;
 }
 

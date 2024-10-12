@@ -14,9 +14,10 @@ def index():
 @app.route('/process_query')
 def process_query():
     query = processTextAreaInput(request.args['user_input'])
+    errors = query['errors']
     query_result = query_hts_db.queryHTSNumber(query['query_list'], testing=True)
     if not query_result: return 'No data'
-    return render_template('query_results.html.j2', query_result=query_result)
+    return render_template('query_results.html.j2', query_result=query_result, errors=errors)
 
 @app.route('/process_file_query')
 def process_file_query():

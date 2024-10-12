@@ -34,8 +34,6 @@ def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
 
         db_query_result[index]['result'] = searchEHIndents(grabQueryRecords(result['document']['data'], query_list[index]), result['document']['data'])
         db_query_result[index]['display_result'] = createDisplayResult(db_query_result[index]['result'])
-        
-    print(db_query_result)
     
     return db_query_result
     

@@ -1,34 +1,42 @@
 {% extends "layout.html.j2" %}
-{% block content %}
-
-    {% for result in query_result %}
-        
-        {% if result[document] == "Missing record"%}
-        <div class="class_container">
-            <h1>HTS Number</h1>
-            <p>{{ result.query.full_query }}</p>
-            <p>This query did not throw any results, please review your HTS number</p>
-        </div>
-        {% else %}
-        {% endif %}
-        {% continue %}
+{% block content %}    
+        {% if errors %}
         <div class="content_container">
-            <h1>HTS number:</h1>
-            <p>{{result.display_result.htsno}}</p>
-            <h1>Description:</h1>
-            <p>{{result.display_result.description}}</p>
-            <button id="details_btn">Details</button>
-            <div class="item_container">
-        {% for key, value in result.display_result.items() %}
-            {% if key != 'htsno' and key != 'description' %}
-                <div class="inner_item">
-                    <h2>{{key | capitalize}}</h2>
-                    <p>{{value}}</p>
-                </div>
-            {% else %}
-            {% endif %}
-        {% endfor%}
+            <h1>Your query had some errors listed below:</h1>
+            <p>PLease check the following HTS codes, as they might have been input with incorrect HTS format</p>
+            <div class="item_container_errors">
+            {% for error in errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
             </div>
-        </div>  
-    {% endfor %}
+        </div>
+        {% endif %}
+
+        {% for result in query_result %}
+            {% if result['document'] == "Missing record"%}
+            <div class="content_container">
+                <h1>HTS Number</h1>
+                <p>{{ result.query.full_query }}</p>
+                <p>This query did not throw any results, please review your HTS number</p>
+            </div>
+            {% else %}
+            <div class="content_container">
+                <h1>HTS number:</h1>
+                <p>{{result.display_result.htsno}}</p>
+                <h1>Description:</h1>
+                <p>{{result.display_result.description}}</p>
+                <button class="details_btn" data-id="{{ loop.index0 }}">Details</button>
+                <div class="item_container" id="item_{{ loop.index0 }}" style="display: none;">
+            {% for key, value in result.display_result.items() %}
+                {% if key != 'htsno' and key != 'description' %}
+                    <div class="inner_item">
+                        <h2>{{key | capitalize}}</h2>
+                        <p>{{value}}</p>
+                    </div>
+                {% endif %}
+            {% endfor%}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
 {% endblock content %}
