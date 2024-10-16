@@ -11,7 +11,6 @@
             </div>
         </div>
         {% endif %}
-
         {% for result in query_result %}
             {% if result['document'] == "Missing record"%}
             <div class="content_container">
@@ -25,17 +24,23 @@
                 <p>{{result.display_result.htsno}}</p>
                 <h1>Description:</h1>
                 <p>{{result.display_result.description}}</p>
+                {% if result.query.type == 'Chapter Heading Record' or result.query.type == 'Subheading Record' %}
+                <div class="item_container">
+                    <p>This is a {{result.query.type}}, and does not contain any additional information on tariffs or census data.</p>
+                </div>
+                {% else %}
                 <button class="details_btn" data-id="{{ loop.index0 }}">Details</button>
                 <div class="item_container" id="item_{{ loop.index0 }}" style="display: none;">
-            {% for key, value in result.display_result.items() %}
-                {% if key != 'htsno' and key != 'description' %}
-                    <div class="inner_item">
-                        <h2>{{key | capitalize}}</h2>
-                        <p>{{value}}</p>
-                    </div>
-                {% endif %}
-            {% endfor%}
+                {% for key, value in result.display_result.items() %}
+                    {% if key != 'htsno' and key != 'description' %}
+                        <div class="inner_item">
+                            <h2>{{key | capitalize}}</h2>
+                            <p>{{value}}</p>
+                        </div>
+                    {% endif %}
+                {% endfor%}
                 </div>
+                {% endif %}
             </div>
             {% endif %}
         {% endfor %}

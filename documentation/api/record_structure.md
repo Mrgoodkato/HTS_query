@@ -35,10 +35,10 @@
 
         #type of records list from global_vars.py, list of tuples:
         
-            (r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Complete_record')
-            (r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Base_semifull')
-            (r'(^[\d]{4})([\d]{2})$', 'Base_subrecord') 
-            (r'(^[\d]{4})$', 'Base_chapter')
+            (r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Statistical Suffix Record')
+            (r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Tariff Item Record')
+            (r'(^[\d]{4})([\d]{2})$', 'Subheading Record') 
+            (r'(^[\d]{4})$', 'Chapter Heading Record')
     - `Connection` instance is created to connect to DB and perform initial query.
     - `connection.queryRecordHTS()`is called with the `query_list` object. This function processes the list and returns the DB records gathered, as well as any errors in search:
       

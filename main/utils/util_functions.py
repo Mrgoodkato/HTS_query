@@ -181,7 +181,7 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
     Returns:
         dict[str,list[str]]: Dictionary containing all the queries in list and all the errors in another list
     """
-    hts_pattern = r'(?:[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{8,10}$)'
+    hts_pattern = r'(?:[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}$)|(?:[\d]{4,10}$)'
     raw_list = raw_text.splitlines()
     print(f'processTextAreaInput - raw list:{raw_list}')
     final_list = {

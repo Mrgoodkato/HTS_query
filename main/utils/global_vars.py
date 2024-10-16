@@ -4,16 +4,16 @@ punctuation_pattern = r'[!\"#$%&\'()*+,-./:;<=>?@\[\]\^_`{|}~—]'
 
 gather_hts_number = [
     (
-        r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Complete_record'
+        r'(^[\d]{4})([\d]{2})([\d]{2})([\d]{2})$', 'Statistical Suffix Record'
     ),
     (
-        r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Base_semifull'
+        r'(^[\d]{4})([\d]{2})([\d]{2})$', 'Tariff Item Record'
     ),
     (
-        r'(^[\d]{4})([\d]{2})$', 'Base_subrecord'
+        r'(^[\d]{4})([\d]{2})$', 'Subheading Record'
     ),
     (
-        r'(^[\d]{4})$', 'Base_chapter'
+        r'(^[\d]{4})$', 'Chapter Heading Record'
     )
 ]
 
