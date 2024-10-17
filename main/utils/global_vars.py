@@ -17,6 +17,21 @@ gather_hts_number = [
     )
 ]
 
+formatted_gather_hts_number = [
+    (
+        r'(^[\d]{4})\.([\d]{2})\.([\d]{2})\.([\d]{2})$', 'Statistical Suffix Record'
+    ),
+    (
+        r'(^[\d]{4})\.([\d]{2})\.([\d]{2})$', 'Tariff Item Record'
+    ),
+    (
+        r'(^[\d]{4})\.([\d]{2})$', 'Subheading Record'
+    ),
+    (
+        r'(^[\d]{4})$', 'Chapter Heading Record'
+    )
+]
+
 temp_hts_folder_path = '../db_hts/temp/NEW_test_files/'
 hts_folder_path = '../db_hts/temp/NEW_final_json_files/'
 string_folder_path = '../db_hts/temp/NEW_test_string_dict/'

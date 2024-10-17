@@ -20,13 +20,20 @@
             </div>
             {% else %}
             <div class="content_container">
+                {% set query_type = result.query_type %}
                 <h1>HTS number:</h1>
-                <p>{{result.display_result.htsno}}</p>
+                {% if result.replaced_query.replace_to %}
+                    {% set query_type = result.replaced_query.replace_to %}
+                        <p class="info_text">Incomplete query returned, please check the highlighted numbers</p>
+                        <p>{{result.replaced_query.result_query}}<span style="color: brown;">{{result.replaced_query.missing_numbers}}</span></p>
+                {% else %}
+                    <p>{{result.display_result.htsno}}</p>
+                {% endif %}             
                 <h1>Description:</h1>
                 <p>{{result.display_result.description}}</p>
-                {% if result.query.type == 'Chapter Heading Record' or result.query.type == 'Subheading Record' %}
+                {% if query_type == 'Chapter Heading Record' or query_type == 'Subheading Record' %}
                 <div class="item_container">
-                    <p>This is a {{result.query.type}}, and does not contain any additional information on tariffs or census data.</p>
+                    <p>This is a {{query_type}}, and does not contain any additional information on tariffs or census data.</p>
                 </div>
                 {% else %}
                 <button class="details_btn" data-id="{{ loop.index0 }}">Details</button>

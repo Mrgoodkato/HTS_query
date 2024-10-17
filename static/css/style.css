@@ -118,6 +118,12 @@ button:hover{
     
 }
 
+.info_text{
+    font-size: x-small;
+    font-style: italic;
+    color: brown;
+}
+
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;

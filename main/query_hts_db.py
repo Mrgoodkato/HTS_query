@@ -1,7 +1,7 @@
 from scripts.query_hts_input import *
 from scripts.query_hts_processing import *
 from db.connection import *
-from utils.util_functions import createDisplayResult
+from utils.util_functions import createDisplayResult, compareQueryWithResult
 
 def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
     """Function that receives an input query string list and queries against the HTS database, getting and parsing the results
@@ -34,6 +34,8 @@ def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
 
         db_query_result[index]['result'] = searchEHIndents(grabQueryRecords(result['document']['data'], query_list[index]), result['document']['data'])
         db_query_result[index]['display_result'] = createDisplayResult(db_query_result[index]['result'])
+        db_query_result[index]['replaced_query'] = compareQueryWithResult(db_query_result[index]['query'], db_query_result[index]['display_result']['htsno'])
+        print(db_query_result[index]['replaced_query'])
     
     return db_query_result
     

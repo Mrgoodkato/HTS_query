@@ -3,7 +3,7 @@ import re
 import json
 from collections import Counter
 from typing import List, Dict, Any
-from utils.global_vars import key_words, punctuation_pattern
+from utils.global_vars import key_words, punctuation_pattern, formatted_gather_hts_number
 
 def removeEmptyKeysAndSave(htsdata: List[Dict[str, Any]], path: str):
     """This function removes the empty keys from the json chapter and saves it to the desired path
@@ -163,7 +163,7 @@ def createDisplayResult(raw_result: list[dict[str,any]])-> dict[str,any]:
     return display_result
 
 def processFootnotes(footnotes: list[dict[str,any]]):
-
+    
     result = ''
     for note in footnotes:
         for key, val in note.items():
@@ -181,7 +181,7 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
     Returns:
         dict[str,list[str]]: Dictionary containing all the queries in list and all the errors in another list
     """
-    hts_pattern = r'(?:[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:[\d]{4}\.[\d]{2}$)|(?:[\d]{4,10}$)'
+    hts_pattern = r'(?:^[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:^[\d]{4}\.[\d]{2}\.[\d]{2}$|\\r)|(?:^[\d]{4}\.[\d]{2}$)|(?:^[\d]{4}$|\\r)|(?:^[\d]{6}$|\\r)|(?:^[\d]{8}$|\\r)|(?:^[\d]{10}$|\\r)'
     raw_list = raw_text.splitlines()
     print(f'processTextAreaInput - raw list:{raw_list}')
     final_list = {
@@ -197,3 +197,18 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
 
     print(f'processTextAreaInput - final list:{final_list}')
     return final_list
+
+def compareQueryWithResult(query: dict[str,any], result: str) -> dict[str,any]:
+    print(f"Final: {result} - Original: {query['full_query']}")    
+    for item in formatted_gather_hts_number:
+
+        if re.match(item[0], result) and item[1] != query['type']: return {
+            'replace_to': item[1],
+            'original_query': query['full_query'],
+            'result_query': result,
+            'missing_numbers': re.sub(result, '', query['full_query'])
+        }
+    
+    return {
+        'replace_to': None
+    }
