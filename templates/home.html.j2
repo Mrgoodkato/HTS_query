@@ -1,10 +1,11 @@
 {% extends "layout.html.j2" %}
 {% block content %}
+    <script defer src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
     <div class="content_container">
         <h1>Input your HTS numbers:</h1>
         <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
             <label for="user_input">Enter your HTS codes</label>
-            <textarea rows="5"  name="user_input" required placeholder="Separate each code in a new line"></textarea>
+            <textarea rows="5" id="hts_txt_area" name="user_input" required placeholder="Separate each code in a new line"></textarea>
             <button>Query</button>
         </form>
     </div>

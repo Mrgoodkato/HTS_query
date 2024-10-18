@@ -162,15 +162,22 @@ def createDisplayResult(raw_result: list[dict[str,any]])-> dict[str,any]:
             
     return display_result
 
-def processFootnotes(footnotes: list[dict[str,any]]):
-    
+def processFootnotes(footnotes: list[dict[str,any]]) -> str:
+    """Processes the footnotes of the HTS query result to gather the relevant information to display
+
+    Args:
+        footnotes (list[dict[str,any]]): Footnotes list object that contains additional information about the HTS result
+
+    Returns:
+        str: String containing the footnotes relevant information.
+    """
     result = ''
     for note in footnotes:
         for key, val in note.items():
             if key == 'columns' or key == 'marker' or key == 'type': continue
-            result = val
-
-    return result
+            result += f'{val} '
+    
+    return result.strip()
 
 def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
     """Function that takes the textarea input from the user, converts it to lists according to matches with HTS patterns, if they don't match, it adds to the error list, if it does, it adds to the result
@@ -199,7 +206,16 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
     return final_list
 
 def compareQueryWithResult(query: dict[str,any], result: str) -> dict[str,any]:
-    print(f"Final: {result} - Original: {query['full_query']}")    
+    """This function adds more information to the resulting query by comparing with the actual final queried result against the initial query and returning the corresponding information
+
+    Args:
+        query (dict[str,any]): Original query list composed of the type, main group, sub groups and full query
+        result (str): Resulting query after being retrieved from DB
+
+    Returns:
+        dict[str,any]: Dictionary with values for further display in the results page in order to convert or offer additional info if there are discrepancies.
+    """
+    
     for item in formatted_gather_hts_number:
 
         if re.match(item[0], result) and item[1] != query['type']: return {
