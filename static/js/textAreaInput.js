@@ -7,15 +7,9 @@ const validCharacters = /^[0-9.\n]*$/g;
 const linePattern = /(?:^[\d]{4}(?:\.[\d]{2}){1,3}$)|(?:^[\d]{4,10})/gm;
 let isPasting =false;
 
-function validateInput(value){
-
-    return validCharacters.test(value)
-
-}
-
 txtArea.addEventListener('input', ()=>{
-
-    if(!validateInput(txtArea.value)){
+    isValid = !!txtArea.value.match(validCharacters)
+    if(!isValid && !isPasting){
         let input = txtArea.value
         txtArea.value = input.replace(/[^0-9.\n]/g, '')
         warning.style.display = 'block';
@@ -24,15 +18,16 @@ txtArea.addEventListener('input', ()=>{
 
 })
 
-txtArea.addEventListener('paste', ()=>{
-
-    isPasting = true;
-
-    if(!validateInput(txtArea.value)){
-        console.log('modal')
-        modalErrors.style.display = 'flex';
-    }
+txtArea.addEventListener('paste', (event)=>{
     
+    isPasting = true;
+    isValid = !!event.clipboardData.getData('text/plain').match(validCharacters);
+    if(!isValid && isPasting){
+        modalErrors.style.display = 'block';
+        errorList.append(event.clipboardData.getData('text'))
+    }
+
     isPasting = false;
+
 
 })

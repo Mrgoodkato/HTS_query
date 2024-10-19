@@ -127,7 +127,13 @@ button:hover{
 #warning_modal{
     display:none;
     position: fixed;
-    background-color: (0, 0, 0, 0.25);
+    padding: 10% 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1000; /* Ensure it's on top of other elements */
 }
 
 h1{

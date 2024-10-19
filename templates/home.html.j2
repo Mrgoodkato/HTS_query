@@ -7,15 +7,15 @@
             <label for="user_input">Enter your HTS codes</label>
             <textarea rows="5" id="hts_txt_area" name="user_input" required placeholder="Separate each code in a new line"></textarea>
             <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
-            <div id="warning_modal">
-                <div class="content_container">
-                    <h2>Your pasted input has some formatting errors</h2>
-                    <div id="error_list" class="item_container"></div>
-                </div>
-                <button>Close</button>
-            </div>
             <button>Query</button>
         </form>
+    <div id="warning_modal">
+        <div class="content_container">
+            <h2>Your pasted input has some formatting errors</h2>
+            <div id="error_list" class="item_container"></div>
+            <button>Close</button>
+        </div>
+    </div>
     </div>
     <div class="content_container">
         <h1>Upload your file with HTS numbers:</h1>
