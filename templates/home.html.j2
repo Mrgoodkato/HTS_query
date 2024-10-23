@@ -3,23 +3,24 @@
     <script defer src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
     <div class="content_container">
         <h1>Input your HTS numbers:</h1>
-        <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
-            <div class="hts_text_area">
+        <div class="hts_text_area">
+            <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
                 <div>
                     <label for="user_input">Enter your HTS codes</label>
                     <textarea rows="5" id="hts_txt_area" name="user_input" required placeholder="Separate each code in a new line"></textarea>
                     <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
                 </div>
-                <div id="error_container">
-                    <div class="content_container">
-                        <h2>Your pasted input has some formatting errors</h2>
-                        <div id="error_list" class="item_container"></div>
-                        <button>Close</button>
-                    </div>
+                <button>Query</button>
+            </form>
+            <div id="error_container">
+                <div class="content_container">
+                    <h2>Your pasted input has some formatting errors</h2>
+                    <p>Errors have been removed from input</p>
+                    <div id="error_list" class="item_container"></div>
+                    <button id="close_errors">Close</button>
                 </div>
             </div>
-            <button>Query</button>
-        </form>
+        </div>
     </div>
     <div class="content_container">
         <h1>Upload your file with HTS numbers:</h1>

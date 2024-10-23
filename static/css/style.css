@@ -55,6 +55,7 @@ button:hover{
 }
 
 .content_container{
+    width: 60%;
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: column;
@@ -120,7 +121,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center;
+    align-items: center;
 }
 
 .info_text{
@@ -133,6 +134,23 @@ button:hover{
     display:none;
     padding: 10px;
     width: 100%;
+}
+
+#error_list{
+    font-size: small;
+    color: brown;
+}
+
+#close_errors{
+    background-color: brown;
+}
+
+#close_errors:active{
+    background-color: rgb(100, 32, 0) !important;
+}
+
+#close_errors:hover{
+    background-color: rgb(171, 78, 2);
 }
 
 h1{
