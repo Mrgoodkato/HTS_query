@@ -55,7 +55,6 @@ button:hover{
 }
 
 .content_container{
-    width: 50%;
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: column;
@@ -95,7 +94,6 @@ button:hover{
 }
 
 .form_container{
-    width: 85%;
     line-height: 20px;
     display: flex;
     flex-direction: column;
@@ -118,35 +116,34 @@ button:hover{
     
 }
 
+.hts_text_area{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
 .info_text{
     font-size: x-small;
     font-style: italic;
     color: brown;
 }
 
-#warning_modal{
+#error_container{
     display:none;
-    position: fixed;
-    padding: 10% 25%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 1000; /* Ensure it's on top of other elements */
+    padding: 10px;
+    width: 100%;
 }
 
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     font-weight: 700;
-    line-height: 0%;
 }
 h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: small;
     font-weight: 700;
-    line-height: 0%;
 }
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

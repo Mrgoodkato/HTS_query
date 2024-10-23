@@ -1,6 +1,6 @@
 const txtArea = document.getElementById('hts_txt_area');
 const warning = document.getElementById('warning_input');
-const modalErrors = document.getElementById('warning_modal');
+const errorArea = document.getElementById('error_container');
 const errorList = document.getElementById('error_list');
 
 const validCharacters = /^[0-9.\n]*$/g;
@@ -23,7 +23,7 @@ txtArea.addEventListener('paste', (event)=>{
     isPasting = true;
     isValid = !!event.clipboardData.getData('text/plain').match(validCharacters);
     if(!isValid && isPasting){
-        modalErrors.style.display = 'block';
+        errorArea.style.display = 'flex';
         errorList.append(event.clipboardData.getData('text'))
     }
 
