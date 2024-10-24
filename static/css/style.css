@@ -149,7 +149,7 @@ button:hover{
 }
 
 #error_container{
-    display:none;
+    display:none;<
     padding: 10px;
     justify-content: space-around;
     width: 100%;

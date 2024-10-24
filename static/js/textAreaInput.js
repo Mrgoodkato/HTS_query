@@ -23,7 +23,7 @@ txtArea.addEventListener('input', ()=>{
 txtArea.addEventListener('keydown', (event)=>{
     const textArray = txtArea.value.split('\n')
     if(event.key == 'Enter'){
-
+        
         
         textArray.forEach(text => {
             if(!text.match(htsPattern)){
