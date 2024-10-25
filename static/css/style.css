@@ -59,7 +59,7 @@ button:hover{
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 1px;
     align-items: start;
     flex-wrap: wrap;
@@ -135,7 +135,7 @@ button:hover{
 
 .hts_text_area{
     width: 100%;
-    padding-right: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -148,16 +148,11 @@ button:hover{
     color: brown;
 }
 
-#error_container{
+.err_container{
     display:flex;
+    flex-direction: column ;
     padding: 10px;
     justify-content: space-around;
-    width: 100%;
-}
-
-#error_list{
-    font-size: small;
-    color: brown;
     width: 100%;
 }
 
