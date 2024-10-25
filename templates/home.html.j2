@@ -1,16 +1,28 @@
 {% extends "layout.html.j2" %}
 {% block content %}
     <script defer src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/inputAreaInput.js')}}"></script>
     <div class="content_container">
         <h1>Input your HTS numbers:</h1>
         <div class="hts_text_area">
             <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
-                <div>
-                    <label for="user_input">Enter your HTS codes</label>
-                    <textarea rows="5" id="hts_txt_area" name="user_input" required placeholder="Separate each code in a new line"></textarea>
-                    <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
+                <div id="copy_paste_input_containert">
+                    <div>
+                        <label for="user_input">Enter your HTS codes</label>
+                        <textarea rows="5" id="hts_txt_area" name="user_input" placeholder="Separate each code in a new line"></textarea>
+                        <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
+                    </div>
+                    <button type="submit" name="action" value="copy_paste">Query</button>
                 </div>
-                <button>Query</button>
+                <div id="manual_input_container">
+                    <div>
+                        <label for="user_input">Enter your HTS codes</label>
+                        <input id="hts_input_area" name="user_input">
+                    </div>
+                    <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
+                    <button type="submit" name="action" value="copy_paste">Query</button>
+                </div>
+                
             </form>
             <div id="error_container" class="err_container">
                 <div class="content_container_errors_hts">
