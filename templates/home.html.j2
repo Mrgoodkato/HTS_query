@@ -1,6 +1,7 @@
 {% extends "layout.html.j2" %}
 {% block content %}
-    <script defer src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/inputAreaInput.js') }}"></script>
     <div class="content_container">
         <h1>Input your HTS numbers:</h1>
         <div class="hts_text_area">
@@ -9,12 +10,11 @@
                     <div>
                         <label for="user_input">Paste your HTS codes in the box below</label>
                         <textarea rows="5" id="hts_txt_area" name="user_input" placeholder="Each code should be separated by a new line, avoid using spaces or special characters to separate"></textarea>
-                        <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
                     </div>
                     <button type="submit" name="action" value="copy_paste">Query</button>
                 </div>
-                <div id="manual_input_container">
-                    <div>
+                <div>
+                    <div id="manual_input_container" class="content_container">
                         <label for="user_input">Enter your HTS codes</label>
                         <input data-htsinput="0" name="user_input">
                     </div>
