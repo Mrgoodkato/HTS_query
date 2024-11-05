@@ -13,14 +13,25 @@ function createNewInputField(manualContainer, currentInputs, element){
     const newInputDataVal = currentInputs.length;
     const focusInput = parseInt(element.getAttribute('data-htsinput'));
 
-    newInput.setAttribute('data-htsinput', newInputDataVal.toString());    
+    if(newInputDataVal == focusInput+1){
+        newInput.setAttribute('data-htsinput', newInputDataVal.toString());    
+        newInput.setAttribute('name', 'user_input');
+        addEventListenerToInput(newInput);
+        manualContainer.appendChild(newInput);
+        const updatedCurrentInputs = document.querySelectorAll('[data-htsinput]')
+        updatedCurrentInputs[focusInput+1].focus();
+        return;
+    }
+
+    newInput.setAttribute('data-htsinput', 'new_input');
     newInput.setAttribute('name', 'user_input');
     addEventListenerToInput(newInput);
-    manualContainer.appendChild(newInput);
-    const updatedCurrentInputs = document.querySelectorAll('[data-htsinput]')
-    updatedCurrentInputs[focusInput+1].focus()
+    const anchorInput = document.querySelector(`[data-htsinput="${(focusInput+1).toString()}"]`);
+    manualContainer.insertBefore(newInput, anchorInput);
+    document.querySelector('[data-htsinput="new_input"]').focus();
+    rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
 
-    return newInput;
+    return;
 
 }
 
@@ -36,12 +47,7 @@ function deleteCurrentInput(element){
 
 function rearrangeInputs(currentInputs){
     
-    let index = 0
-    currentInputs.forEach(input => {
-        console.log(input.getAttribute('data-htsinput'))
-        input.setAttribute('data-htsinput', index.toString());
-        index++;
-    });
+    currentInputs.forEach((input, index) => input.setAttribute('data-htsinput', index.toString()));
 
 }
 
@@ -53,6 +59,7 @@ function addEventListenerToInput(element){
             if(element.getAttribute('data-htsinput') == 0) return;
             event.preventDefault();
             deleteCurrentInput(element);
+            rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
         }
         //Enter behavior
         if(event.key == 'Enter'){

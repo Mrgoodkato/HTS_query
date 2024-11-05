@@ -3,7 +3,7 @@ const errorList = document.getElementById('error_list');
 const errorArea = document.getElementById('error_container');
 const punctuationErrorList = document.getElementById('punctuation_error_list');
 
-import {htsPattern, punctuationPattern} from './util/globalVars.js'
+import {htsPattern, validCharacters, punctuationPattern} from './util/globalVars.js'
 
 
 //TEXT AREA LOGIC
@@ -53,12 +53,6 @@ function populatePunctuationErrors(text){
     paragraph.textContent =text;
     punctuationErrorList.replaceChildren(paragraph);
 }
-
-txtArea.addEventListener('input', (event)=>{
-    
-    event.preventDefault();
-
-})
 
 txtArea.addEventListener('paste', (event)=>{
     const isValid = !!event.clipboardData.getData('text/plain').match(validCharacters);
