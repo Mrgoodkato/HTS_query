@@ -51,6 +51,12 @@ function rearrangeInputs(currentInputs){
 
 }
 
+function checkInputFormat(inputValue){
+
+    
+
+}
+
 function addEventListenerToInput(element){
 
     element.addEventListener('keydown', (event)=>{
