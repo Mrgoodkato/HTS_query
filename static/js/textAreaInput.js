@@ -3,7 +3,7 @@ const errorList = document.getElementById('error_list');
 const errorArea = document.getElementById('error_container');
 const punctuationErrorList = document.getElementById('punctuation_error_list');
 
-import {htsPattern, validCharacters, punctuationPattern} from './util/globalVars.js'
+import {htsPattern, htsFPattern, validCharacters, punctuationPattern} from './util/globalVars.js'
 
 
 //TEXT AREA LOGIC
@@ -25,7 +25,17 @@ function grabTextAreaInput(value){
     textArray.forEach(text => {
         
         if(!text.match(htsPattern)) parsedText.errors.push(text);
-        else parsedText.valid.push(text);
+        else {
+            const formattedHTS = text.replace(htsFPattern, (raw, f1,f2,f3,f4,sf1,sf2,sf3,sh1,sh2,c1) =>{
+                console.log(f1, f2, f3, f4, sf1, sf2, sf3, sh1, sh2, c1);   
+                if(c1) return `${c1}`;
+                if(sh1) return `${sh1}.${sh2}`;
+                if(sf1) return `${sf1}.${sf2}.${sf3}`;
+                if(f1) return `${f1}.${f2}.${f3}.${f4}`
+
+            })
+            parsedText.valid.push(formattedHTS);
+        }
     });
     return parsedText;
 
@@ -65,6 +75,11 @@ txtArea.addEventListener('paste', (event)=>{
         errorList.replaceChildren();
         populateErrorArea(parsedText.errors);
         populateTextArea(parsedText.valid);
+        return;
     }
+
+
+
+
 })
 

@@ -3,7 +3,7 @@ const manualContainer = document.getElementById('manual_input_container');
 const warning = document.getElementById('warning_input');
 
 
-import { allowedKeys, htsPattern, patternManualInput } from "./util/globalVars.js";
+import { allowedKeys, htsFPattern, patternManualInput } from "./util/globalVars.js";
 
 //INPUT AREA LOGIC
 
@@ -51,15 +51,28 @@ function rearrangeInputs(currentInputs){
 
 }
 
-function checkInputFormat(inputValue){
+function formatInputBox(inputValue){
 
-    
+    const formattedHTS = inputValue.replace(htsFPattern, (raw, f1,f2,f3,f4,sf1,sf2,sf3,sh1,sh2,c1) =>{
+        console.log(f1, f2, f3, f4, sf1, sf2, sf3, sh1, sh2, c1);   
+        if(c1) return `${c1}.`;
+        if(sh1) return `${sh1}.${sh2}.`;
+        if(sf1) return `${sf1}.${sf2}.${sf3}.`;
+        if(f1) return `${f1}.${f2}.${f3}.${f4}.`;
+
+    })
+    return formattedHTS;
 
 }
 
 function addEventListenerToInput(element){
 
     element.addEventListener('keydown', (event)=>{
+
+        if(element.value.match(htsFPattern)){
+            element.value = formatInputBox(element.value);
+        }
+
         //Removes the previous input field
         if(event.key == 'Backspace' && element.value == ''){
             if(element.getAttribute('data-htsinput') == 0) return;
