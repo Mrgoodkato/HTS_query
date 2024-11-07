@@ -3,7 +3,7 @@ const manualContainer = document.getElementById('manual_input_container');
 const warning = document.getElementById('warning_input');
 
 
-import { allowedKeys, htsFPattern, patternManualInput } from "./util/globalVars.js";
+import { allowedKeys, htsIPattern, htsFPattern, patternManualInput } from "./util/globalVars.js";
 
 //INPUT AREA LOGIC
 
@@ -53,13 +53,11 @@ function rearrangeInputs(currentInputs){
 
 function formatInputBox(inputValue){
 
-    const formattedHTS = inputValue.replace(htsFPattern, (raw, f1,f2,f3,f4,sf1,sf2,sf3,sh1,sh2,c1) =>{
-        console.log(f1, f2, f3, f4, sf1, sf2, sf3, sh1, sh2, c1);   
-        if(c1) return `${c1}.`;
-        if(sh1) return `${sh1}.${sh2}.`;
-        if(sf1) return `${sf1}.${sf2}.${sf3}.`;
-        if(f1) return `${f1}.${f2}.${f3}.${f4}.`;
-
+    const formattedHTS = inputValue.replace(htsIPattern, (raw, sg1, sg2, sg3) =>{
+        if(sg1) return `${sg1}.`;
+        if(sg2) return `${sg2}.`;
+        if(sg3) return `${sg3}.`;
+        
     })
     return formattedHTS;
 
@@ -69,7 +67,10 @@ function addEventListenerToInput(element){
 
     element.addEventListener('keydown', (event)=>{
 
-        if(element.value.match(htsFPattern)){
+        if(element.value.length == 13 && event.key != 'Backspace' && event.key != 'Enter') event.preventDefault();
+
+        //Active input formatter for periods
+        if(element.value.match(htsIPattern) && event.key != 'Backspace' && event.key != 'Enter'){
             element.value = formatInputBox(element.value);
         }
 
@@ -106,6 +107,13 @@ function addEventListenerToInput(element){
             warning.style.display = 'none';
             return;
         }
+    })
+
+    element.addEventListener('paste', (event) =>{
+        const text = event.clipboardData.getData('text');
+
+        
+
     })
 
 }
