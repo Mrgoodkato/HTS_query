@@ -3,7 +3,7 @@ const manualContainer = document.getElementById('manual_input_container');
 const warning = document.getElementById('warning_input');
 
 
-import { allowedKeys, htsIPattern, htsFPattern, patternManualInput } from "./util/globalVars.js";
+import { allowedKeys, htsIPattern, validInputCharacters, patternManualInput } from "./util/globalVars.js";
 
 //INPUT AREA LOGIC
 
@@ -110,8 +110,27 @@ function addEventListenerToInput(element){
     })
 
     element.addEventListener('paste', (event) =>{
-        const text = event.clipboardData.getData('text');
+        const text = event.clipboardData.getData('text').match(validInputCharacters);
+        console.log(text)
+        if(text.length > 10){
+            event.preventDefault();
+            return;
+        }
+        const patternAndResult = {
+            "first": [4,0],
+            "second":[2,0],
+            "third":[2,0],
+            "fourth":[2,0],
+            "result": ''
+        
+        };
+        text.forEach(t => {
+            
+            if(patternAndResult.first[0] > patternAndResult.first[1]) patternAndResult.result += t;
+            if(patternAndResult.first[0] == patternAndResult.first[1]) patternAndResult.result += t + '.';
 
+
+        });
         
 
     })

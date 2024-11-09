@@ -36,6 +36,7 @@ export const htsPattern = /(?:^[\d]{4}\.[\d]{2}\.[\d]{2}\.[\d]{2}$|\\r)|(?:^[\d]
 export const htsFPattern = /(^[\d]{4})((?<=\1)[\d]{2})((?<=\2)[\d]{2})((?<=\3)[\d]{2}$)|(^[\d]{4})((?<=\1)[\d]{2})((?<=\2)[\d]{2}$)|(^[\d]{4})((?<=\1)[\d]{2}$)|(^[\d]{4}$)/;
 export const htsIPattern = /(^[\d]{4}$)|(^[\d]{4}\.[\d]{2}$)|(^[\d]{4}\.[\d]{2}\.[\d]{2}$)/;
 export const validCharacters = /^[0-9.\n]*$/g;
+export const validInputCharacters = /[\d]+?/g;
 export const linePattern = /(?:^[\d]{4}(?:\.[\d]{2}){1,3}$)|(?:^[\d]{4,10})/gm;
 export const punctuationPattern = /[ \r!\"#$%&\'()*+,-./:;<=>?@\[\]\^_`{|}~—]/g;
 export const patternManualInput = /[a-zA-Z \r!\"#$%&\'\.()*+,\-:;<=>?@\[\]\^_`{|}~—\\]/g;
