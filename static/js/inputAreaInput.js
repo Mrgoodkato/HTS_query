@@ -66,8 +66,9 @@ function formatInputBox(inputValue){
 function addEventListenerToInput(element){
 
     element.addEventListener('keydown', (event)=>{
-
-        if(element.value.length == 13 && event.key != 'Backspace' && event.key != 'Enter') event.preventDefault();
+        
+        //Prevents more than 13 characters in hts code (taking into consideration the periods)
+        if(element.value.length == 13 && !allowedKeys.includes(event.key)) event.preventDefault();
 
         //Active input formatter for periods
         if(element.value.match(htsIPattern) && event.key != 'Backspace' && event.key != 'Enter'){
@@ -98,6 +99,9 @@ function addEventListenerToInput(element){
             warning.style.display = 'none';
             return;
         }
+        //Allows copying inputs
+        if(event.ctrlKey && event.key == 'c') return;
+        
         //Prevents letters and wrong characters input in the field
         if(event.key.match(patternManualInput)){
             event.preventDefault();
@@ -110,28 +114,19 @@ function addEventListenerToInput(element){
     })
 
     element.addEventListener('paste', (event) =>{
+        event.preventDefault();
         const text = event.clipboardData.getData('text').match(validInputCharacters);
-        console.log(text)
         if(text.length > 10){
-            event.preventDefault();
+            warning.style.display = 'block';
             return;
         }
-        const patternAndResult = {
-            "first": [4,0],
-            "second":[2,0],
-            "third":[2,0],
-            "fourth":[2,0],
-            "result": ''
-        
-        };
-        text.forEach(t => {
+        let htsCode = '';
+        for (let index = 0; index < text.length; index++) {
+            htsCode += text[index];
+            if(index == 3 || index == 5 || index == 7) htsCode += '.';
             
-            if(patternAndResult.first[0] > patternAndResult.first[1]) patternAndResult.result += t;
-            if(patternAndResult.first[0] == patternAndResult.first[1]) patternAndResult.result += t + '.';
-
-
-        });
-        
+        }
+        element.value = htsCode;
 
     })
 
