@@ -12,11 +12,15 @@
                         <textarea rows="5" readonly id="hts_txt_area" name="user_input" placeholder="Each code should be separated by a new line, avoid using spaces or special characters to separate"></textarea>
                     </div>
                     <button type="submit" name="action" value="copy_paste">Query</button>
+                    <button type="button" id="copy">Copy</button>
+                    <button type="button" id="clear_all">Clear all</button>
                 </div>
                 <div>
                     <div id="manual_input_container" class="content_container">
                         <label for="user_input">Enter your HTS codes</label>
-                        <input data-htsinput="0" name="user_input">
+                        <div class="input_field">
+                            <input data-htsinput="0" name="user_input">
+                        </div>
                     </div>
                     <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
                     <button type="submit" name="action" value="manual_input">Query</button>
