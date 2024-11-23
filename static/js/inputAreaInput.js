@@ -11,19 +11,19 @@ function createNewInputField(manualContainer, currentInputs, element){
 
     const newInputDataVal = currentInputs.length;
     const focusInput = parseInt(element.getAttribute('data-htsinput'));
-    const newInputElement = armInputContainer(newInputDataVal);
 
     if(newInputDataVal == focusInput+1){
+        const newInputElement = armInputContainer(newInputDataVal.toString());
         manualContainer.appendChild(newInputElement);
         const updatedCurrentInputs = document.querySelectorAll('[data-htsinput]')
         updatedCurrentInputs[focusInput+1].focus();
         return;
     }
-    
+    const newInputElement = armInputContainer('new_input');
     const anchorNode = document.querySelector(`[data-container="${(focusInput+1).toString()}"]`);
     manualContainer.insertBefore(newInputElement, anchorNode);
     document.querySelector('[data-htsinput="new_input"]').focus();
-    rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
+    rearrangeInputs(document.querySelectorAll('[data-htsinput]'), document.querySelectorAll('[data-container]'));
 
     return;
 
@@ -36,8 +36,8 @@ function armInputContainer(newInputDataVal){
     const closeBtn = document.createElement('button');
 
     inputContainer.setAttribute('class', 'input_field');
-    inputContainer.setAttribute('data-container', newInputDataVal.toString());
-    newInput.setAttribute('data-htsinput', newInputDataVal.toString());
+    inputContainer.setAttribute('data-container', newInputDataVal);
+    newInput.setAttribute('data-htsinput', newInputDataVal);
     newInput.setAttribute('name', 'user_input');
     addEventListenerToInput(newInput);
 
@@ -45,7 +45,7 @@ function armInputContainer(newInputDataVal){
     closeBtn.textContent = 'Delete';
     closeBtn.addEventListener('click', ()=>{
         inputContainer.remove();
-        rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
+        rearrangeInputs(document.querySelectorAll('[data-htsinput]'), document.querySelectorAll('[data-container'));
     });
 
     inputContainer.append(newInput, closeBtn);
@@ -57,17 +57,18 @@ function armInputContainer(newInputDataVal){
 function deleteCurrentInput(element){
 
     const currentInputs = document.querySelectorAll('[data-htsinput]');
+    const currentContainers = document.querySelectorAll('[data-container]');
     const inputNumber = parseInt(element.getAttribute('data-htsinput'));
-    element.remove()
+    currentContainers[inputNumber].remove()
     currentInputs[inputNumber-1].focus()
-    rearrangeInputs(currentInputs);
+    rearrangeInputs(currentInputs, document.querySelectorAll('[data-container]'));
 
 }
 
-function rearrangeInputs(currentInputs){
+function rearrangeInputs(currentInputs, currentContainers){
     
     currentInputs.forEach((input, index) => input.setAttribute('data-htsinput', index.toString()));
-
+    currentContainers.forEach((container, index) => container.setAttribute('data-container', index.toString()));
 }
 
 function formatInputBox(inputValue){
