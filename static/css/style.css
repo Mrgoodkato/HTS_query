@@ -142,6 +142,13 @@ button:hover{
     align-items: center;
 }
 
+.input_field{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px;
+}
+
 .info_text{
     font-size: x-small;
     font-style: italic;

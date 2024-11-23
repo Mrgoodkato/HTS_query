@@ -9,29 +9,48 @@ import { allowedKeys, htsIPattern, validInputCharacters, patternManualInput } fr
 
 function createNewInputField(manualContainer, currentInputs, element){
 
-    const newInput = document.createElement('input');
     const newInputDataVal = currentInputs.length;
     const focusInput = parseInt(element.getAttribute('data-htsinput'));
+    const newInputElement = armInputContainer(newInputDataVal);
 
     if(newInputDataVal == focusInput+1){
-        newInput.setAttribute('data-htsinput', newInputDataVal.toString());    
-        newInput.setAttribute('name', 'user_input');
-        addEventListenerToInput(newInput);
-        manualContainer.appendChild(newInput);
+        manualContainer.appendChild(newInputElement);
         const updatedCurrentInputs = document.querySelectorAll('[data-htsinput]')
         updatedCurrentInputs[focusInput+1].focus();
         return;
     }
-
-    newInput.setAttribute('data-htsinput', 'new_input');
-    newInput.setAttribute('name', 'user_input');
-    addEventListenerToInput(newInput);
-    const anchorInput = document.querySelector(`[data-htsinput="${(focusInput+1).toString()}"]`);
-    manualContainer.insertBefore(newInput, anchorInput);
+    
+    const anchorNode = document.querySelector(`[data-container="${(focusInput+1).toString()}"]`);
+    manualContainer.insertBefore(newInputElement, anchorNode);
     document.querySelector('[data-htsinput="new_input"]').focus();
     rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
 
     return;
+
+}
+
+function armInputContainer(newInputDataVal){
+
+    const inputContainer = document.createElement('div');
+    const newInput = document.createElement('input');
+    const closeBtn = document.createElement('button');
+
+    inputContainer.setAttribute('class', 'input_field');
+    inputContainer.setAttribute('data-container', newInputDataVal.toString());
+    newInput.setAttribute('data-htsinput', newInputDataVal.toString());
+    newInput.setAttribute('name', 'user_input');
+    addEventListenerToInput(newInput);
+
+    closeBtn.setAttribute('type', 'button');
+    closeBtn.textContent = 'Delete';
+    closeBtn.addEventListener('click', ()=>{
+        inputContainer.remove();
+        rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
+    });
+
+    inputContainer.append(newInput, closeBtn);
+    
+    return inputContainer;
 
 }
 
