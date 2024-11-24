@@ -83,12 +83,36 @@ function formatInputBox(inputValue){
 
 }
 
+function moveUpDown(element, key){
+
+    const currentInputs = document.querySelectorAll('[data-htsinput]');
+    const currentIndex = parseInt(element.getAttribute('data-htsinput'));
+    
+    if(key == 'ArrowUp' && currentIndex > 0){
+        currentInputs[currentIndex-1].focus();
+        currentInputs[currentIndex-1].select();
+    }else if(key == 'ArrowDown' && currentIndex < currentInputs.length){
+        currentInputs[currentIndex+1].focus();
+        currentInputs[currentIndex+1].select();
+    }
+
+    
+
+
+
+}
+
 function addEventListenerToInput(element){
 
     element.addEventListener('keydown', (event)=>{
+
+        if(event.key == 'ArrowUp' || event.key == 'ArrowDown'){
+            event.preventDefault();
+            moveUpDown(element, event.key);
+        }
         
         //Prevents more than 13 characters in hts code (taking into consideration the periods)
-        if(element.value.length == 13 && !allowedKeys.includes(event.key)) event.preventDefault();
+        if(element.value.length == 13 && !allowedKeys.includes(event.key) && !event.ctrlKey) event.preventDefault();
 
         //Active input formatter for periods
         if(element.value.match(htsIPattern) && event.key != 'Backspace' && event.key != 'Enter'){
@@ -100,7 +124,6 @@ function addEventListenerToInput(element){
             if(element.getAttribute('data-htsinput') == 0) return;
             event.preventDefault();
             deleteCurrentInput(element);
-            rearrangeInputs(document.querySelectorAll('[data-htsinput]'));
         }
         //Enter behavior
         if(event.key == 'Enter'){
@@ -133,9 +156,32 @@ function addEventListenerToInput(element){
         }
     })
 
+    //PASTE FUNCTIONS
+    function focusOnNextInput(element){
+
+        const currentInputs = document.querySelectorAll('[data-htsinput]');
+        const focusIndex = parseInt(element.getAttribute('data-htsinput'));
+
+        if(focusIndex+1 == currentInputs.length){
+            createNewInputField(manualContainer, currentInputs, element);
+            return;
+        }
+        currentInputs[focusIndex+1].focus();
+        return;
+
+
+
+    }
+
     element.addEventListener('paste', (event) =>{
         event.preventDefault();
+        if(element.value != ''){
+            console.log('not empty')
+            element.value = '';
+        }
         const text = event.clipboardData.getData('text').match(validInputCharacters);
+        
+        if (!text) return;
         if(text.length > 10){
             warning.style.display = 'block';
             return;
@@ -147,6 +193,9 @@ function addEventListenerToInput(element){
             
         }
         element.value = htsCode;
+
+        focusOnNextInput(element);
+
 
     })
 
