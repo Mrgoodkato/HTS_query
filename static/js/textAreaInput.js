@@ -1,4 +1,5 @@
 const txtArea = document.getElementById('hts_txt_area');
+const errorContainer = document.getElementById('error_container');
 const errorList = document.getElementById('error_list');
 const clearAllBtn = document.getElementById('clear_all');
 const copyBtn = document.getElementById('copy');
@@ -71,10 +72,13 @@ function populatePunctuationErrors(text){
 
 //Defines the behavior of the txtArea element
 txtArea.addEventListener('paste', (event)=>{
+    txtArea.value = '';
+    errorContainer.style.display = 'none';
     const isValid = !!event.clipboardData.getData('text/plain').match(validCharacters);
     const parsedText = grabTextAreaInput(event.clipboardData.getData('text'));
-    if(!isValid && parsedText.errors){
+    if(!isValid || parsedText.errors){
         event.preventDefault();
+        errorContainer.style.display = 'flex';
         if(parsedText.invalidPunctuation) {
             populatePunctuationErrors(parsedText.invalidPunctuation);           
         }

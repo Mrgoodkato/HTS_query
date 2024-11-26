@@ -163,6 +163,23 @@ button:hover{
     width: 100%;
 }
 
+.options{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.main_option{
+    background-color: brown;
+    font-size: small;
+}
+
+#error_container{
+    display: none;
+}
+
 #close_errors{
     background-color: brown;
 }
@@ -173,6 +190,10 @@ button:hover{
 
 #close_errors:hover{
     background-color: rgb(171, 78, 2);
+}
+
+div[data-optionContainer]{
+    display: none;
 }
 
 h1{
