@@ -3,6 +3,7 @@
     <script defer type="module" src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
     <script defer type="module" src="{{ url_for('static', filename='js/inputAreaInput.js') }}"></script>
     <script defer type="module" src="{{ url_for('static', filename='js/options.js') }}"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/submit.js') }}"></script>
     <div class="content_container">
         <h1>Input your HTS numbers:</h1>
         <div class="options">
@@ -21,6 +22,17 @@
                 <button type="submit" name="action" value="copy_paste">Query</button>
                 <button type="button" id="copy">Copy</button>
                 <button type="button" id="clear_all">Clear all</button>
+                 <div id="error_container" class="err_container">
+                    <div class="content_container_errors_hts">
+                        <p class="info_text">Following codes contain errors, they have been removed from the input</p>
+                        <div id="error_list" class="item_container"></div>
+                    </div>
+                    <div class="content_container_errors_hts">
+                        <p class="info_text">The following special characters were detected and removed from your input:</p>
+                        <div id="punctuation_error_list" class="item_container">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div data-optionContainer="manual">
                 <div id="manual_input_container" class="content_container">
@@ -33,17 +45,6 @@
                 <button type="submit" name="action" value="manual_input">Query</button>
             </div>
         </form>
-        <div id="error_container" class="err_container">
-            <div class="content_container_errors_hts">
-                <p class="info_text">Following codes contain errors, they have been removed from the input</p>
-                <div id="error_list" class="item_container"></div>
-            </div>
-            <div class="content_container_errors_hts">
-                <p class="info_text">The following special characters were detected and removed from your input:</p>
-                <div id="punctuation_error_list" class="item_container">
-                </div>
-            </div>
-        </div>
     </div>
     <div data-optionContainer="file" class="content_container">
         <h1>Upload your file with HTS numbers:</h1>
