@@ -5,53 +5,50 @@
     <script defer type="module" src="{{ url_for('static', filename='js/options.js') }}"></script>
     <script defer type="module" src="{{ url_for('static', filename='js/submit.js') }}"></script>
     <div class="content_container">
-        <h1>Input your HTS numbers:</h1>
         <div class="options">
             <button class="main_option" data-option="manual">Manual input</button>
             <button class="main_option" data-option="paste">Paste HTS codes</button>
             <button class="main_option" data-option="file">Upload file</button>
         </div>
     </div>
-    <div class="hts_text_area">
-        <form action="{{ url_for('process_query') }}" method="GET" class="form_container">
-            <div data-optionContainer="paste">
-                <div>
-                    <label for="user_input">Paste your HTS codes in the box below</label>
-                    <textarea rows="5" readonly id="hts_txt_area" name="user_input" placeholder="Each code should be separated by a new line, avoid using spaces or special characters to separate"></textarea>
+    <div data-optionContainer="paste" class="content_container">
+        <div id="paste_form" class="form_container">
+            <label for="user_input">Paste your HTS codes in the box below</label>
+            <textarea rows="5" readonly id="hts_txt_area" name="user_input" placeholder="Each code should be separated by a new line, avoid using spaces or special characters to separate"></textarea>
+            <button type="button" id="submit_paste">Query</button>
+            <button type="button" id="copy">Copy</button>
+            <button type="button" id="clear_all">Clear all</button>
+                <div id="error_container" class="err_container">
+                <div class="content_container_errors_hts">
+                    <p class="info_text">Following codes contain errors, they have been removed from the input</p>
+                    <div id="error_list" class="item_container"></div>
                 </div>
-                <button type="submit" name="action" value="copy_paste">Query</button>
-                <button type="button" id="copy">Copy</button>
-                <button type="button" id="clear_all">Clear all</button>
-                 <div id="error_container" class="err_container">
-                    <div class="content_container_errors_hts">
-                        <p class="info_text">Following codes contain errors, they have been removed from the input</p>
-                        <div id="error_list" class="item_container"></div>
-                    </div>
-                    <div class="content_container_errors_hts">
-                        <p class="info_text">The following special characters were detected and removed from your input:</p>
-                        <div id="punctuation_error_list" class="item_container">
-                        </div>
+                <div class="content_container_errors_hts">
+                    <p class="info_text">The following special characters were detected and removed from your input:</p>
+                    <div id="punctuation_error_list" class="item_container">
                     </div>
                 </div>
             </div>
-            <div data-optionContainer="manual">
-                <div id="manual_input_container" class="content_container">
-                    <label for="user_input">Enter your HTS codes</label>
-                    <div class="input_field" data-container="0">
-                        <input data-htsinput="0" name="user_input">
-                    </div>
+        </div>
+    </div>
+    <div data-optionContainer="manual" class="content_container">
+        <form id="manual_form" class="form_container">
+            <div id="manual_input_container" class="content_container">
+                <label for="user_input">Enter your HTS codes</label>
+                <div class="input_field" data-container="0">
+                    <input data-htsinput="0" name="user_input">
                 </div>
-                <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
-                <button type="submit" name="action" value="manual_input">Query</button>
             </div>
+            <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
+            <button type="button" id="submit_manual">Query</button>
         </form>
     </div>
     <div data-optionContainer="file" class="content_container">
         <h1>Upload your file with HTS numbers:</h1>
-        <form action="{{ url_for('process_file_query') }}" method="GET" class="form_container">
+        <form  id="file_form" class="form_container">
             <label for="user_input">Enter your CSV file with HTS codes</label>
             <input type="file" name="user_input" required>
-            <button>Query</button>
+            <button type="button" id="submit_file">Query</button>
         </form>
     </div>
 {% endblock content %}

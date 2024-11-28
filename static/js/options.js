@@ -4,8 +4,8 @@ const optionContainers = document.querySelectorAll('[data-optionContainer');
 
 function toggleDisplayBtn(container){
 
-    if(container.style.display == 'block') container.style.display = 'none';
-    else container.style.display = 'block';
+    if(container.style.display == 'flex') container.style.display = 'none';
+    else container.style.display = 'flex';
 
 }
 

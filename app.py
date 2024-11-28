@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    
     return render_template('home.html.j2', title='Enter query')
 
 @app.route('/process_query')
