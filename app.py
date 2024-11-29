@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     return render_template('home.html.j2', title='Enter query')
 
-@app.route('/process_query')
+@app.route('/process_query', methods=['POST'])
 def process_query():
     query = processTextAreaInput(request.args['user_input'])
     errors = query['errors']
