@@ -12,4 +12,8 @@ submitPaste.addEventListener('click', () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({user_input: textArea.value})
     })
+    .then(response => response.json())
+    .then(result => console.log('Success!', result))
+    .catch(error => console.log('Error', error));
+
 });
