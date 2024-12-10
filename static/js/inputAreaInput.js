@@ -38,7 +38,7 @@ function armInputContainer(newInputDataVal){
     inputContainer.setAttribute('class', 'input_field');
     inputContainer.setAttribute('data-container', newInputDataVal);
     newInput.setAttribute('data-htsinput', newInputDataVal);
-    newInput.setAttribute('name', 'user_input');
+    newInput.setAttribute('name', 'user_input_manual');
     addEventListenerToInput(newInput);
 
     closeBtn.setAttribute('type', 'button');

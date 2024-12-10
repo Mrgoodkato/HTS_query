@@ -3,7 +3,6 @@
     <script defer type="module" src="{{ url_for('static', filename='js/textAreaInput.js') }}"></script>
     <script defer type="module" src="{{ url_for('static', filename='js/inputAreaInput.js') }}"></script>
     <script defer type="module" src="{{ url_for('static', filename='js/options.js') }}"></script>
-    <script defer type="module" src="{{ url_for('static', filename='js/submit.js') }}"></script>
     <div class="content_container">
         <div class="options">
             <button class="main_option" data-option="manual">Manual input</button>
@@ -12,10 +11,10 @@
         </div>
     </div>
     <div data-optionContainer="paste" class="content_container">
-        <div id="paste_form" class="form_container">
+        <form method="POST" action="/process_query" class="form_container">
             <label for="user_input">Paste your HTS codes in the box below</label>
             <textarea rows="5" readonly id="hts_txt_area" name="user_input" id="txt" placeholder="Each code should be separated by a new line, avoid using spaces or special characters to separate"></textarea>
-            <button type="button" id="submit_paste">Query</button>
+            <button type="submit">Query</button>
             <button type="button" id="copy">Copy</button>
             <button type="button" id="clear_all">Clear all</button>
                 <div id="error_container" class="err_container">
@@ -29,25 +28,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <div data-optionContainer="manual" class="content_container">
-        <form id="manual_form" class="form_container">
+        <form method="POST" action="/process_query" class="form_container">
             <div id="manual_input_container" class="content_container">
-                <label for="user_input">Enter your HTS codes</label>
+                <label for="user_input_manual">Enter your HTS codes</label>
                 <div class="input_field" data-container="0">
-                    <input data-htsinput="0" name="user_input">
+                    <input data-htsinput="0" name="user_input_manual">
                 </div>
             </div>
             <p class="info_text" id="warning_input" style="display: none;">Please enter valid data for HTS search, only allowed numeric data and periods for HTS numbers</p>
-            <button type="button" id="submit_manual">Query</button>
+            <button type="submit" id="submit_manual">Query</button>
         </form>
     </div>
     <div data-optionContainer="file" class="content_container">
         <h1>Upload your file with HTS numbers:</h1>
-        <form  id="file_form" class="form_container">
-            <label for="user_input">Enter your CSV file with HTS codes</label>
-            <input type="file" name="user_input" required>
+        <form method="POST" action="/process_file_query" class="form_container">
+            <label for="user_input_file">Enter your CSV file with HTS codes</label>
+            <input type="file" name="user_input_file" required>
             <button type="button" id="submit_file">Query</button>
         </form>
     </div>
