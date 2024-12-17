@@ -35,7 +35,6 @@ def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
         db_query_result[index]['result'] = searchEHIndents(grabQueryRecords(result['document']['data'], query_list[index]), result['document']['data'])
         db_query_result[index]['display_result'] = createDisplayResult(db_query_result[index]['result'])
         db_query_result[index]['replaced_query'] = compareQueryWithResult(db_query_result[index]['query'], db_query_result[index]['display_result']['htsno'])
-        print(db_query_result[index]['replaced_query'])
     
     return db_query_result
     

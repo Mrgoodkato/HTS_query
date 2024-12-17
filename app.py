@@ -1,11 +1,13 @@
 import sys, os
+import pandas as pd
 from openpyxl import Workbook, load_workbook
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, session, jsonify, send_file, url_for, redirect
 sys.path.append(os.path.abspath('main'))
 from main import query_hts_db, query_string_db
 from main.utils.util_functions import processTextAreaInput
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
@@ -20,6 +22,8 @@ def process_query():
     query = processTextAreaInput(query_string)
     errors = query['errors']
     query_result = query_hts_db.queryHTSNumber(query['query_list'], testing=True)
+    session['query_results'] = query_result
+    session['query_errors'] = errors
     if not query_result: return 'No data'
     return render_template('query_results.html.j2', query_result=query_result, errors=errors)
 
@@ -27,6 +31,18 @@ def process_query():
 def process_file_query():
     
     return 'Hello there'
+
+@app.route('/download_query')
+def download_query():
+
+    data_query = session.get('query_results')
+    data_errors = session.get('query_errors')
+
+    if not data_query and not data_errors:
+        df = pd.DataFrame(data_query)
+        print(df)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
