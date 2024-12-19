@@ -81,7 +81,7 @@ class Connection:
                     print(f"Warning, no result found for {group['main_group']}")
                 else: result.append({
                     'query': group,
-                    'document': document
+                    'document': {key: value for key, value in document.items() if key != "_id"}
                 })
             except Exception as exception:
                 print(f"Failed query of record {group['main_group']}")

@@ -2,7 +2,7 @@
 {% block content %}
     <div class="content_container">
         <h1>Download results in excel format?</h1>
-        <button>Download</button>
+        <a href="{{url_for('download_query')}}">Download</a>
     </div>
     {% if errors %}
     <div class="content_container">

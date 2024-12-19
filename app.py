@@ -1,5 +1,6 @@
 import sys, os
 import pandas as pd
+from logs import basic_logs as bl
 from openpyxl import Workbook, load_workbook
 from flask import Flask, render_template, request, session, jsonify, send_file, url_for, redirect
 sys.path.append(os.path.abspath('main'))
@@ -17,7 +18,6 @@ def index():
 def process_query():
 
     user_input = request.form.getlist('user_input') or request.form.getlist('user_input_manual')
-   
     query_string = '\n'.join(user_input)
     query = processTextAreaInput(query_string)
     errors = query['errors']
@@ -37,12 +37,10 @@ def download_query():
 
     data_query = session.get('query_results')
     data_errors = session.get('query_errors')
+    df = pd.DataFrame(data_query)
+    df.to_excel('logs/txt_logs/download.xlsx')
 
-    if not data_query and not data_errors:
-        df = pd.DataFrame(data_query)
-        print(df)
-
-
+    return 'Success!'
 
 if __name__ == '__main__':
     app.run(debug=True)
