@@ -1,3 +1,6 @@
+# Ignore temporary JSON files for DB creation
+/db_hts/
+
 # Ignore Excel files
 *.xlsx
 

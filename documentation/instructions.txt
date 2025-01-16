@@ -37,6 +37,15 @@ sudo systemctl stop mongod
 <<RESTART mongodb process>>
 sudo systemctl restart mongod
 
+<<Problemas al iniciar el venv en windows, RemoteExecutionPolicy>>
+Se debe cambiar el RemoteExecutionPolicy a RemoteSigned asi en powershell:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Se puede revertir asi:
+Set-ExecutionPolicy Restricted -Scope CurrentUser
+
+Y se puede checkear el estado de esto asi:
+GetExecutionPolicy
 
 <<ERRORS IN VENV>>
 UBUNTU:
