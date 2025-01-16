@@ -1,0 +1,1 @@
+ImmutableMultiDict([('user_input', '8471.30.01.00\r\n6204.63.00\r\n0409.00\r\n')])
