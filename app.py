@@ -25,7 +25,7 @@ def process_query():
     errors = query['errors']
     query_result = query_hts_db.queryHTSNumber(query['query_list'], testing=True)
     session['query_results'] = query_result
-    session['query_errors'] = errors
+    session['query_errors'] = errorxs
     bl.basic_logger(str(session.items()), 'session')
 
     if not query_result: return 'No data'
