@@ -22,22 +22,25 @@ def queryHTSNumber(input_query: list[str], testing: bool)-> list[dict[str,any]]:
             }
         ]
     """
+    
     query_list = createQueryGroups(input_query)
     connection = Connection(testing)
     db_query_result = connection.queryRecordsHTS(query_list)
+    
     connection.closeConnection()
 
     logger = bl.trace_logger('queryHTSNumberLogs.txt')
-
-
+    separator = '\n\n-----------------------------------------------------------------------\n\n'
     if not db_query_result: return None
 
     for index, result in enumerate(db_query_result):
 
         if result['document'] == 'Missing record': continue
-        
-        db_query_result[index]['result'] = searchEHIndents(grabQueryRecords(result['document']['data'], query_list[index]), result['document']['data'])
-        logger.info(str(db_query_result[index]['result']))
+
+        logger.info(str(result) + separator + str(query_list[index]) + separator)        
+        db_query_result[index]['pre-result'] = grabQueryRecords(result['document']['data'], query_list[index])
+        logger.info('PRE-RESULT' + separator + str(db_query_result[index]['pre-result']) + separator)
+        db_query_result[index]['result'] = searchEHIndents(db_query_result[index]['pre-result'], result['document']['data'])
         db_query_result[index]['display_result'] = createDisplayResult(db_query_result[index]['result'])
         db_query_result[index]['replaced_query'] = compareQueryWithResult(db_query_result[index]['query'], db_query_result[index]['display_result']['htsno'])
     

@@ -5,6 +5,7 @@ from collections import Counter
 from typing import List, Dict, Any
 from utils.global_vars import key_words, punctuation_pattern, formatted_gather_hts_number
 
+
 def removeEmptyKeysAndSave(htsdata: List[Dict[str, Any]], path: str):
     """This function removes the empty keys from the json chapter and saves it to the desired path
 
@@ -141,6 +142,7 @@ def createDisplayResult(raw_result: list[dict[str,any]])-> dict[str,any]:
     for item in raw_result:
 
         for key, val in item.items():
+
             if val == None: continue
             if key == 'indent' or key == 'indexHTSRec' or key == 'missing': continue
             if key == 'units': 
