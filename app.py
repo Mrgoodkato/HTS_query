@@ -2,6 +2,7 @@ import sys, os
 from logs import basic_logs as bl
 from openpyxl import Workbook, load_workbook
 from flask import Flask, render_template, request, session, jsonify, send_file, url_for, redirect
+from flask_session import Session
 sys.path.append(os.path.abspath('main'))
 from main import query_hts_db, query_string_db
 from main.utils.util_functions import processTextAreaInput
@@ -9,6 +10,13 @@ from main.utils.process_excel import saveExcelDF
 
 app = Flask(__name__)
 app.secret_key = 'my_keyDEVELOPMENTONLY'
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_PERMANENT'] = False
+app.config['SESSION_FILE_DIR'] = os.path.join(os.getcwd(), 'app_sessions')
+app.config['SESSION_USE_SIGNER'] = True
+app.config['SESSION_FILE_THRESHOLD'] = 100
+
+Session(app)
 
 @app.route('/')
 def index():
@@ -16,7 +24,6 @@ def index():
 
 @app.route('/process_query', methods=['POST'])
 def process_query():
-    session.permanent = False
     session.clear()
     user_input = request.form.getlist('user_input') or request.form.getlist('user_input_manual')
     bl.basic_logger(str(request.form), 'request_process_query')

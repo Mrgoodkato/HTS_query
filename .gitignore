@@ -1,5 +1,6 @@
 # Ignore temporary JSON files for DB creation
 /db_hts/
+/app_sessions/
 
 # Ignore Excel files
 *.xlsx

@@ -198,11 +198,11 @@ def processTextAreaInput(raw_text: str)-> dict[str,list[str]]:
         'errors': []
     }
     for string in raw_list:
-        
-        if re.match(hts_pattern, string):
-            final_list['query_list'].append(string)
+        stripped_str = re.sub(r'\.*(?=$)', '', string)
+        if re.match(hts_pattern, stripped_str):
+            final_list['query_list'].append(stripped_str)
         else:
-            final_list['errors'].append(string)
+            final_list['errors'].append(stripped_str)
 
     print(f'processTextAreaInput - final list:{final_list}')
     return final_list
