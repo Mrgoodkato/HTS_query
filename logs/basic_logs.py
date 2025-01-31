@@ -1,5 +1,6 @@
 import logging
 import os
+import json
 
 #UTIL FUNCTIONS
 def remove_old_log(folder_path:str, file_name:str):
@@ -21,14 +22,24 @@ def remove_old_log(folder_path:str, file_name:str):
     return
 
 #LOGGER FUNCTIONS
-def basic_logger(data: list[dict,any], filename: str):
-    """Method to log different txt results to the folder 'logs/txt_logs/'
+def basic_logger(data: list[dict,any], filename: str, mode: str):
+    """Method to log different txt results to the folder 'logs/txt_logs/' or 'logs/json_logs/'
 
     Args:
         data (list[dict,any]): Data to log
         filename (str): Filename to be used
+        mode (str): Either 'txt' or 'json' defines the folder to be used
     """
-    with open(f'logs/txt_logs/{filename}.txt', 'w', encoding="utf-8") as log_file: log_file.write(str(data))
+    json_folder = 'logs/json_logs/'
+    txt_folder = 'logs/txt_logs/'
+    
+    if mode == 'txt':
+        with open(f'{txt_folder}{filename}.txt', 'w', encoding="utf-8") as log_file: log_file.write(str(data))
+    else:
+        with open(f'{json_folder}{filename}.json', 'w') as log_file:
+            json.dump(data, log_file, indent=1)
+
+
 
 def trace_logger(file_name:str) -> logging.Logger:
     """Trace logger creator, this creaates a logger that appends detailed information about a process into a txt file

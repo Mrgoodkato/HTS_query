@@ -26,14 +26,15 @@ def index():
 def process_query():
     session.clear()
     user_input = request.form.getlist('user_input') or request.form.getlist('user_input_manual')
-    bl.basic_logger(str(request.form), 'request_process_query')
+    bl.basic_logger(str(request.form), 'request_process_query', 'txt')
     query_string = '\n'.join(user_input)
     query = processTextAreaInput(query_string)
     errors = query['errors']
     query_result = query_hts_db.queryHTSNumber(query['query_list'], testing=True)
     session['query_results'] = query_result
     session['query_errors'] = errors
-    bl.basic_logger(str(session.items()), 'session')
+    bl.basic_logger(session.get('query_results'), 'session_results', 'json')
+    bl.basic_logger(session.get('query_errors'), 'session_errors', 'json')
 
     if not query_result: return 'No data'
     return render_template('query_results.html.j2', query_result=query_result, errors=errors)

@@ -1,0 +1,1972 @@
+[
+ {
+  "query": {
+   "type": "Statistical Suffix Record",
+   "main_group": "8471",
+   "sub_groups": [
+    "8471.30",
+    "8471.30.01",
+    "8471.30.01.00"
+   ],
+   "full_query": "8471.30.01.00"
+  },
+  "document": {
+   "header": "8471",
+   "data": [
+    {
+     "htsno": "8471",
+     "indent": 0,
+     "description": "Automatic data processing machines and units thereof; magnetic or optical readers, machines for transcribing data onto data media in coded form and machines for processing such data, not elsewhere specified or included:",
+     "indexHTSRec": 0
+    },
+    {
+     "htsno": "8471.30.01.00",
+     "indent": 1,
+     "description": "Portable automatic data processing machines, weighing not more than <il>10 kg</il>, consisting of at least a central processing unit, a keyboard and a display",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "indexHTSRec": 1
+    },
+    {
+     "indent": 1,
+     "description": "Other automatic data processing machines:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.41.01",
+     "indent": 2,
+     "description": "Comprising in the same housing at least a central processing unit and an input and output unit, whether or not combined",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.41.01.10",
+     "indent": 3,
+     "description": "With cathode-ray tube (CRT)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.41.01.50",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.49.00.00",
+     "indent": 2,
+     "description": "Other, entered in the form of systems",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.50.01",
+     "indent": 1,
+     "description": "Processing units other than those of subheading 8471.41 or 8471.49, whether or not containing in the same housing one or two of the following types of unit: storage units, input units, output units",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.50.01.10",
+     "indent": 2,
+     "description": "With cathode-ray tube (CRT)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.50.01.50",
+     "indent": 2,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.60",
+     "indent": 1,
+     "description": "Input or output units, whether or not containing storage units in the same housing:"
+    },
+    {
+     "htsno": "8471.60.10",
+     "indent": 2,
+     "description": "Combined input/output units",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.60.10.10",
+     "indent": 3,
+     "description": "With cathode-ray tube (CRT)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.60.10.50",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 2,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.60.20.00",
+     "indent": 3,
+     "description": "Keyboards",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%"
+    },
+    {
+     "htsno": "8471.60.70.00",
+     "indent": 3,
+     "description": "Units suitable for physical incorporation into automatic data processing machines or units thereof",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.60.80.00",
+     "indent": 3,
+     "description": "Optical scanners and magnetic ink recognition devices",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.60.90",
+     "indent": 3,
+     "description": "Other",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.60.90.30",
+     "indent": 4,
+     "description": "Card key and magnetic media entry devices",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.60.90.50",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70",
+     "indent": 1,
+     "description": "Storage units:"
+    },
+    {
+     "indent": 2,
+     "description": "Magnetic disk drive units:",
+     "superior": "true"
+    },
+    {
+     "indent": 3,
+     "description": "For a disk of a diameter exceeding <il>21 cm:</il>",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.70.10.00",
+     "indent": 4,
+     "description": "Without read-write unit assembled therein; read-write units entered separately",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.70.20.00",
+     "indent": 4,
+     "description": "Units for physical incorporation into automatic data processing machines or units thereof",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.70.30.00",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.01.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.70.40",
+     "indent": 4,
+     "description": "Not assembled in cabinets, and without attached external power supply",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.01.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.70.40.35",
+     "indent": 5,
+     "description": "Flexible (floppy) magnetic disk drive units",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70.40.65",
+     "indent": 5,
+     "description": "Hard magnetic disk drive units",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70.40.95",
+     "indent": 5,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70.50",
+     "indent": 4,
+     "description": "Other",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.70.50.35",
+     "indent": 5,
+     "description": "Flexible (floppy) magnetic disk drive units",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70.50.65",
+     "indent": 5,
+     "description": "Hard magnetic disk drive units",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8471.70.50.95",
+     "indent": 5,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 2,
+     "description": "Other storage units:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.70.60.00",
+     "indent": 3,
+     "description": "Not assembled in cabinets for placing on a table, desk, wall, floor or similar place",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.01. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.70.90.00",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.01. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.80",
+     "indent": 1,
+     "description": "Other units of automatic data processing machines:"
+    },
+    {
+     "htsno": "8471.80.10.00",
+     "indent": 2,
+     "description": "Control or adapter units",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 2,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8471.80.40.00",
+     "indent": 3,
+     "description": "Units suitable for physical incorporation into automatic data processing machines",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.80.90.00",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8471.90.00.00",
+     "indent": 1,
+     "description": "Other",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    }
+   ]
+  },
+  "pre-result": [
+   {
+    "htsno": "8471",
+    "indent": 0,
+    "description": "Automatic data processing machines and units thereof; magnetic or optical readers, machines for transcribing data onto data media in coded form and machines for processing such data, not elsewhere specified or included:",
+    "indexHTSRec": 0
+   },
+   {
+    "htsno": "8471.30.01.00",
+    "indent": 1,
+    "description": "Portable automatic data processing machines, weighing not more than <il>10 kg</il>, consisting of at least a central processing unit, a keyboard and a display",
+    "units": [
+     "No."
+    ],
+    "general": "Free",
+    "other": "35%",
+    "indexHTSRec": 1
+   }
+  ],
+  "result": [
+   {
+    "htsno": "8471",
+    "indent": 0,
+    "description": "Automatic data processing machines and units thereof; magnetic or optical readers, machines for transcribing data onto data media in coded form and machines for processing such data, not elsewhere specified or included:",
+    "indexHTSRec": 0
+   },
+   {
+    "htsno": "8471.30.01.00",
+    "indent": 1,
+    "description": "Portable automatic data processing machines, weighing not more than <il>10 kg</il>, consisting of at least a central processing unit, a keyboard and a display",
+    "units": [
+     "No."
+    ],
+    "general": "Free",
+    "other": "35%",
+    "indexHTSRec": 1
+   }
+  ],
+  "display_result": {
+   "htsno": "8471.30.01.00",
+   "description": "Automatic data processing machines and units thereof; magnetic or optical readers, machines for transcribing data onto data media in coded form and machines for processing such data, not elsewhere specified or included: Portable automatic data processing machines, weighing not more than <il>10 kg</il>, consisting of at least a central processing unit, a keyboard and a display",
+   "units": "No.",
+   "general": "Free",
+   "other": "35%"
+  },
+  "replaced_query": {
+   "replace_to": null
+  }
+ },
+ {
+  "query": {
+   "type": "Chapter Heading Record",
+   "main_group": "0101",
+   "full_query": "0101"
+  },
+  "document": {
+   "header": "0101",
+   "data": [
+    {
+     "htsno": "0101",
+     "indent": 0,
+     "description": "Live horses, asses, mules and hinnies:",
+     "indexHTSRec": 0
+    },
+    {
+     "indent": 1,
+     "description": "Horses:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0101.21.00",
+     "indent": 2,
+     "description": "Purebred breeding animals",
+     "general": "Free",
+     "other": "Free",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0101.21.00.10",
+     "indent": 3,
+     "description": "Males",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0101.21.00.20",
+     "indent": 3,
+     "description": "Females",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0101.29.00",
+     "indent": 2,
+     "description": "Other",
+     "general": "Free",
+     "other": "20%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0101.29.00.10",
+     "indent": 3,
+     "description": "Imported for immediate slaughter",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0101.29.00.90",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0101.30.00.00",
+     "indent": 1,
+     "description": "Asses",
+     "units": [
+      "No."
+     ],
+     "general": "6.8%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+     "other": "15%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0101.90",
+     "indent": 1,
+     "description": "Other:"
+    },
+    {
+     "htsno": "0101.90.30.00",
+     "indent": 2,
+     "description": "Imported for immediate slaughter",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "Free",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0101.90.40.00",
+     "indent": 2,
+     "description": "Other",
+     "units": [
+      "No."
+     ],
+     "general": "4.5%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA,PE,S, SG)",
+     "other": "20%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    }
+   ]
+  },
+  "pre-result": [
+   {
+    "htsno": "0101",
+    "indent": 0,
+    "description": "Live horses, asses, mules and hinnies:",
+    "indexHTSRec": 0
+   }
+  ],
+  "result": [
+   {
+    "htsno": "0101",
+    "indent": 0,
+    "description": "Live horses, asses, mules and hinnies:",
+    "indexHTSRec": 0
+   }
+  ],
+  "display_result": {
+   "htsno": "0101",
+   "description": "Live horses, asses, mules and hinnies:"
+  },
+  "replaced_query": {
+   "replace_to": null
+  }
+ },
+ {
+  "query": {
+   "type": "Chapter Heading Record",
+   "main_group": "0102",
+   "full_query": "0102"
+  },
+  "document": {
+   "header": "0102",
+   "data": [
+    {
+     "htsno": "0102",
+     "indent": 0,
+     "description": "Live bovine animals:",
+     "indexHTSRec": 0
+    },
+    {
+     "indent": 1,
+     "description": "Cattle:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.21.00",
+     "indent": 2,
+     "description": "Purebred breeding animals",
+     "general": "Free",
+     "other": "Free",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Dairy:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.21.00.10",
+     "indent": 4,
+     "description": "Male",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0102.21.00.20",
+     "indent": 4,
+     "description": "Female",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.21.00.30",
+     "indent": 4,
+     "description": "Male",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0102.21.00.50",
+     "indent": 4,
+     "description": "Female",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0102.29",
+     "indent": 2,
+     "description": "Other:"
+    },
+    {
+     "htsno": "0102.29.20",
+     "indent": 3,
+     "description": "Cows imported specially for dairy purposes",
+     "general": "Free",
+     "other": "6.6\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0102.29.20.11",
+     "indent": 4,
+     "description": "Weighing less than 90 kg each",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.20.12",
+     "indent": 4,
+     "description": "Weighing 90 kg or more each",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40",
+     "indent": 3,
+     "description": "Other",
+     "general": "1\u00a2/kg",
+     "special": "Free (A+,AU,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+     "other": "5.5\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing less than 90 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.24",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.28",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 90 kg or more but less than 200 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.34",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.38",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 200 kg or more but less than 320 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.54",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.58",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 320 kg or more each:",
+     "superior": "true"
+    },
+    {
+     "indent": 5,
+     "description": "For immediate slaughter:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.62",
+     "indent": 6,
+     "description": "Steers",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.64",
+     "indent": 6,
+     "description": "Bulls",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.66",
+     "indent": 6,
+     "description": "Cows",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.68",
+     "indent": 6,
+     "description": "Heifers",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 5,
+     "description": "For breeding:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.72",
+     "indent": 6,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.74",
+     "indent": 6,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 5,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.29.40.82",
+     "indent": 6,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.29.40.84",
+     "indent": 6,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 1,
+     "description": "Buffalo:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.31.00",
+     "indent": 2,
+     "description": "Purebred breeding animals",
+     "general": "Free",
+     "other": "Free",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0102.31.00.10",
+     "indent": 3,
+     "description": "Male",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0102.31.00.20",
+     "indent": 3,
+     "description": "Female",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "0102.39.00",
+     "indent": 2,
+     "description": "Other",
+     "general": "1\u00a2/kg",
+     "special": "Free (A+,AU,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+     "other": "5.5\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "0102.39.00.10",
+     "indent": 3,
+     "description": "Bison",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "indent": 4,
+     "description": "Weighing less than 90 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.24",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.39.00.28",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 90 kg or more but less than 200 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.34",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.39.00.38",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 200 kg or more but less than 320 kg each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.54",
+     "indent": 5,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.39.00.58",
+     "indent": 5,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 4,
+     "description": "Weighing 320 kg or more each:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.61",
+     "indent": 5,
+     "description": "For immediate slaughter",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 5,
+     "description": "For breeding:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.72",
+     "indent": 6,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.39.00.74",
+     "indent": 6,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "indent": 5,
+     "description": "Other:",
+     "superior": "true"
+    },
+    {
+     "htsno": "0102.39.00.82",
+     "indent": 6,
+     "description": "Male",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.39.00.84",
+     "indent": 6,
+     "description": "Female",
+     "units": [
+      "No.",
+      "kg"
+     ]
+    },
+    {
+     "htsno": "0102.90.00.00",
+     "indent": 1,
+     "description": "Other",
+     "units": [
+      "No.",
+      "kg"
+     ],
+     "general": "1\u00a2/kg",
+     "special": "Free (A+,AU,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+     "other": "5.5\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    }
+   ]
+  },
+  "pre-result": [
+   {
+    "htsno": "0102",
+    "indent": 0,
+    "description": "Live bovine animals:",
+    "indexHTSRec": 0
+   }
+  ],
+  "result": [
+   {
+    "htsno": "0102",
+    "indent": 0,
+    "description": "Live bovine animals:",
+    "indexHTSRec": 0
+   }
+  ],
+  "display_result": {
+   "htsno": "0102",
+   "description": "Live bovine animals:"
+  },
+  "replaced_query": {
+   "replace_to": null
+  }
+ },
+ {
+  "query": {
+   "type": "Statistical Suffix Record",
+   "main_group": "1008",
+   "sub_groups": [
+    "1008.90",
+    "1008.90.10",
+    "1008.90.10.00"
+   ],
+   "full_query": "1008.90.10.00"
+  },
+  "document": {
+   "header": "1008",
+   "data": [
+    {
+     "htsno": "1008",
+     "indent": 0,
+     "description": "Buckwheat, millet and canary seeds; other cereals (including wild rice):",
+     "indexHTSRec": 0
+    },
+    {
+     "htsno": "1008.10.00.00",
+     "indent": 1,
+     "description": "Buckwheat",
+     "units": [
+      "kg"
+     ],
+     "general": "Free",
+     "other": "0.55\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 1,
+     "description": "Millet:",
+     "superior": "true"
+    },
+    {
+     "htsno": "1008.21.00.00",
+     "indent": 2,
+     "description": "Seed",
+     "units": [
+      "kg"
+     ],
+     "general": "0.32\u00a2/kg",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA,PE,S, SG)",
+     "other": "2.2\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.29.00.00",
+     "indent": 2,
+     "description": "Other",
+     "units": [
+      "kg"
+     ],
+     "general": "0.32\u00a2/kg",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA,PE,S, SG)",
+     "other": "2.2\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.30.00.00",
+     "indent": 1,
+     "description": "Canary seeds",
+     "units": [
+      "kg"
+     ],
+     "general": "0.12\u00a2/kg",
+     "special": "Free (A,AU,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+     "other": "2.2\u00a2/kg",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.40.00.00",
+     "indent": 1,
+     "description": "Fonio (<i>Digitaria spp.</i>)",
+     "units": [
+      "kg"
+     ],
+     "general": "1.1%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA,PE,S, SG)",
+     "other": "10%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.50.00",
+     "indent": 1,
+     "description": "Quinoa (<i>Chenopodium quinoa</i>)",
+     "general": "1.1%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA,PE,S, SG)",
+     "other": "10%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.50.00.10",
+     "indent": 2,
+     "description": "Certified organic",
+     "units": [
+      "kg"
+     ]
+    },
+    {
+     "htsno": "1008.50.00.90",
+     "indent": 2,
+     "description": "Other",
+     "units": [
+      "kg"
+     ]
+    },
+    {
+     "htsno": "1008.60.00.00",
+     "indent": 1,
+     "description": "Triticale",
+     "units": [
+      "kg"
+     ],
+     "general": "1.1%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA, PE,S,SG)",
+     "other": "10%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.15. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.90.01",
+     "indent": 1,
+     "description": "Other cereals (including wild rice)",
+     "general": "1.1%",
+     "special": "Free (A+,AU,BH,CL,CO,D,E, IL,JO,KR,MA,OM,P,PA, PE,S,SG)",
+     "other": "10%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.88.03.",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "1008.90.01.20",
+     "indent": 2,
+     "description": "Wild rice",
+     "units": [
+      "kg"
+     ]
+    },
+    {
+     "htsno": "1008.90.01.40",
+     "indent": 2,
+     "description": "Other",
+     "units": [
+      "kg"
+     ]
+    }
+   ]
+  },
+  "pre-result": [
+   {
+    "htsno": "1008",
+    "indent": 0,
+    "description": "Buckwheat, millet and canary seeds; other cereals (including wild rice):",
+    "indexHTSRec": 0
+   }
+  ],
+  "result": [
+   {
+    "htsno": "1008",
+    "indent": 0,
+    "description": "Buckwheat, millet and canary seeds; other cereals (including wild rice):",
+    "indexHTSRec": 0
+   }
+  ],
+  "display_result": {
+   "htsno": "1008",
+   "description": "Buckwheat, millet and canary seeds; other cereals (including wild rice):"
+  },
+  "replaced_query": {
+   "replace_to": "Chapter Heading Record",
+   "original_query": "1008.90.10.00",
+   "result_query": "1008",
+   "missing_numbers": ".90.10.00"
+  }
+ },
+ {
+  "query": {
+   "type": "Statistical Suffix Record",
+   "main_group": "8542",
+   "sub_groups": [
+    "8542.31",
+    "8542.31.00",
+    "8542.31.00.12"
+   ],
+   "full_query": "8542.31.00.12"
+  },
+  "document": {
+   "header": "8542",
+   "data": [
+    {
+     "htsno": "8542",
+     "indent": 0,
+     "description": "Electronic integrated circuits; parts thereof:",
+     "indexHTSRec": 0,
+     "missing": [
+      1
+     ]
+    },
+    {
+     "indent": 1,
+     "description": "Electronic integrated circuits:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.31.00",
+     "indent": 2,
+     "description": "Processors and controllers, whether or not combined with memories, converters, logic circuits, amplifiers, clock and timing circuits, or other circuits",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.91.05. ",
+       "type": "endnote"
+      }
+     ],
+     "indexHTSRec": 2
+    },
+    {
+     "indent": 3,
+     "description": "Controllers (including microcontrollers):",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.31.00.15",
+     "indent": 4,
+     "description": "8-bit",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.20",
+     "indent": 4,
+     "description": "16-bit",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.25",
+     "indent": 4,
+     "description": "32-bit",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.30",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Processors (including microprocessors):",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.31.00.35",
+     "indent": 4,
+     "description": "Digital signal processors (DSPs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.40",
+     "indent": 4,
+     "description": "Graphics processing units (GPUs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.45",
+     "indent": 4,
+     "description": "Central processing units (CPUs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.50",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Programmable logic devices (PLDs):",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.31.00.55",
+     "indent": 4,
+     "description": "Complex programmable logic devices (CPLDs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.60",
+     "indent": 4,
+     "description": "Field programmable gate arrays (FPGAs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.65",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.70",
+     "indent": 3,
+     "description": "System on chip (SoCs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.31.00.75",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00",
+     "indent": 2,
+     "description": "Memories",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.91.05. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Dynamic read-write random access (DRAM):",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.32.00.02",
+     "indent": 4,
+     "description": "Not over 128 megabits",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.24",
+     "indent": 4,
+     "description": "Over 128 megabits but not over 256 megabits",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.28",
+     "indent": 4,
+     "description": "Over 256 megabits but not over 512 megabits",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.32",
+     "indent": 4,
+     "description": "Over 512 megabits but not over 1 gigabit",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.36",
+     "indent": 4,
+     "description": "Over 1 gigabit",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.41",
+     "indent": 3,
+     "description": "Static read-write random access (SRAM)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.51",
+     "indent": 3,
+     "description": "Electrically erasable programmable read-only memory (EEPROM)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.61",
+     "indent": 3,
+     "description": "Erasable (except electrically) programmable read-only memory (EPROM)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.32.00.71",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.33.00.01",
+     "indent": 2,
+     "description": "Amplifiers",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.91.05. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8542.39.00",
+     "indent": 2,
+     "description": "Other",
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.91.05. ",
+       "type": "endnote"
+      }
+     ]
+    },
+    {
+     "htsno": "8542.39.00.10",
+     "indent": 3,
+     "description": "RF transceivers",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.39.00.20",
+     "indent": 3,
+     "description": "Active filters",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "indent": 3,
+     "description": "Data converters:",
+     "superior": "true"
+    },
+    {
+     "htsno": "8542.39.00.30",
+     "indent": 4,
+     "description": "Analog to digital converters (ADCs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.39.00.40",
+     "indent": 4,
+     "description": "Digital to analog converters (DACs)",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.39.00.50",
+     "indent": 4,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.39.00.60",
+     "indent": 3,
+     "description": "Other",
+     "units": [
+      "No."
+     ]
+    },
+    {
+     "htsno": "8542.90.00.00",
+     "indent": 1,
+     "description": "Parts",
+     "units": [
+      "No."
+     ],
+     "general": "Free",
+     "other": "35%",
+     "footnotes": [
+      {
+       "columns": [
+        "general"
+       ],
+       "value": "See 9903.91.05. ",
+       "type": "endnote"
+      }
+     ]
+    }
+   ]
+  },
+  "pre-result": [
+   {
+    "htsno": "8542",
+    "indent": 0,
+    "description": "Electronic integrated circuits; parts thereof:",
+    "indexHTSRec": 0,
+    "missing": [
+     1
+    ]
+   },
+   {
+    "htsno": "8542.31.00",
+    "indent": 2,
+    "description": "Processors and controllers, whether or not combined with memories, converters, logic circuits, amplifiers, clock and timing circuits, or other circuits",
+    "general": "Free",
+    "other": "35%",
+    "footnotes": [
+     {
+      "columns": [
+       "general"
+      ],
+      "value": "See 9903.91.05. ",
+      "type": "endnote"
+     }
+    ],
+    "indexHTSRec": 2
+   }
+  ],
+  "result": [
+   {
+    "htsno": "8542",
+    "indent": 0,
+    "description": "Electronic integrated circuits; parts thereof:",
+    "indexHTSRec": 0,
+    "missing": [
+     1
+    ]
+   },
+   {
+    "indent": 1,
+    "description": "Electronic integrated circuits:"
+   },
+   {
+    "htsno": "8542.31.00",
+    "indent": 2,
+    "description": "Processors and controllers, whether or not combined with memories, converters, logic circuits, amplifiers, clock and timing circuits, or other circuits",
+    "general": "Free",
+    "other": "35%",
+    "footnotes": [
+     {
+      "columns": [
+       "general"
+      ],
+      "value": "See 9903.91.05. ",
+      "type": "endnote"
+     }
+    ],
+    "indexHTSRec": 2
+   }
+  ],
+  "display_result": {
+   "htsno": "8542.31.00",
+   "description": "Electronic integrated circuits; parts thereof: Electronic integrated circuits: Processors and controllers, whether or not combined with memories, converters, logic circuits, amplifiers, clock and timing circuits, or other circuits",
+   "general": "Free",
+   "other": "35%",
+   "footnotes": "See 9903.91.05."
+  },
+  "replaced_query": {
+   "replace_to": "Tariff Item Record",
+   "original_query": "8542.31.00.12",
+   "result_query": "8542.31.00",
+   "missing_numbers": ".12"
+  }
+ }
+]
